@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>立法タイムライン — 法案の流れを時系列で</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#9a2b1e">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root{
+  --ink:#1a1410;
+  --paper:#f4efe6;
+  --paper-2:#ebe3d4;
+  --line:#d8cdb8;
+  --accent:#9a2b1e;       /* 朱 vermilion */
+  --accent-2:#1f4733;     /* 深緑 */
+  --gold:#a87f32;
+  --muted:#6b5f4d;
+
+  /* stage colors */
+  --s-plan:#8a8170;       /* 提出予定 */
+  --s-cabinet:#b5862b;    /* 閣議決定 */
+  --s-submit:#3a6ea5;     /* 国会提出 */
+  --s-review:#c06a1f;     /* 審議中 */
+  --s-passed:#1f7a4d;     /* 成立 */
+  --s-promulgated:#5b4a8a;/* 公布 */
+  --s-enforced:#9a2b1e;   /* 施行 */
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(154,43,30,.04), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(31,71,51,.04), transparent 40%);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* grain overlay */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- ページ切替タブ ---------- */
+.page-tabs{background:var(--paper);border-bottom:1px solid var(--line)}
+.page-tabs-in{max-width:1240px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.pt-tabs{display:flex;gap:24px}
+.pt-tabs a{font-family:'Shippori Mincho',serif;font-size:.98rem;font-weight:600;color:var(--muted);text-decoration:none;padding:13px 4px 11px;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .13s}
+.pt-tabs a:hover{color:var(--ink)}
+.pt-tabs a.active{color:var(--accent);border-bottom-color:var(--accent)}
+.pt-soc{display:flex;gap:8px;align-items:center}
+.pt-soc a{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#fff;transition:border-color .13s,color .13s}
+.pt-soc a:hover{border-color:var(--accent);color:var(--accent)}
+.pt-soc .si{width:12px;height:12px}
+@media(max-width:560px){.page-tabs-in{padding:0 16px}.pt-tabs{gap:16px}.pt-tabs a{font-size:.9rem}.pt-soc a{padding:4px 9px}}
+
+/* ---------- フッター（運営・SNS） ---------- */
+.site-foot{border-top:1px solid var(--line);background:var(--paper)}
+.site-foot-in{max-width:1240px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.foot-name{font-family:'Shippori Mincho',serif;font-weight:600;font-size:13px;color:var(--ink)}
+.foot-soc{display:flex;gap:9px;align-items:center}
+.foot-soc a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 14px;background:#fff;font-size:12px;font-weight:600;transition:border-color .13s,color .13s}
+.foot-soc a:hover{border-color:var(--accent);color:var(--accent)}
+.foot-soc .si{width:13px;height:13px}
+
+/* ---------- Header ---------- */
+header{
+  border-bottom:3px double var(--ink);
+  background:var(--paper);
+  position:relative;
+}
+.masthead{
+  max-width:1240px;margin:0 auto;padding:22px 28px 18px;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;
+}
+.brand{display:flex;flex-direction:column;gap:2px}
+.brand .kicker{
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--accent);font-weight:600;
+}
+.brand h1{
+  font-family:'Shippori Mincho',serif;font-weight:800;font-size:38px;
+  letter-spacing:.06em;line-height:1;
+}
+.brand .sub{font-family:'Shippori Mincho',serif;font-size:13px;color:var(--muted);letter-spacing:.18em;margin-top:4px}
+.meta{text-align:right;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);line-height:1.9}
+.meta b{color:var(--ink)}
+.meta .live{color:var(--accent);font-weight:600}
+.meta .live::before{content:"●";font-size:8px;vertical-align:2px;margin-right:5px;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- Controls ---------- */
+.controls{
+  max-width:1240px;margin:0 auto;padding:14px 28px;
+  display:flex;gap:14px;align-items:center;flex-wrap:wrap;
+  border-top:1px solid var(--line);
+}
+.search{
+  flex:1;min-width:220px;position:relative;
+}
+.search input{
+  width:100%;padding:9px 14px 9px 36px;border:1px solid var(--line);background:#fff;
+  font-family:'Zen Kaku Gothic New',sans-serif;font-size:14px;border-radius:2px;color:var(--ink);
+}
+.search input:focus{outline:none;border-color:var(--accent)}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.45}
+.filter-group{display:flex;gap:6px;flex-wrap:wrap}
+.filter-group select{
+  padding:8px 10px;border:1px solid var(--line);background:#fff;font-size:13px;
+  font-family:'Zen Kaku Gothic New',sans-serif;border-radius:2px;color:var(--ink);cursor:pointer;
+}
+
+/* ---------- Stage legend ---------- */
+.legend{
+  max-width:1240px;margin:0 auto;padding:10px 28px 16px;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);
+}
+.legend .lbl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;color:var(--muted);margin-right:6px}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:30px;
+  font-size:12px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:.15s;
+  background:#fff;
+}
+.chip .dot{width:9px;height:9px;border-radius:50%}
+.chip.active{box-shadow:inset 0 0 0 1.5px currentColor}
+.chip[data-on="false"]{opacity:.38}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:8px 28px 80px;display:grid;grid-template-columns:1fr 330px;gap:34px}
+@media(max-width:980px){.wrap{grid-template-columns:1fr;padding:8px 18px 80px}}
+
+/* ---------- Timeline ---------- */
+.tl-head{display:flex;align-items:baseline;justify-content:space-between;margin:18px 0 8px;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.tl-head h2{font-family:'Shippori Mincho',serif;font-size:20px;letter-spacing:.1em;font-weight:700}
+.tl-head .count{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+
+.month-group{margin-top:26px}
+.month-label{
+  font-family:'Shippori Mincho',serif;font-weight:700;font-size:15px;color:var(--accent);
+  letter-spacing:.14em;display:flex;align-items:center;gap:12px;margin-bottom:14px;
+}
+.month-label::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--line),var(--line))}
+
+.event{
+  position:relative;margin-bottom:16px;background:#fff;border:1px solid var(--line);
+  border-radius:3px;padding:15px 18px;cursor:pointer;transition:.18s;
+  animation:rise .5s both;
+}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.event:hover{transform:translateX(3px);box-shadow:-4px 4px 0 rgba(26,20,16,.08);border-color:var(--ink)}
+.event::before{
+  content:"";position:absolute;left:-23px;top:20px;width:13px;height:13px;border-radius:50%;
+  background:var(--paper);border:3px solid var(--stage,#999);
+}
+.event-top{display:flex;align-items:center;gap:10px;margin-bottom:7px;flex-wrap:wrap}
+.stage-badge{
+  font-size:11px;font-weight:700;padding:3px 10px;border-radius:3px;color:#fff;letter-spacing:.06em;
+  background:var(--stage,#999);
+}
+.event-date{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+.event-ministry{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:2px 8px;border-radius:3px;margin-left:auto}
+.event h3{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:600;line-height:1.45;letter-spacing:.02em}
+.event .gist{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.65}
+.event .tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11px;color:var(--accent-2);background:rgba(31,71,51,.07);padding:2px 8px;border-radius:3px}
+
+/* progress mini-track inside card */
+.track{display:flex;gap:3px;margin-top:11px}
+.track .seg{flex:1;height:4px;border-radius:2px;background:var(--paper-2)}
+.track .seg.done{background:var(--stage,#999)}
+.track-labels{display:flex;justify-content:space-between;margin-top:4px;font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+
+/* ---------- Sidebar ---------- */
+aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:column;gap:22px}
+@media(max-width:980px){aside{position:static}}
+.panel{border:1px solid var(--line);background:#fff;border-radius:3px}
+.panel-h{font-family:'Shippori Mincho',serif;font-weight:700;font-size:14px;letter-spacing:.14em;padding:11px 16px;border-bottom:1px solid var(--line);background:var(--paper-2);display:flex;align-items:center;gap:8px}
+.panel-h .mark{color:var(--accent);font-size:18px;line-height:0}
+.panel-b{padding:6px 0}
+.feed-item{padding:11px 16px;border-bottom:1px dashed var(--line);cursor:pointer;transition:.15s}
+.feed-item:last-child{border-bottom:none}
+.feed-item:hover{background:var(--paper)}
+.feed-item .ft{display:flex;align-items:center;gap:8px;margin-bottom:3px}
+.feed-item .fdate{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);font-weight:600}
+.feed-item .fname{font-size:13px;font-weight:500;line-height:1.4}
+.feed-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.stat{background:#fff;padding:14px 16px;text-align:center}
+.stat .n{font-family:'Shippori Mincho',serif;font-size:30px;font-weight:800;line-height:1;color:var(--accent)}
+.stat .l{font-size:11px;color:var(--muted);margin-top:5px;letter-spacing:.08em}
+.scope-note{font-size:11px;color:var(--muted);padding:11px 14px;line-height:1.7;border-top:1px solid var(--line)}
+
+/* ---------- Detail modal ---------- */
+.overlay{position:fixed;inset:0;background:rgba(26,20,16,.55);backdrop-filter:blur(3px);z-index:1000;display:none;align-items:center;justify-content:center;padding:24px;animation:fade .2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.overlay.show{display:flex}
+.modal{background:var(--paper);max-width:620px;width:100%;max-height:88vh;overflow-y:auto;border:1px solid var(--ink);border-radius:4px;box-shadow:-8px 8px 0 rgba(26,20,16,.18);animation:rise .3s}
+.modal-h{padding:22px 28px 18px;border-bottom:2px solid var(--ink)}
+.modal-h .close{float:right;font-size:24px;cursor:pointer;line-height:1;color:var(--muted);background:none;border:none}
+.modal-h .close:hover{color:var(--accent)}
+.modal-h h2{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;line-height:1.4;padding-right:30px}
+.modal-h .mmeta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--muted)}
+.modal-b{padding:22px 28px 28px}
+.modal-b .sec-t{font-family:'Shippori Mincho',serif;font-weight:800;font-size:21px;letter-spacing:.04em;color:var(--ink);margin:30px 0 14px;padding-bottom:9px;border-bottom:2px solid var(--ink);display:flex;align-items:center;gap:10px}
+.modal-b .sec-t::before{content:"";width:6px;height:22px;background:var(--accent);border-radius:1px;flex:none}
+.modal-b .sec-t:first-child{margin-top:0}
+.modal-b p{font-size:14px;line-height:1.8}
+
+/* vertical stage timeline in modal */
+.vsteps{margin-top:6px}
+.vstep{display:flex;gap:12px;padding:5px 0;position:relative}
+.vstep .vdate{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);width:78px;flex-shrink:0;text-align:right;padding-top:2px}
+.vstep .vnode{width:13px;flex-shrink:0;display:flex;flex-direction:column;align-items:center}
+.vstep .vdot{width:13px;height:13px;border-radius:50%;border:3px solid var(--line);background:#fff;z-index:2}
+.vstep.done .vdot{border-color:var(--stage);background:var(--stage)}
+.vstep .vline{width:2px;flex:1;background:var(--line);margin-top:-1px}
+.vstep:last-child .vline{display:none}
+.vstep .vbody{padding-bottom:8px}
+.vstep .vlabel{font-size:13px;font-weight:600}
+.vstep.done .vlabel{color:var(--ink)}
+.vstep:not(.done) .vlabel{color:var(--muted)}
+.vstep .vnote{font-size:12px;color:var(--muted)}
+
+.src-note{font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:20px;padding-top:12px;border-top:1px dashed var(--line);line-height:1.7}
+
+
+.empty{text-align:center;padding:60px 20px;color:var(--muted);font-family:'Shippori Mincho',serif}
+
+/* 個人別ありバッジ（一覧カード） */
+.indiv-badge{font-size:11px;color:#fff;background:var(--accent2);padding:2px 9px;border-radius:3px;font-weight:600;letter-spacing:.02em}
+
+/* ===== 統合モーダルの中身 ===== */
+.mb-plain{font-family:'Shippori Mincho',serif;font-weight:800;font-size:1.5rem;line-height:1.45;margin-bottom:8px}
+.mb-plain .hl{background:linear-gradient(transparent 58%,#f0d49b 58%)}
+/* AI要約ブロック（解釈）＝事実と視覚的に分離 */
+.ai-summary{background:linear-gradient(180deg,#fbf7ef,#f6efe2);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:2px 16px 16px;margin-bottom:20px}
+.ai-banner{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted);letter-spacing:.02em;padding:9px 0 7px;border-bottom:1px dashed var(--line);margin-bottom:4px}
+.ai-banner b{font-size:.76rem;color:var(--ink);font-family:'Zen Kaku Gothic New',sans-serif}
+.ai-pending{font-size:.85rem;color:var(--muted);padding:10px 2px 4px;line-height:1.75}
+.ai-summary.pending{background:linear-gradient(180deg,#f7f7f4,#efefe9);border-left-color:#b9b3a6}
+.ai-banner.pending b{color:var(--muted)}
+.gist-pending{color:var(--muted);font-style:italic;opacity:.9}
+.ai-src{display:inline-block;font-size:.72rem;color:#3a5a72;text-decoration:none;margin-top:8px}
+.ai-src:hover{text-decoration:underline}
+.gp{border:1px solid var(--line);border-radius:5px;background:#fff;padding:10px 12px;margin-top:8px}
+.gp-name{font-weight:700;font-size:.8rem;margin-bottom:5px}
+.arg.pro .gp-name{color:#125e39}.arg.con .gp-name{color:#7a2116}
+.gp-gist{font-size:.82rem;line-height:1.7}
+.gp-src{display:inline-block;font-size:.7rem;color:#3a5a72;text-decoration:none;margin-top:7px}
+.gp-src:hover{text-decoration:underline}
+.fact-tag{display:inline-block;font-size:.62rem;font-family:'JetBrains Mono',monospace;color:var(--accent-2);background:rgba(31,71,51,.09);padding:2px 8px;border-radius:3px;margin-left:9px;letter-spacing:.04em;vertical-align:middle;font-weight:600}
+.mb-formal{font-size:.76rem;color:var(--muted);font-family:'Shippori Mincho',serif;margin-bottom:6px}
+.changed{background:#fff;border:1px solid var(--line);border-radius:4px;padding:14px 16px}
+.changed ul{list-style:none}
+.changed li{font-size:.9rem;padding-left:20px;position:relative;margin:7px 0}
+.changed li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700}
+.issue{background:var(--paper-2);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:12px 15px;margin-bottom:13px}
+.issue p{font-size:.88rem}.issue b{color:var(--accent)}
+.args{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:540px){.args{grid-template-columns:1fr}}
+.arg{border:1px solid var(--line);border-radius:4px;padding:13px;background:#fff}
+.arg.pro{border-top:3px solid var(--s-passed)}.arg.con{border-top:3px solid var(--accent)}
+.arg h4{font-size:.8rem;margin-bottom:8px}.arg.pro h4{color:#125e39}.arg.con h4{color:#7a2116}
+.arg ul{list-style:none}.arg li{font-size:.82rem;line-height:1.55;padding-left:13px;position:relative;margin:6px 0}
+.arg li::before{content:"・";position:absolute;left:0}
+.arg .who{font-size:.67rem;color:#a59c8a;margin-top:9px}
+.neutral{font-size:.74rem;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:4px;padding:9px 12px;margin-top:10px}
+.neutral b{color:var(--ink)}
+
+/* プロセス図（モーダル内・横より縦の簡潔版） */
+.proc-legend{display:flex;gap:13px;font-size:.7rem;color:var(--muted);margin-bottom:14px;flex-wrap:wrap}
+.proc-legend span{display:inline-flex;align-items:center;gap:5px}
+.proc-learn{display:inline-block;margin:13px 0 2px;font-size:.78rem;color:var(--accent-2);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:7px 13px;background:#fff;transition:transform .12s,border-color .12s}
+.proc-learn:hover{border-color:var(--accent-2);transform:translateY(-1px)}
+.pl{width:10px;height:10px;border-radius:50%}.pl.d{background:var(--s-passed)}.pl.n{background:var(--s-review);box-shadow:0 0 0 3px rgba(192,106,31,.2)}.pl.f{background:var(--future,#c9c2b2)}
+.ptl{position:relative;padding-left:30px}
+.ptl::before{content:"";position:absolute;left:9px;top:5px;bottom:24px;width:3px;background:#c9c2b2;border-radius:2px}
+.pstep{position:relative;margin-bottom:13px}
+.pnode{position:absolute;left:-27px;top:1px;width:22px;height:22px;border-radius:50%;background:var(--paper);border:3px solid #c9c2b2;display:flex;align-items:center;justify-content:center;z-index:2}
+.pstep.done .pnode{border-color:var(--s-passed);background:var(--s-passed)}
+.pstep.done .pnode svg{width:10px;height:10px;fill:#fff}.pnode svg{display:none}.pstep.done .pnode svg{display:block}
+.pstep.now .pnode{border-color:var(--s-review);background:var(--s-review);box-shadow:0 0 0 5px rgba(192,106,31,.18)}
+.pbx{background:#fff;border:1px solid var(--line);border-radius:4px;padding:11px 13px}
+.pstep.now .pbx{border-color:var(--s-review);border-width:2px}
+.pstep.future .pbx{background:transparent;border-style:dashed;opacity:.72}
+.ptp{display:flex;align-items:center;gap:7px;flex-wrap:wrap;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.pwhere{font-size:.64rem;font-weight:700;padding:1px 7px;border-radius:99px;background:#eee7d8;color:var(--muted)}
+.pwhere.diet2{background:#e0e9f0;color:#3a5a72}
+.pnm{font-family:'Shippori Mincho',serif;font-weight:700;font-size:.92rem}
+.pdt{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted)}
+/* 開閉シェブロン */
+.pcv{width:18px;height:18px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none;transition:transform .2s;margin-left:4px}
+.pdt + .pcv{margin-left:6px}
+.pcv::before{content:"";width:4px;height:4px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translate(-1px,-1px)}
+.pstep.open .pcv{transform:rotate(180deg)}
+/* 詳細部：デフォルト閉じる */
+.pdetail{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.pstep.open .pdetail{max-height:600px}
+.pdetail-in{padding-top:8px}
+.pds{font-size:.77rem;color:#4a4338}
+.pex{font-size:.75rem;margin-top:7px;padding:7px 10px;border-radius:4px;background:var(--yes-bg,#dcefe2);color:#125e39;border-left:3px solid var(--s-passed)}
+.pjump{display:inline-block;margin-top:7px;font-size:.74rem;font-weight:700;color:var(--accent);text-decoration:none;background:rgba(154,43,30,.07);padding:5px 10px;border-radius:4px}
+.psrc{margin-top:9px;display:flex;flex-direction:column;gap:5px}
+.psrc a{font-size:.74rem;color:#3a5a72;text-decoration:none;display:inline-block}
+.psrc a:hover{text-decoration:underline}
+
+/* 会派別 */
+.tally{display:flex;height:30px;border-radius:4px;overflow:hidden;border:1px solid var(--line);margin-bottom:5px;margin-top:4px}
+.tally .t{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.74rem}
+.tally .ty{background:var(--s-passed)}.tally .tn{background:var(--accent)}
+.htag{font-size:.68rem;color:var(--muted);margin-bottom:10px;font-family:'JetBrains Mono',monospace}
+.hcard{border:1px solid var(--line);border-radius:4px;background:#fff;overflow:hidden;margin-bottom:14px}
+.hch{display:flex;align-items:center;gap:8px;padding:9px 13px;background:var(--paper-2);border-bottom:1px solid var(--line)}
+.hcn{font-family:'Shippori Mincho',serif;font-weight:700;font-size:.94rem}
+.gic{display:inline-flex;gap:2px;align-items:center}.gic i{display:block;background:var(--muted);border-radius:50%;width:6px;height:6px}
+.gic.party i{border-radius:2px;width:13px;height:7px;opacity:.5}
+.gtx{font-size:.66rem;color:var(--muted)}
+.hcb{padding:8px 13px}
+.prow{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.prow:last-child{border-bottom:none}
+.pill{font-weight:800;font-size:.72rem;padding:3px 10px;border-radius:6px;flex:none;min-width:48px;text-align:center}
+.py{background:var(--s-passed);color:#fff}.pn{background:var(--accent);color:#fff}.pm{background:linear-gradient(100deg,var(--s-passed) 48%,var(--accent) 52%);color:#fff}
+.prow .nm{font-weight:700;font-size:.86rem}.prow .ct{margin-left:auto;font-size:.72rem;color:var(--muted)}
+.plock{margin-left:auto;display:flex;align-items:center;gap:4px;font-size:.68rem;color:#a59c8a}
+.plock svg{width:11px;height:11px;fill:#a59c8a}
+
+/* 奥：個人別 */
+.deeper{margin-top:10px;border:1px solid var(--line);border-radius:4px;background:#fff;overflow:hidden}
+.dph{display:flex;align-items:center;gap:9px;padding:12px 14px;cursor:pointer;background:linear-gradient(#fff,#fdfaf3)}
+.dph:hover{background:var(--paper)}
+.dph .dic{width:28px;height:28px;border-radius:7px;background:var(--paper-2);display:flex;align-items:center;justify-content:center;flex:none}
+.dph .dic svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2}
+.dph .dtt{font-family:'Shippori Mincho',serif;font-weight:700;font-size:.92rem}
+.dph .dss{font-size:.7rem;color:var(--muted)}
+.dchev{margin-left:auto;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none;transition:transform .2s,background .15s}
+.dchev::before{content:"";width:5px;height:5px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translate(-1px,-1px)}
+.deeper.open .dchev{transform:rotate(180deg);background:var(--accent)}.deeper.open .dchev::before{border-color:#fff}
+.dpb{max-height:0;overflow:hidden;transition:max-height .35s ease}.deeper.open .dpb{max-height:4000px}
+.pind{border-top:1px solid var(--line)}
+.pih{display:flex;align-items:center;gap:8px;padding:10px 13px;cursor:pointer}.pih:hover{background:var(--paper)}
+.pip{font-weight:800;font-size:.72rem;padding:3px 9px;border-radius:6px;min-width:46px;text-align:center}
+.pin{font-weight:700;font-size:.85rem}.pimini{font-size:.68rem;color:var(--muted)}
+.pichev{margin-left:auto;font-size:.66rem;color:#bbb}
+.pibody{display:none;padding:2px 13px 13px}.pind.open .pibody{display:block}
+.grp{margin-top:9px}.grph{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.grpbar{width:4px;height:13px;border-radius:2px}
+.grp-y .grpbar{background:var(--s-passed)}.grp-n .grpbar{background:var(--accent)}.grp-x .grpbar{background:var(--none,#8a8170)}
+.grpt{font-weight:800;font-size:.78rem}.grp-y .grpt{color:#125e39}.grp-n .grpt{color:#7a2116}.grp-x .grpt{color:#8a8170}
+.grpc{font-size:.7rem;color:var(--muted)}
+.names{display:flex;flex-wrap:wrap;gap:5px}
+.mm{font-size:.81rem;padding:4px 10px;border-radius:7px;background:var(--paper);border:1px solid rgba(0,0,0,.06)}
+.grp-y .mm{color:#125e39}.grp-n .mm{color:#7a2116}.grp-x .mm{color:var(--muted)}
+.mm.cross{box-shadow:0 0 0 2px var(--accent);font-weight:700}.mm.cross .f{font-size:.6rem;color:var(--accent);margin-left:3px}
+.crossnote{font-size:.7rem;color:var(--muted);margin:10px 13px 13px;display:flex;gap:6px;align-items:center}
+.crossnote .sw{width:11px;height:11px;border-radius:4px;background:var(--paper);box-shadow:0 0 0 2px var(--accent);flex:none}
+/* 参院が起立採決＝個別記録なし（衆院の会派態度とは別レベル） */
+.kiritsu-note{font-size:.85rem;line-height:1.7;padding:13px 14px;color:var(--ink)}
+.kiritsu-note b{color:var(--s-passed)}
+
+/* もっと調べる（検索リンク群） */
+.explore{margin-top:14px;background:var(--paper-2);border:1px solid var(--line);border-radius:4px;padding:14px 15px}
+.explore .ex-t{font-family:'Shippori Mincho',serif;font-weight:700;font-size:.92rem;margin-bottom:4px}
+.explore .ex-s{font-size:.74rem;color:var(--muted);margin-bottom:12px}
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:480px){.ex-grid{grid-template-columns:1fr}}
+.ex-btn{display:flex;align-items:center;gap:9px;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:10px 12px;color:var(--ink);transition:transform .12s,box-shadow .12s}
+.ex-btn:hover{transform:translateY(-1px);box-shadow:-2px 2px 0 rgba(26,20,16,.1)}
+.ex-btn .eic{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex:none;font-size:15px}
+.ex-btn .etx{line-height:1.3}
+.ex-btn .ett{font-size:.82rem;font-weight:700}
+.ex-btn .ess{font-size:.66rem;color:var(--muted)}
+/* 検索アイコン：白アイコン＋彩度のあるタイルで統一（公式=和の色、報道/SNS=ブランド色） */
+.ex-btn .eic svg{display:block}
+.eic.gov{background:#1f7a4d}      /* 省庁＝深緑 */
+.eic.src{background:#b08d3c}      /* 会議録＝金茶 */
+.eic.news{background:#3a6ea5}     /* Googleニュース＝青 */
+.eic.x{background:#1a1410}        /* X＝墨 */
+.eic.yt{background:#cc2b1f}       /* YouTube＝赤 */
+.eic.tt{background:#15171b}       /* TikTok＝黒 */
+.eic.ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}  /* Instagram＝グラデ */
+
+/* AIに聞く */
+.askai{margin-top:12px;border:1px solid var(--line);border-radius:4px;background:#fff;overflow:hidden}
+.askai-h{display:flex;align-items:center;gap:10px;padding:13px 15px;cursor:pointer;background:linear-gradient(#fff,#fdfaf3)}
+.askai-h:hover{background:var(--paper)}
+.askai-h .aic{width:30px;height:30px;border-radius:7px;background:#f0e6d8;display:flex;align-items:center;justify-content:center;flex:none;font-size:16px}
+.askai-h .att{font-family:'Shippori Mincho',serif;font-weight:700;font-size:.94rem}
+.askai-h .ass{font-size:.7rem;color:var(--muted)}
+.askai-h .achev{margin-left:auto;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none;transition:transform .2s,background .15s}
+.askai-h .achev::before{content:"";width:5px;height:5px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg) translate(-1px,-1px)}
+.askai.open .achev{transform:rotate(180deg);background:var(--accent)}.askai.open .achev::before{border-color:#fff}
+.askai-b{max-height:0;overflow:hidden;transition:max-height .35s ease}.askai.open .askai-b{max-height:1200px}
+.askai-in{padding:0 15px 15px}
+.ptabs{display:flex;gap:5px;flex-wrap:wrap;margin-top:12px}
+.ptab{font-size:.76rem;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;font-family:inherit;transition:.13s}
+.ptab:hover{border-color:var(--accent);color:var(--accent)}
+.ptab.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.prompt-box{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:12px 13px;font-size:.8rem;line-height:1.7;color:#2a2620;white-space:pre-wrap;margin:10px 0;max-height:230px;overflow-y:auto;font-family:'Zen Kaku Gothic New',sans-serif}
+.copy-btn{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:var(--paper);border:none;border-radius:6px;padding:10px 16px;font-size:.84rem;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s}
+.copy-btn:hover{background:#000}
+.copy-btn.copied{background:var(--s-passed)}
+.ai-jump-label{font-size:.72rem;color:var(--muted);margin:14px 0 8px}
+.ai-jumps{display:flex;gap:8px;flex-wrap:wrap}
+.ai-jump{display:inline-flex;align-items:center;gap:7px;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:8px 13px;font-size:.8rem;font-weight:600;color:var(--ink);background:#fff;transition:transform .12s,box-shadow .12s;cursor:pointer;font-family:inherit}
+.ai-jump:hover{transform:translateY(-1px);box-shadow:-2px 2px 0 rgba(26,20,16,.1)}
+.ai-jump .aj-ic{width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+.aj-gpt{background:#10a37f}.aj-claude{background:#d97757}.aj-gemini{background:#4285f4}.aj-perplexity{background:#20808d}
+.askai-note{font-size:.68rem;color:var(--muted);margin-top:12px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<nav class="page-tabs">
+  <div class="page-tabs-in">
+    <span class="pt-tabs">
+      <a href="index.html" class="active" aria-current="page">法案を見る</a>
+      <a href="houritsu-dekirumade.html">法律ができるまで</a>
+    </span>
+    <span class="pt-soc">
+      <a href="https://note.com/seiji_mieru" target="_blank" rel="noopener">note ↗</a>
+      <a href="https://x.com/seiji_mieru" target="_blank" rel="noopener" aria-label="X（@seiji_mieru）"><svg class="si" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg></a>
+    </span>
+  </div>
+</nav>
+
+<header>
+  <div class="masthead">
+    <div class="brand">
+      <span class="kicker">Legislative Timeline · 立法情報</span>
+      <h1>立法タイムライン</h1>
+      <span class="sub">法案の流れと、だれが賛成したかを時系列で</span>
+    </div>
+    <div class="meta">
+      <div id="meta-diet">第 <b>—</b> 回国会</div>
+      <div>収録議案 <b id="meta-count">—</b> 件</div>
+      <div class="live">データ最終更新 <span id="meta-updated">—</span></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="text" placeholder="法案名・キーワードで検索（例：個人情報、エネルギー、税）">
+    </div>
+    <div class="filter-group">
+      <select id="fMinistry"><option value="">全府省庁</option></select>
+      <select id="fField"><option value="">全分野</option></select>
+      <select id="fDiet"><option value="">全回次</option></select>
+    </div>
+  </div>
+
+  <div class="legend" id="legend">
+    <span class="lbl">STAGE</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <main>
+    <div class="tl-head">
+      <h2>時系列フィード</h2>
+      <span class="count" id="count"></span>
+    </div>
+    <div id="timeline"></div>
+  </main>
+
+  <aside>
+    <div class="panel">
+      <div class="panel-h"><span class="mark">●</span> いま動いた法案</div>
+      <div class="panel-b" id="feed"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="mark">▦</span> 収録データ</div>
+      <div class="stat-grid">
+        <div class="stat"><div class="n" id="stat-bills">—</div><div class="l">成立法案</div></div>
+        <div class="stat"><div class="n" id="stat-individual">—</div><div class="l">個別票あり</div></div>
+        <div class="stat"><div class="n" id="stat-ryoron">—</div><div class="l">両論あり</div></div>
+        <div class="stat"><div class="n" id="stat-diets">—</div><div class="l">収録国会</div></div>
+      </div>
+      <div class="scope-note" id="scope-note"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="mark">◆</span> データソース</div>
+      <div class="panel-b" style="padding:14px 16px;font-size:12px;color:var(--muted);line-height:1.8">
+        e-Gov法令API v2 ／ 衆議院・参議院 議案DB ／ 内閣官房 国会提出法案<br>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:10px">出典：政府標準利用規約 2.0 に基づく</span>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<footer class="site-foot">
+  <div class="site-foot-in">
+    <span class="foot-name">政治見える化プロジェクト</span>
+    <span class="foot-soc">
+      <a href="https://note.com/seiji_mieru" target="_blank" rel="noopener">note ↗</a>
+      <a href="https://x.com/seiji_mieru" target="_blank" rel="noopener" aria-label="X（@seiji_mieru）"><svg class="si" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg>@seiji_mieru ↗</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+/* ============ サンプルデータ ============
+  実運用ではこの配列を bills.json（GitHub Actionsが生成）に置き換える。
+  stages: 7段階。各段階は {date} があれば「到達済み」。null は未到達。
+  STAGE順: plan→cabinet→submit→review→passed→promulgated→enforced
+*/
+const STAGES = [
+  {key:'plan',        label:'提出予定',   short:'予定', color:'var(--s-plan)'},
+  {key:'cabinet',     label:'閣議決定',   short:'閣議', color:'var(--s-cabinet)'},
+  {key:'submit',      label:'国会提出',   short:'提出', color:'var(--s-submit)'},
+  {key:'review',      label:'審議中',     short:'審議', color:'var(--s-review)'},
+  {key:'passed',      label:'成立',       short:'成立', color:'var(--s-passed)'},
+  {key:'promulgated', label:'公布',       short:'公布', color:'var(--s-promulgated)'},
+  {key:'enforced',    label:'施行',       short:'施行', color:'var(--s-enforced)'},
+];
+const stageColor = k => (STAGES.find(s=>s.key===k)||{}).color || '#999';
+const stageLabel = k => (STAGES.find(s=>s.key===k)||{}).label || k;
+
+let BILLS = [];
+let GENERATED_AT = null;   /* データ生成日（立法日と分離した「データ最終更新」表示用） */
+
+/* ---- build month-grouped events from latest reached stage ---- */
+function latestStage(b){
+  let last=null;
+  for(const s of STAGES){ if(b.stages[s.key]) last=s.key; }
+  return last;
+}
+function latestDate(b){ const k=latestStage(b); return k? b.stages[k] : '0000-00-00'; }
+
+/* event list = each bill represented by its most recent stage event */
+/* 公開対象＝draftでない法案だけ（draftはデータには残すが表示しない） */
+function pub(){ return BILLS.filter(b=>!b.draft); }
+
+function buildEvents(){
+  return pub().map(b=>{
+    const k=latestStage(b);
+    return {bill:b, stage:k, date:b.stages[k]};
+  }).sort((a,b)=> b.date.localeCompare(a.date));
+}
+
+const fmt = d => { if(!d) return '—'; const [y,m,da]=d.split('-'); return `${y}.${m}.${da}`; };
+const monthKey = d => d.slice(0,7);
+const monthJP = d => { const [y,m]=d.split('-'); return `${y}年 ${parseInt(m)}月`; };
+
+/* ---- state ---- */
+const state={q:'',ministry:'',field:'',diet:'',stages:new Set(STAGES.map(s=>s.key))};
+
+/* ---- populate filters & legend ---- */
+function uniq(arr){return [...new Set(arr)]}
+function initFilters(){
+  uniq(pub().map(b=>b.ministry)).sort().forEach(m=>addOpt('fMinistry',m));
+  uniq(pub().map(b=>b.field)).sort().forEach(f=>addOpt('fField',f));
+  uniq(pub().map(b=>b.diet)).sort().forEach(d=>addOpt('fDiet',d));
+  const lg=document.getElementById('legend');
+  STAGES.forEach(s=>{
+    const c=document.createElement('span');
+    c.className='chip active'; c.dataset.stage=s.key; c.dataset.on='true';
+    c.style.color=s.color;
+    c.innerHTML=`<span class="dot" style="background:${s.color}"></span>${s.label}`;
+    c.onclick=()=>{ if(state.stages.has(s.key)){state.stages.delete(s.key);c.dataset.on='false';c.classList.remove('active')} else {state.stages.add(s.key);c.dataset.on='true';c.classList.add('active')} render(); };
+    lg.appendChild(c);
+  });
+}
+function addOpt(id,v){const o=document.createElement('option');o.value=v;o.textContent=v;document.getElementById(id).appendChild(o)}
+
+/* ---- render timeline ---- */
+function passesFilter(b){
+  if(state.ministry && b.ministry!==state.ministry) return false;
+  if(state.field && b.field!==state.field) return false;
+  if(state.diet && b.diet!==state.diet) return false;
+  if(state.q){
+    const hay=(b.name+(b.gist||'')+b.tags.join('')+b.ministry).toLowerCase();
+    if(!hay.includes(state.q.toLowerCase())) return false;
+  }
+  if(!state.stages.has(latestStage(b))) return false;
+  return true;
+}
+
+function render(){
+  const events=buildEvents().filter(e=>passesFilter(e.bill));
+  const tl=document.getElementById('timeline');
+  document.getElementById('count').textContent=`${events.length} 件表示`;
+  tl.innerHTML='';
+  if(!events.length){ tl.innerHTML='<div class="empty">該当する法案がありません</div>'; return; }
+
+  let curMonth=null, group=null, delay=0;
+  events.forEach(e=>{
+    const mk=monthKey(e.date);
+    if(mk!==curMonth){
+      curMonth=mk;
+      const mg=document.createElement('div'); mg.className='month-group';
+      mg.innerHTML=`<div class="month-label">${monthJP(e.date)}</div>`;
+      group=document.createElement('div'); group.className='timeline';
+      mg.appendChild(group); tl.appendChild(mg);
+    }
+    group.appendChild(eventCard(e, delay)); delay+=0.04;
+  });
+}
+
+function eventCard(e, delay){
+  const b=e.bill, col=stageColor(e.stage);
+  const el=document.createElement('div');
+  el.className='event'; el.style.setProperty('--stage',col);
+  el.style.animationDelay=delay+'s';
+  // mini progress
+  let reached=0; STAGES.forEach(s=>{ if(b.stages[s.key]) reached++; });
+  const segs=STAGES.map((s,i)=>`<div class="seg ${b.stages[s.key]?'done':''}"></div>`).join('');
+  const indivBadge = b.hasIndividual ? `<span class="indiv-badge">👤 議員ひとりずつ見られる</span>` : '';
+  el.innerHTML=`
+    <div class="event-top">
+      <span class="stage-badge">${stageLabel(e.stage)}</span>
+      <span class="event-date">${fmt(e.date)}</span>
+      <span class="event-ministry">${b.ministry}</span>
+    </div>
+    <h3>${b.name}</h3>
+    <div class="gist">${b.gist || '<span class="gist-pending">やさしい要約は準備中（会議録の公開待ち）</span>'}</div>
+    <div class="tags">${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')} ${indivBadge}</div>
+    <div class="track">${segs}</div>
+    <div class="track-labels">${STAGES.map(s=>`<span>${s.short}</span>`).join('')}</div>
+  `;
+  el.onclick=()=>openModal(b);
+  return el;
+}
+
+/* ---- feed (recently moved) ---- */
+function renderFeed(){
+  const recent=buildEvents().slice(0,7);
+  const f=document.getElementById('feed');
+  f.innerHTML=recent.map(e=>`
+    <div class="feed-item" data-id="${e.bill.id}">
+      <div class="ft">
+        <span class="feed-dot" style="background:${stageColor(e.stage)}"></span>
+        <span class="fdate">${fmt(e.date)}</span>
+        <span style="font-size:11px;color:var(--muted)">${stageLabel(e.stage)}</span>
+      </div>
+      <div class="fname">${e.bill.name.replace(/の一部を改正する法律案|に関する法律案|法律案/,'')}…</div>
+    </div>`).join('');
+  f.querySelectorAll('.feed-item').forEach(it=>it.onclick=()=>{
+    openModal(BILLS.find(b=>b.id===it.dataset.id));
+  });
+}
+
+/* ---- modal ---- */
+function openModal(b){
+  const m=document.getElementById('modal');
+  if(b.ai && b.votes){ m.innerHTML=richModal(b); window.__prompts=buildPrompts(b); bindDeeper(); }
+  else { m.innerHTML=simpleModal(b); }
+  m.scrollTop=0;
+  document.getElementById('overlay').classList.add('show');
+  if(b&&b.id) location.hash='#/bill/'+encodeURIComponent(b.id);   // 共有できる深リンク
+}
+
+function richModal(b){
+  // プロセス図
+  const procSteps=(b.process||[]).map((p,i)=>{
+    const cls = p.now?'now open':'done';
+    const extra = p.extra?`<div class="pex">${p.extra}</div>`:'';
+    const jump = p.jump?`<a class="pjump" href="#" onclick="scrollHouse('${p.jump}');return false;">▼ ${p.jump==='san'?'参議院':'衆議院'}での賛否を見る</a>`:'';
+    const src = p.src?`<div class="psrc">${p.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">📄 ${s.t} ↗</a>`).join('')}</div>`:'';
+    return `<div class="pstep ${cls}"><div class="pnode"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z"/></svg></div>
+      <div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere ${p.cls}">${p.where}</span><span class="pnm">${p.name}</span>${p.date?`<span class="pdt">${p.date}</span>`:''}<span class="pcv"></span></div>
+      <div class="pdetail"><div class="pdetail-in"><div class="pds">${p.desc}</div>${extra}${jump}${src}</div></div></div></div>`;
+  }).join('');
+  // 公布・施行は stages から描画（公布日があれば「公布済」。予算は法律でないので省略）
+  const ymd=s=>s?s.split('-').map(Number).join('/'):'';
+  const prom=b.stages&&b.stages.promulgated, enf=b.stages&&b.stages.enforced;
+  const dNode=`<div class="pnode"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z"/></svg></div>`;
+  const futureSteps = b.type==='予算' ? '' : `
+    <div class="pstep ${prom?'done':'future'}">${prom?dNode:'<div class="pnode"></div>'}<div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere">政府</span><span class="pnm">公布</span>${prom?`<span class="pdt">${ymd(prom)}</span>`:''}<span class="pcv"></span></div><div class="pdetail"><div class="pdetail-in"><div class="pds">成立した法律を正式に世に知らせる手続きです。${b.lawNumber?`（法律第${b.lawNumber}号）`:''}</div>${b.egovUrl?`<div class="psrc"><a href="${b.egovUrl}" target="_blank" rel="noopener">📄 e-Gov法令検索で見る ↗</a></div>`:''}</div></div></div></div>
+    <div class="pstep ${enf?'done':'future'}">${enf?dNode:'<div class="pnode"></div>'}<div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere">—</span><span class="pnm">施行（実際に効力を持つ）</span>${enf?`<span class="pdt">${ymd(enf)}</span>`:''}<span class="pcv"></span></div><div class="pdetail"><div class="pdetail-in"><div class="pds">公布後、決められた日から暮らしに適用されます。項目ごとに段階的に始まることがあります。</div></div></div></div></div>`;
+
+  // 個人別（参院・各会派の中に畳む）
+  const san=b.votes.san;
+  const shu=b.votes.shu;
+  const shuYes=shu.parties.filter(p=>p.stance==='y').length;
+  const shuNo=shu.parties.filter(p=>p.stance==='n').length;
+  function indHTML(p){
+    if(!p.members) return '';
+    const mem=p.members;
+    const chip=(n,extra='')=>`<span class="mm${extra?' cross':''}">${n}${extra?`<span class="f">${extra}</span>`:''}</span>`;
+    let grps='';
+    if(mem.yes&&mem.yes.length){ grps+=`<div class="grp grp-y"><div class="grph"><span class="grpbar"></span><span class="grpt">賛成</span><span class="grpc">${mem.yes.length+(mem.yesMore||0)}名</span></div><div class="names">${mem.yes.map(n=>chip(n)).join('')}${mem.yesMore?`<span class="mm" style="opacity:.5">＋ほか${mem.yesMore}名</span>`:''}</div></div>`; }
+    if(mem.no&&mem.no.length){ grps+=`<div class="grp grp-n"><div class="grph"><span class="grpbar"></span><span class="grpt">反対</span><span class="grpc">${mem.no.length+(mem.noMore||0)}名</span></div><div class="names">${mem.no.map(n=>chip(n)).join('')}${mem.noMore?`<span class="mm" style="opacity:.5">＋ほか${mem.noMore}名</span>`:''}</div></div>`; }
+    const noneList=[...(mem.none||[]),...(mem.noneCross||[])];
+    if(noneList.length){ grps+=`<div class="grp grp-x"><div class="grph"><span class="grpbar"></span><span class="grpt">投票なし</span><span class="grpc">${noneList.length}名</span></div><div class="names">${(mem.none||[]).map(n=>chip(n)).join('')}${(mem.noneCross||[]).map(n=>chip(n,'会派の多数と違う')).join('')}</div></div>`; }
+    return grps;
+  }
+
+  // 参院 会派の行（クリックで個人別が中に開く）
+  const sanRows=(san.parties||[]).map((p,i)=>{
+    const pillCls=p.stance==='y'?'py':p.stance==='n'?'pn':'pm';
+    const label=p.stance==='y'?'賛成':p.stance==='n'?'反対':'分裂';
+    const ind=indHTML(p);
+    if(ind){
+      return `<div class="pind"><div class="pih" onclick="this.parentElement.classList.toggle('open')"><span class="pip ${pillCls}">${label}</span><span><span class="pin">${p.name}</span> <span class="pimini">${p.count}</span></span><span class="pichev">▼ ひとりずつ</span></div><div class="pibody">${ind}</div></div>`;
+    }
+    return `<div class="prow"><span class="pill ${pillCls}">${label}</span><span class="nm">${p.name}</span><span class="ct">${p.count}</span></div>`;
+  }).join('');
+
+  // 衆院 会派別（個人記録なし）
+  const shuRows=shu.parties.map(p=>{
+    const pillCls=p.stance==='y'?'py':'pn';
+    const label=p.stance==='y'?'賛成':'反対';
+    return `<div class="prow"><span class="pill ${pillCls}">${label}</span><span class="nm">${p.name}</span><span class="plock"><svg viewBox="0 0 24 24"><path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5z"/></svg>個人記録なし</span></div>`;
+  }).join('');
+
+  return `
+    <div class="modal-h">
+      <button class="close" onclick="closeModal()">×</button>
+      <h2 style="font-size:18px">${b.name}</h2>
+      <div class="mmeta"><span>📋 ${b.diet}</span><span>🏛 ${b.ministry}</span><span>🗂 ${b.field}</span><span style="color:var(--s-passed);font-weight:700">成立</span></div>
+    </div>
+    <div class="modal-b">
+      ${b.ai.plain ? `<div class="ai-summary">
+        <div class="ai-banner">🤖 <b>AIによる要約</b> 会議録をもとに自動作成・正確には原文リンクでご確認ください</div>
+        <div class="mb-plain">${b.ai.plain}</div>
+        <div class="sec-t">ざっくり、何が変わる？</div>
+        <div class="changed"><ul>${b.ai.changed.map(c=>`<li>${c}</li>`).join('')}</ul></div>
+        <a class="ai-src" href="${b.ai.summarySource.url}" target="_blank" rel="noopener">📄 ${b.ai.summarySource.label} ↗</a>${b.ai.issue ? `
+        <div class="sec-t">何をめぐって賛否が分かれたか</div>
+        <div class="issue"><p>${b.ai.issue}</p></div>
+        <div class="args">
+          <div class="arg pro"><h4>◎ 賛成する立場</h4>${b.ai.pro.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">📄 ${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
+          <div class="arg con"><h4>● 反対する立場</h4>${b.ai.con.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">📄 ${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
+        </div>` : ''}
+      </div>` : `<div class="ai-summary pending">
+        <div class="ai-banner pending">📝 <b>やさしい要約・両論は準備中</b></div>
+        <div class="ai-pending">この法案の会議録（委員長報告）はまだ公開されていません。やさしい要約と賛否の理由は、会議録が公開され次第、自動で追加されます。<br>下の<b>賛否・プロセス・出典</b>はすでに確定しています。</div>
+      </div>`}
+
+      ${b.process ? `<div class="sec-t">どこを通って成立したか<span class="fact-tag">公式記録</span></div>
+      <div class="proc-legend"><span><span class="pl d"></span>通過した</span><span><span class="pl n"></span>いまここ</span><span><span class="pl f"></span>この先の一般的な流れ</span></div>
+      <div class="ptl">${procSteps}${futureSteps}</div>
+      <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">📖 立法の流れ（法律ができるまで）を、やさしく知る ↗</a>` : ''}
+
+      <div class="sec-t">どの政党が賛成したか<span class="fact-tag">公式記録</span></div>
+
+      <div class="hcard" id="house-shu">
+        <div class="hch"><span class="hcn">衆議院</span><span class="gic party"><i></i></span><span class="gtx">会派ごと・個人記録なし</span></div>
+        <div style="padding:10px 13px 2px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap">
+            <span style="font-family:'Shippori Mincho',serif;font-weight:700;font-size:.95rem">${shu.date}　${shu.result}</span>
+            <span style="font-size:.72rem;color:var(--muted)"><b style="color:var(--s-passed)">賛成 ${shuYes}</b> ／ <b style="color:var(--accent)">反対 ${shuNo}</b> 会派</span>
+          </div>
+          <div class="htag" style="margin-top:6px">衆院の本会議は会派ごとの賛否まで（議員ひとりずつの記録はありません）</div>
+        </div>
+        <div class="hcb">${shuRows}</div>
+      </div>
+
+      ${san.recorded===false ? `<div class="hcard" id="house-san">
+        <div class="hch"><span class="hcn">参議院</span><span class="gtx">起立採決・個別の記録なし</span></div>
+        <div class="kiritsu-note">起立採決で<b>${san.result||'可決'}</b>（議員ごとの賛否は記録されていません）</div>
+      </div>` : `<div class="hcard" id="house-san">
+        <div class="hch"><span class="hcn">参議院</span><span class="gic"><i></i><i></i><i></i></span><span class="gtx">ひとりずつ記録あり</span></div>
+        <div style="padding:0 13px"><div class="tally"><span class="t ty" style="width:${Math.round(san.yes/san.total*100)}%">賛成 ${san.yes}</span><span class="t tn" style="width:${Math.round(san.no/san.total*100)}%">反対 ${san.no}</span></div><div class="htag">${san.date} 投票総数${san.total}</div></div>
+        <div class="hcb">${sanRows}</div>
+        <div class="htag" style="padding:2px 13px 12px">政党をタップすると、議員ひとりずつの賛否が見られます。</div>
+      </div>`}
+
+      <div class="explore">
+        <div class="ex-t">この法案を自分で調べる</div>
+        <div class="ex-s">外部サービスへ移動します。当サイトが記事を選ぶことはしません。</div>
+        <div class="ex-grid">
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent((b.nickname||b.name)+' '+b.ministry)}">
+            <span class="eic gov"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M12 2 2 7v2h20V7L12 2zM5 11v6H4v2h16v-2h-1v-6h-2v6h-2v-6h-2v6h-2v-6H9v6H7v-6H5z"/></svg></span><span class="etx"><span class="ett">公式の解説を読む</span><br><span class="ess">省庁の一次資料 ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://kokkai.ndl.go.jp/#/simple?keyword=${encodeURIComponent(b.nickname||b.name)}">
+            <span class="eic src"><svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V7h3.5L13 3.5zM8 11h8v1.6H8V11zm0 3.2h8v1.6H8v-1.6zm0-6.4h3v1.6H8V7.8z"/></svg></span><span class="etx"><span class="ett">国会の議論を読む</span><br><span class="ess">会議録検索 ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://news.google.com/search?q=${encodeURIComponent(b.nickname||b.name)}&hl=ja">
+            <span class="eic news"><svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M20 3H4a1 1 0 0 0-1 1v14a3 3 0 0 0 3 3h13a2 2 0 0 0 2-2V4a1 1 0 0 0-1-1zM7 7h6v4H7V7zm0 6h10v1.5H7V13zm0 3.5h10V18H7v-1.5zM15 7h2v1.5h-2V7zm0 3h2v1.5h-2V10z"/></svg></span><span class="etx"><span class="ett">ニュースで読む</span><br><span class="ess">Googleニュース ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://x.com/search?q=${encodeURIComponent(b.nickname||b.name)}&f=live">
+            <span class="eic x"><svg viewBox="0 0 24 24" width="13" height="13" fill="#fff"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg></span><span class="etx"><span class="ett">Xで反応を見る</span><br><span class="ess">いまの声 ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent(b.nickname||b.name)}">
+            <span class="eic yt"><svg viewBox="0 0 24 24" width="17" height="17" fill="#fff"><path d="M23 12s0-3.3-.4-4.8a2.5 2.5 0 0 0-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.4A2.5 2.5 0 0 0 1.4 7.2C1 8.7 1 12 1 12s0 3.3.4 4.8a2.5 2.5 0 0 0 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.5.4-4.8.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/></svg></span><span class="etx"><span class="ett">動画で見る</span><br><span class="ess">YouTube ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://www.tiktok.com/search?q=${encodeURIComponent(b.nickname||b.name)}">
+            <span class="eic tt"><svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M16.5 3c.4 2.4 1.8 3.9 4.1 4.1v2.8c-1.4 0-2.7-.4-4-1.1v6.2c0 3.3-2.6 5.9-5.9 5.9S4.8 18.3 4.8 15s2.6-5.9 5.9-5.9c.3 0 .6 0 .9.1v2.9c-.3-.1-.6-.2-.9-.2-1.7 0-3 1.4-3 3.1s1.3 3.1 3 3.1 3-1.4 3-3.1V3h2.8z"/></svg></span><span class="etx"><span class="ett">短い動画で見る</span><br><span class="ess">TikTok ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://www.instagram.com/explore/search/keyword/?q=${encodeURIComponent(b.nickname||b.name)}">
+            <span class="eic ig"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="#fff" stroke="none"/></svg></span><span class="etx"><span class="ett">投稿を見る</span><br><span class="ess">Instagram ↗</span></span></a>
+        </div>
+      </div>
+
+      <div class="askai" id="askai">
+        <div class="askai-h" onclick="document.getElementById('askai').classList.toggle('open')">
+          <span class="aic">🤖</span>
+          <span><span class="att">AIに聞いてみる</span><br><span class="ass">目的に合わせた質問の雛形を用意しました</span></span>
+          <span class="achev"></span>
+        </div>
+        <div class="askai-b">
+          <div class="askai-in">
+            <div class="ptabs">
+              <button class="ptab on" data-k="summary" onclick="switchPrompt('summary')">要約して</button>
+              <button class="ptab" data-k="both" onclick="switchPrompt('both')">賛成と反対</button>
+              <button class="ptab" data-k="pro" onclick="switchPrompt('pro')">賛成側を詳しく</button>
+              <button class="ptab" data-k="con" onclick="switchPrompt('con')">反対側を詳しく</button>
+              <button class="ptab" data-k="background" onclick="switchPrompt('background')">経緯・背景</button>
+            </div>
+            <div class="prompt-box" id="prompt-text">${buildPrompts(b).summary.text}</div>
+            <button class="copy-btn" onclick="copyPrompt(this)">📋 <span class="cl">この質問をコピー</span></button>
+            <div class="ai-jump-label">コピーして、そのままAIを開く（開いた画面に貼り付け）</div>
+            <div class="ai-jumps">
+              <button class="ai-jump" onclick="copyAndOpen('https://chatgpt.com/')"><span class="aj-ic aj-gpt">G</span>ChatGPT</button>
+              <button class="ai-jump" onclick="copyAndOpen('https://claude.ai/new')"><span class="aj-ic aj-claude">C</span>Claude</button>
+              <button class="ai-jump" onclick="copyAndOpen('https://gemini.google.com/app')"><span class="aj-ic aj-gemini">G</span>Gemini</button>
+              <button class="ai-jump" onclick="copyAndOpen('https://www.perplexity.ai/')"><span class="aj-ic aj-perplexity">P</span>Perplexity</button>
+            </div>
+            <div class="askai-note">※ ボタンを押すと質問をコピーしてからAIが開きます。貼り付けて送信してください。AIの回答は誤ることがあるので、上の検索ボタンから公式・報道で確認を。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="src-note">
+        出典（一次資料）: 参議院 本会議投票結果（議員別）／衆議院 会派態度・進行日付（スマートニュース メディア研究所 議案DB・MIT）／やさしい要約・賛否の理由は国会会議録をもとにAIが作成<br>
+        事実（賛否数・議員名・日付・プロセス）は公式記録、🤖印の要約はAI生成です。
+      </div>
+    </div>`;
+}
+
+function scrollHouse(which){
+  const el=document.getElementById('house-'+which);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function bindDeeper(){ /* placeholder for any post-render binding */ }
+
+/* AIに聞く：目的別の質問雛形 */
+function buildPrompts(b){
+  const nick = b.nickname ? `（通称：${b.nickname}）\n` : '';   // 通称が無い法案は行ごと省く（正式名称だけで成立）
+  const head=`次の日本の法律について教えてください。\n\n法律名：${b.name}\n${nick}\n`;
+  return {
+    summary:{
+      label:'要約して',
+      text:head+`# お願い
+- この法律が「何のための法律か」を、政治にくわしくない人にも分かるように3〜4行で説明してください
+- 主な変更点を、かんたんな言葉で3つほど挙げてください
+- 専門用語にはひとこと説明を添えてください
+- 確実でない点や古い可能性のある点は「分からない」と述べ、できれば出典を示してください`
+    },
+    both:{
+      label:'賛成と反対',
+      text:head+`# お願い
+- この法律に「賛成する立場」と「反対する立場」の主な意見を、どちらにも偏らず両方、同じくらいの分量で挙げてください
+- それぞれ「誰の主張か（政党・団体など）」を添えてください
+- できるだけ出典（公式サイト・報道）を示してください
+- どちらが正しいという結論は出さず、判断は私にゆだねてください`
+    },
+    pro:{
+      label:'賛成側を詳しく',
+      text:head+`# お願い
+- この法律に「賛成・推進する立場」の論拠を、できるだけ具体的に説明してください
+- どの政党・団体がどんな理由で支持しているかを示してください
+- ただし、その立場への批判や反論も最後に簡単に添えて、一方的にならないようにしてください
+- 出典を示し、確実でない点は「分からない」と述べてください`
+    },
+    con:{
+      label:'反対側を詳しく',
+      text:head+`# お願い
+- この法律に「反対・慎重な立場」の論拠を、できるだけ具体的に説明してください
+- どの政党・団体がどんな理由で反対しているかを示してください
+- ただし、その立場への反論や、賛成側の言い分も最後に簡単に添えて、一方的にならないようにしてください
+- 出典を示し、確実でない点は「分からない」と述べてください`
+    },
+    background:{
+      label:'経緯・背景',
+      text:head+`# お願い
+- この法律が提出された背景・経緯を教えてください
+- いつ頃から議論され、何がきっかけだったかを説明してください
+- どの省庁や政党が推進したかを、どちらの立場にも偏らず示してください
+- 出典を示し、確実でない点は「分からない」と述べてください`
+    }
+  };
+}
+function switchPrompt(key){
+  const ps=window.__prompts; if(!ps) return;
+  document.getElementById('prompt-text').textContent=ps[key].text;
+  document.querySelectorAll('.ptab').forEach(t=>t.classList.toggle('on',t.dataset.k===key));
+}
+function copyPrompt(btn){
+  const text=document.getElementById('prompt-text').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.classList.add('copied'); const o=btn.querySelector('.cl'); const old=o.textContent; o.textContent='コピーしました';
+    setTimeout(()=>{btn.classList.remove('copied');o.textContent=old;},1800);
+  }).catch(()=>{ alert('コピーできませんでした。雛形を長押しして選択してください。'); });
+}
+/* コピーしてからAIを開く（全AIで確実に動く方式） */
+function copyAndOpen(url){
+  const text=document.getElementById('prompt-text').textContent;
+  navigator.clipboard.writeText(text).finally(()=>{ window.open(url,'_blank','noopener'); });
+}
+
+function simpleModal(b){
+  const steps=STAGES.map(s=>{
+    const done=!!b.stages[s.key];
+    const note=b.notes&&b.notes[s.key]?`<div class="vnote">${b.notes[s.key]}</div>`:'';
+    return `<div class="vstep ${done?'done':''}" style="--stage:${s.color}">
+      <div class="vdate">${done?fmt(b.stages[s.key]):'—'}</div>
+      <div class="vnode"><div class="vdot"></div><div class="vline"></div></div>
+      <div class="vbody"><div class="vlabel">${s.label}</div>${note}</div>
+    </div>`;
+  }).join('');
+  return `
+    <div class="modal-h">
+      <button class="close" onclick="closeModal()">×</button>
+      <h2>${b.name}</h2>
+      <div class="mmeta">
+        <span>📋 ${b.diet}</span><span>🏛 ${b.ministry}</span><span>🗂 ${b.field}</span>
+      </div>
+    </div>
+    <div class="modal-b">
+      <div class="sec-t">概要</div>
+      <p>${b.gist||''}</p>
+      <div class="sec-t">立法プロセス</div>
+      <div class="vsteps">${steps}</div>
+      <div class="sec-t">関連キーワード</div>
+      <div class="tags" style="margin-top:4px">${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')}</div>
+      <div class="src-note">
+        議案ID: ${b.id}<br>
+        出典: 衆議院・参議院 議案データベース／内閣官房 国会提出法案／e-Gov法令検索<br>
+        ※ 本モックのデータはデザイン確認用のサンプルです
+      </div>
+    </div>`;
+}
+function closeModal(){
+  document.getElementById('overlay').classList.remove('show');
+  if(location.hash.indexOf('#/bill/')===0) history.replaceState(null,'',location.pathname+location.search);
+}
+/* 深リンク #/bill/{id} で該当法案を開く（議員ページ/houan-timeline からの被リンク・共有用） */
+function openFromHash(){
+  const mm=location.hash.match(/^#\/bill\/(.+)$/);
+  if(mm){ const b=BILLS.find(x=>x.id===decodeURIComponent(mm[1])); if(b) openModal(b); }
+}
+window.addEventListener('hashchange',openFromHash);
+document.getElementById('overlay').onclick=e=>{if(e.target.id==='overlay')closeModal()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+/* ---- bindings ---- */
+document.getElementById('q').oninput=e=>{state.q=e.target.value;render()};
+document.getElementById('fMinistry').onchange=e=>{state.ministry=e.target.value;render()};
+document.getElementById('fField').onchange=e=>{state.field=e.target.value;render()};
+document.getElementById('fDiet').onchange=e=>{state.diet=e.target.value;render()};
+
+/* ヘッダー・「収録データ」を公開済み法案から自動算出（推測ゼロ・data由来のみ）。
+   収録範囲は「成立した法律」だけ。提出議案/審議中/施行済みは成立のみ収録のため出さない。 */
+function renderStats(){
+  const bills=pub();
+  const dietNums=uniq(bills.map(b=>b.diet && String(b.diet).replace(/^第/,'').replace(/回$/,'')).filter(Boolean))
+    .map(Number).filter(n=>!isNaN(n)).sort((a,b)=>a-b);
+  const dietRange = dietNums.length
+    ? (dietNums.length===1 ? `第${dietNums[0]}回` : `第${dietNums[0]}〜${dietNums[dietNums.length-1]}回`)
+    : '—';
+  document.getElementById('meta-diet').innerHTML = `${dietRange}国会`;
+  document.getElementById('meta-count').textContent = bills.length;
+  // データ最終更新＝データ生成日（立法日とは別物。bills.json の generatedAt）。
+  document.getElementById('meta-updated').textContent = GENERATED_AT ? GENERATED_AT.replace(/-/g,'/') : '—';
+  // 収録データの正直な指標（すべて収録済みデータの事実。分母の無い推計はしない）
+  const hasRyoron=b=>b.ai && ((b.ai.pro&&b.ai.pro.length)||(b.ai.con&&b.ai.con.length));
+  document.getElementById('stat-bills').textContent = bills.length;
+  document.getElementById('stat-individual').textContent = bills.filter(b=>b.hasIndividual).length;
+  document.getElementById('stat-ryoron').textContent = bills.filter(hasRyoron).length;
+  document.getElementById('stat-diets').textContent = dietNums.length;
+  const scope=document.getElementById('scope-note');
+  if(scope) scope.textContent = `${dietRange}国会で成立した法律を収録しています（審議未了・廃案・継続審議中は含みません）。`;
+}
+
+async function boot(){
+  const tl=document.getElementById('timeline');
+  try{
+    const res=await fetch('data/bills.json',{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data=await res.json(); BILLS = Array.isArray(data) ? data : (data.bills||[]);
+    GENERATED_AT = (data && !Array.isArray(data) && data.generatedAt) ? data.generatedAt : null;
+  }catch(err){
+    console.error('bills.json の読み込みに失敗:',err);
+    tl.innerHTML='<div class="empty">データを読み込めませんでした（'+err.message+'）。<br>ローカルで開く場合は簡易サーバ経由で：<br><code>python3 -m http.server</code> を起動し http://localhost:8000/ を開いてください。</div>';
+    return;
+  }
+  initFilters(); renderStats(); render(); renderFeed(); openFromHash();
+}
+boot();
+</script>
+</body>
+</html>

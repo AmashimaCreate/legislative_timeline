@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>法律ができるまで | 政治のしくみ</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#9a2b1e">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap');
+
+  /* 本体（立法タイムライン）と同じパレット：和紙色・朱・深緑・金 */
+  :root{
+    --ink:#1a1410;
+    --paper:#f4efe6;
+    --card:#fffdf8;
+    --line:#d8cdb8;
+    --accent:#9a2b1e;      /* 朱（本体と統一） */
+    --accent-soft:#e7d2cc;
+    --gov:#3a6ea5;         /* 内閣・行政の青（本体の「国会提出」色） */
+    --gov-soft:#dce5ef;
+    --diet:#2f6b48;        /* 国会の緑（本体の深緑系） */
+    --diet-soft:#dce7d6;
+    --gold:#a87f32;        /* 公布の金（本体と統一） */
+    --muted:#6b5f4d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Zen Kaku Gothic New",sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(154,43,30,.04), transparent 40%),
+      radial-gradient(circle at 88% 92%, rgba(31,71,51,.04), transparent 40%);
+  }
+  /* 本体と同じ紙の粒子オーバーレイ */
+  body::after{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ページ切替タブ（本体と統一） */
+  .page-tabs{background:var(--paper);border-bottom:1px solid var(--line);}
+  .page-tabs-in{max-width:920px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+  .pt-tabs{display:flex;gap:24px;}
+  .pt-tabs a{font-family:"Shippori Mincho",serif;font-size:.98rem;font-weight:600;color:var(--muted);text-decoration:none;padding:13px 4px 11px;border-bottom:3px solid transparent;margin-bottom:-1px;transition:color .13s;}
+  .pt-tabs a:hover{color:var(--ink);}
+  .pt-tabs a.active{color:var(--accent);border-bottom-color:var(--accent);}
+  .pt-soc{display:flex;gap:8px;align-items:center;}
+  .pt-soc a{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#fff;transition:border-color .13s,color .13s;}
+  .pt-soc a:hover{border-color:var(--accent);color:var(--accent);}
+  .pt-soc .si{width:12px;height:12px;}
+  @media(max-width:560px){.page-tabs-in{padding:0 16px;}.pt-tabs{gap:16px;}.pt-tabs a{font-size:.9rem;}.pt-soc a{padding:4px 9px;}}
+
+  /* ヘッダー */
+  header{
+    max-width:920px;margin:0 auto;padding:64px 24px 24px;text-align:center;
+  }
+  .eyebrow{
+    display:inline-block;font-family:"Shippori Mincho",serif;font-weight:700;
+    font-size:.78rem;letter-spacing:.25em;color:var(--accent);
+    border:1.5px solid var(--accent);border-radius:99px;padding:5px 16px 4px;margin-bottom:22px;
+  }
+  h1{
+    font-family:"Shippori Mincho",serif;font-weight:900;
+    font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.3;letter-spacing:.02em;
+  }
+  h1 .mark{
+    background:linear-gradient(transparent 62%,var(--accent-soft) 62%);
+    padding:0 .1em;
+  }
+  .lead{
+    margin:22px auto 0;max-width:600px;font-size:1.05rem;color:#544e45;
+  }
+
+  main{max-width:920px;margin:0 auto;padding:24px;}
+
+  /* 3秒まとめ */
+  .tldr{
+    background:var(--card);border:2px solid var(--ink);border-radius:18px;
+    padding:26px 28px;margin:40px 0 56px;position:relative;
+    box-shadow:6px 6px 0 var(--accent-soft);
+  }
+  .tldr .tag{
+    position:absolute;top:-15px;left:24px;background:var(--ink);color:var(--paper);
+    font-family:"Shippori Mincho",serif;font-weight:700;font-size:.85rem;
+    padding:3px 16px;border-radius:99px;letter-spacing:.08em;
+  }
+  .tldr p{font-size:1.08rem;font-weight:500;}
+  .tldr b{color:var(--accent);font-weight:900;}
+
+  .section-title{
+    font-family:"Shippori Mincho",serif;font-weight:900;font-size:1.6rem;
+    margin:8px 0 4px;display:flex;align-items:center;gap:12px;
+  }
+  .section-title::before{
+    content:"";width:14px;height:26px;background:var(--accent);border-radius:3px;display:inline-block;
+  }
+  .section-sub{color:var(--muted);margin-bottom:26px;font-size:.96rem;}
+
+  /* フロー図 */
+  .flow-wrap{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:34px 20px;margin-bottom:14px;overflow:hidden;
+  }
+  svg{width:100%;height:auto;display:block;}
+
+  .legend{
+    display:flex;gap:20px;flex-wrap:wrap;justify-content:center;
+    margin:6px 0 56px;font-size:.86rem;color:#544e45;
+  }
+  .legend span{display:inline-flex;align-items:center;gap:7px;}
+  .dot{width:13px;height:13px;border-radius:4px;display:inline-block;}
+
+  /* ステップ詳細 */
+  .steps{display:flex;flex-direction:column;gap:18px;margin-bottom:56px;}
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .step:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.06);}
+  .step .num{
+    font-family:"Shippori Mincho",serif;font-weight:900;font-size:1.5rem;
+    width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    color:#fff;
+  }
+  .c-diet{background:var(--diet);}
+  .c-gov{background:var(--gov);}
+  .c-accent{background:var(--accent);}
+  .c-gold{background:var(--gold);}
+  .step h3{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.2rem;margin-bottom:4px;}
+  .step p{font-size:1rem;color:#4d4740;}
+  .step .word{
+    display:inline-block;background:var(--accent-soft);color:#7d2218;font-weight:700;
+    border-radius:6px;padding:1px 8px;font-size:.9rem;margin-top:8px;
+  }
+
+  /* もっと詳しく */
+  details{
+    background:var(--gov-soft);border:1px solid #b9cedd;border-radius:16px;
+    padding:4px 24px;margin-bottom:18px;
+  }
+  details summary{
+    font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.1rem;color:var(--gov);
+    cursor:pointer;padding:18px 0;list-style:none;display:flex;align-items:center;gap:10px;
+  }
+  details summary::-webkit-details-marker{display:none;}
+  details summary::before{content:"＋";font-weight:900;font-size:1.2rem;}
+  details[open] summary::before{content:"−";}
+  details .body{padding:0 0 22px;color:#33485a;}
+  details .body p{margin-bottom:12px;}
+  details .body strong{color:var(--gov);}
+
+  /* 用語ミニ */
+  .glossary{
+    background:var(--diet-soft);border:1px solid #bcd2b6;border-radius:16px;
+    padding:26px 28px;margin:14px 0 56px;
+  }
+  .glossary h3{font-family:"Shippori Mincho",serif;font-weight:900;color:#3f6b3e;margin-bottom:16px;font-size:1.25rem;}
+  .glossary dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;}
+  .glossary dt{font-weight:700;color:#2f5530;white-space:nowrap;}
+  .glossary dd{color:#3d4a3c;}
+
+  /* 出典 */
+  .sources{
+    border-top:1px dashed var(--line);padding-top:22px;margin-top:20px;
+    font-size:.85rem;color:var(--muted);
+  }
+  .sources a{color:var(--gov);}
+  /* 本体（実例データ）への導線 */
+  .cta{display:block;text-decoration:none;background:var(--accent);color:#fff;border-radius:18px;
+    padding:24px 28px;margin:8px 0 56px;box-shadow:6px 6px 0 var(--accent-soft);transition:transform .15s ease,box-shadow .15s ease;}
+  .cta:hover{transform:translateY(-2px);box-shadow:9px 9px 0 var(--accent-soft);}
+  .cta .cta-t{display:block;font-family:"Shippori Mincho",serif;font-weight:800;font-size:1.25rem;}
+  .cta .cta-s{display:block;font-size:.92rem;opacity:.93;margin-top:5px;}
+  footer{text-align:center;padding:40px 24px 64px;color:var(--muted);font-size:.85rem;}
+  footer a{color:var(--accent);font-weight:700;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .foot-soc{display:inline-flex;gap:8px;margin-top:12px;}
+  .foot-soc a{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;padding:4px 13px;background:#fff;font-weight:700;font-size:.8rem;text-decoration:none;color:var(--ink);}
+  .foot-soc a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+
+  @media(max-width:560px){
+    .step{grid-template-columns:44px 1fr;gap:12px;padding:18px;}
+    .step .num{width:44px;height:44px;font-size:1.2rem;}
+    .glossary dl{grid-template-columns:1fr;gap:4px 0;}
+    .glossary dt{margin-top:8px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="page-tabs">
+  <div class="page-tabs-in">
+    <span class="pt-tabs">
+      <a href="index.html">法案を見る</a>
+      <a href="houritsu-dekirumade.html" class="active" aria-current="page">法律ができるまで</a>
+    </span>
+    <span class="pt-soc">
+      <a href="https://note.com/seiji_mieru" target="_blank" rel="noopener">note ↗</a>
+      <a href="https://x.com/seiji_mieru" target="_blank" rel="noopener" aria-label="X（@seiji_mieru）"><svg class="si" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg></a>
+    </span>
+  </div>
+</nav>
+
+<header>
+  <span class="eyebrow">政治のしくみ ／ 国会編</span>
+  <h1>法律は、<br><span class="mark">こうして生まれる</span>。</h1>
+  <p class="lead">ニュースで聞く「可決」「委員会」「成立」。
+  実は、一本の決まった道を通っています。その流れを、最後まで追ってみましょう。</p>
+</header>
+
+<main>
+
+  <!-- 3秒まとめ -->
+  <div class="tldr">
+    <span class="tag">３秒でわかる</span>
+    <p>法律のタネ（法律案）が <b>国会</b> に持ち込まれ、<b>2つの議院</b>（衆議院・参議院）でそれぞれ話し合われる。
+    両方が「OK（可決）」と言えば <b>成立</b>。世に知らせて（公布）、いよいよ <b>スタート（施行）</b>。</p>
+  </div>
+
+  <!-- フロー図 -->
+  <h2 class="section-title">ぜんたいの流れ</h2>
+  <p class="section-sub">上から下へ、法律案がたどる道のりです。</p>
+
+  <div class="flow-wrap">
+    <svg viewBox="0 0 700 880" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="法律ができるまでの流れ図">
+      <defs>
+        <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+          <path d="M2,2 L10,6 L2,10 Z" fill="#b3a994"/>
+        </marker>
+        <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/>
+        </filter>
+      </defs>
+
+      <!-- 縦の背骨ライン -->
+      <line x1="350" y1="70" x2="350" y2="810" stroke="#d8cdb8" stroke-width="3"/>
+
+      <!-- 0 だれが出す -->
+      <g filter="url(#soft)">
+        <rect x="150" y="20" width="400" height="86" rx="18" fill="#fffdf8" stroke="#d8cdb8"/>
+      </g>
+      <text x="350" y="50" text-anchor="middle" font-family="Shippori Mincho" font-weight="700" font-size="18" fill="#3a6ea5">① 法律案をつくる・出す</text>
+      <text x="350" y="76" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="13.5" fill="#544e45">内閣（政府）が出す ＝ 閣法 ／ 国会議員が出す ＝ 議員立法</text>
+      <text x="350" y="95" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="12" fill="#6b5f4d">内閣が出す場合は「閣議決定」を経てから</text>
+      <line x1="350" y1="106" x2="350" y2="136" stroke="#b3a994" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+      <!-- 議院ラベル -->
+      <text x="350" y="158" text-anchor="middle" font-family="Shippori Mincho" font-weight="900" font-size="15" fill="#2f6b48">▼ まず一方の議院（例：衆議院）で</text>
+
+      <!-- 2 委員会 -->
+      <g filter="url(#soft)">
+        <rect x="150" y="174" width="400" height="92" rx="18" fill="#dbe8d6" stroke="#bcd2b6"/>
+      </g>
+      <text x="350" y="204" text-anchor="middle" font-family="Shippori Mincho" font-weight="700" font-size="18" fill="#3f6b3e">② 委員会で審査</text>
+      <text x="350" y="230" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="13.5" fill="#3d4a3c">専門の少人数チームが、中身をくわしくチェック</text>
+      <text x="350" y="250" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="12" fill="#5a6657">趣旨説明 → 質疑 → 討論 → 採決（時に公聴会も）</text>
+      <line x1="350" y1="266" x2="350" y2="296" stroke="#b3a994" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+      <!-- 3 本会議 -->
+      <g filter="url(#soft)">
+        <rect x="150" y="334" width="400" height="92" rx="18" fill="#dbe8d6" stroke="#bcd2b6"/>
+      </g>
+      <text x="350" y="364" text-anchor="middle" font-family="Shippori Mincho" font-weight="700" font-size="18" fill="#3f6b3e">③ 本会議で採決</text>
+      <text x="350" y="390" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="13.5" fill="#3d4a3c">議員ぜんいんで、賛成か反対かを決める</text>
+      <text x="350" y="410" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="12" fill="#5a6657">出席議員の過半数の賛成で「可決」</text>
+      <line x1="350" y1="426" x2="350" y2="456" stroke="#b3a994" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+      <!-- もう一方の議院 -->
+      <text x="350" y="478" text-anchor="middle" font-family="Shippori Mincho" font-weight="900" font-size="15" fill="#2f6b48">▼ もう一方の議院（例：参議院）でも同じことを</text>
+
+      <!-- 4 もう一院 -->
+      <g filter="url(#soft)">
+        <rect x="150" y="494" width="400" height="80" rx="18" fill="#dbe8d6" stroke="#bcd2b6"/>
+      </g>
+      <text x="350" y="524" text-anchor="middle" font-family="Shippori Mincho" font-weight="700" font-size="18" fill="#3f6b3e">④ 委員会 → 本会議をくり返す</text>
+      <text x="350" y="550" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="13.5" fill="#3d4a3c">こちらでも可決されれば、いよいよ……</text>
+      <line x1="350" y1="574" x2="350" y2="604" stroke="#b3a994" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+      <!-- 5 成立 -->
+      <g filter="url(#soft)">
+        <rect x="170" y="622" width="360" height="74" rx="18" fill="#9a2b1e" stroke="#7d2218"/>
+      </g>
+      <text x="350" y="652" text-anchor="middle" font-family="Shippori Mincho" font-weight="900" font-size="20" fill="#fff">⑤ 成立！</text>
+      <text x="350" y="678" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="13" fill="#ffe9e3">両方の議院が可決 ＝ 法律として決定</text>
+      <line x1="350" y1="696" x2="350" y2="726" stroke="#b3a994" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+      <!-- 6 公布 -->
+      <g filter="url(#soft)">
+        <rect x="190" y="744" width="320" height="58" rx="16" fill="#fffdf8" stroke="#a87f32"/>
+      </g>
+      <text x="350" y="772" text-anchor="middle" font-family="Shippori Mincho" font-weight="700" font-size="16" fill="#8a6526">⑥ 公布（みんなに知らせる）</text>
+      <text x="350" y="790" text-anchor="middle" font-family="Zen Kaku Gothic New" font-size="11.5" fill="#6b5f4d">天皇が国民に公表 → 官報に掲載</text>
+      <line x1="350" y1="802" x2="350" y2="828" stroke="#b3a994" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+      <!-- 7 施行 -->
+      <g filter="url(#soft)">
+        <rect x="225" y="836" width="250" height="40" rx="20" fill="#1a1410"/>
+      </g>
+      <text x="350" y="861" text-anchor="middle" font-family="Shippori Mincho" font-weight="900" font-size="16" fill="#f4efe6">⑦ 施行 ＝ 効力スタート</text>
+    </svg>
+  </div>
+
+  <div class="legend">
+    <span><span class="dot" style="background:var(--gov)"></span>内閣・政府がかかわる</span>
+    <span><span class="dot" style="background:var(--diet)"></span>国会（議院の中）の作業</span>
+    <span><span class="dot" style="background:var(--accent)"></span>成立の瞬間</span>
+    <span><span class="dot" style="background:var(--gold)"></span>世に出す手続き</span>
+  </div>
+
+  <!-- ステップ詳細 -->
+  <h2 class="section-title">一歩ずつ、くわしく</h2>
+  <p class="section-sub">それぞれの段階で、何が起きているのか。</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="num c-gov">①</div>
+      <div>
+        <h3>法律案をつくって、出す</h3>
+        <p>法律のタネ「法律案（法案）」を国会に持ち込みます。出せるのは2者。<strong>内閣（政府）</strong>が出すものを「閣法」、<strong>国会議員</strong>が出すものを「議員立法」と呼びます。内閣が出す場合は、その前に大臣たちの会議で「閣議決定」をしてから提出します。</p>
+        <span class="word">閣議決定＝内閣としての正式なゴーサイン</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num c-diet">②</div>
+      <div>
+        <h3>委員会で、じっくり審査</h3>
+        <p>いきなり全員で話すのではなく、まず分野ごとの専門チーム「委員会」が中身を細かく調べます。説明を聞き（趣旨説明）、質問し（質疑）、意見を述べ（討論）、賛否を決める（採決）。重要な案件では、外部の専門家から話を聞く「公聴会」も開かれます。</p>
+        <span class="word">委員会＝法案の中身を専門的に調べる場</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num c-diet">③</div>
+      <div>
+        <h3>本会議で、賛成か反対か</h3>
+        <p>委員会を通った法案は、その議院の議員ぜんいんが集まる「本会議」へ。委員長が審査の結果を報告し、最終的に採決します。<strong>出席議員の過半数</strong>が賛成すれば「可決」。重要な案件では、誰がどう投票したかを記録する「記名投票」が行われます。</p>
+        <span class="word">可決＝その議院が「OK」と決めること</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num c-diet">④</div>
+      <div>
+        <h3>もう一方の議院でも、くり返す</h3>
+        <p>日本の国会は<strong>衆議院と参議院</strong>の2つ（二院制）。最初の議院で可決されたら、もう一方の議院に送られ、また委員会→本会議をたどります。2つの議院で別々にチェックすることで、慎重に決めるしくみです。</p>
+        <span class="word">二院制＝2つの議院でダブルチェック</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num c-accent">⑤</div>
+      <div>
+        <h3>両方が可決 ＝ 成立</h3>
+        <p>衆議院・参議院のどちらも可決すると、法案は晴れて「法律」になります。これが<strong>成立</strong>。ニュースで「〇〇法が成立しました」と流れるのは、この瞬間です。</p>
+        <span class="word">成立＝法律として正式に決まった状態</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num c-gold">⑥</div>
+      <div>
+        <h3>公布 ＝ みんなに知らせる</h3>
+        <p>成立した法律は、天皇が国民に向けて公表します。これを<strong>公布</strong>といい、「官報」という国の広報紙に載せて正式に知らせます。「決まったよ」と世間にお披露目する段階です。</p>
+        <span class="word">公布＝法律ができたことを公表する</span>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num c-accent">⑦</div>
+      <div>
+        <h3>施行 ＝ いよいよ効力スタート</h3>
+        <p>公布されても、すぐ効くとは限りません。実際に効力を持って動き出す日を<strong>施行</strong>といいます。「公布の日から」のこともあれば、「半年後から」「来年4月1日から」と決められていることも。ここで初めて、私たちの生活にルールとして関わってきます。</p>
+        <span class="word">施行＝法律が実際に効きはじめる</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 実例データ（本体）への導線 -->
+  <a class="cta" href="index.html">
+    <span class="cta-t">実際の法案で、この流れを見てみる →</span>
+    <span class="cta-s">立法タイムライン（第217〜221回の成立法案）。賛否・議員ごとの票・プロセスを、一本ずつ実例で。</span>
+  </a>
+
+  <!-- もっと詳しく(例外) -->
+  <h2 class="section-title">もっと知りたい人へ</h2>
+  <p class="section-sub">2つの議院の意見が食い違ったら、どうなる？</p>
+
+  <details>
+    <summary>衆議院と参議院で結論が割れたら？</summary>
+    <div class="body">
+      <p>2つの議院でいつも意見が一致するとは限りません。割れたときの調整方法が、憲法で決められています。</p>
+      <p><strong>① 両院協議会をひらく</strong><br>両院から10名ずつが集まって妥協点を探す話し合い。法律案の場合は「開くこともできる」任意の手続きです。</p>
+      <p><strong>② 衆議院の3分の2で再可決</strong><br>参議院が否決しても、衆議院がもう一度<strong>出席議員の3分の2以上</strong>の賛成で可決すれば、法律として成立します。これが「衆議院の優越」と呼ばれるしくみのひとつです。</p>
+      <p><strong>③ 60日ルール</strong><br>衆議院が可決した法案を参議院が受け取って60日以内に議決しないとき、衆議院は「参議院が否決した」とみなすことができます。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>「衆議院の優越」って、なぜあるの？</summary>
+    <div class="body">
+      <p>衆議院は参議院より任期が短く（4年）、解散もあるため、<strong>より新しい民意を反映している</strong>と考えられています。そのため、意見が割れて決まらない事態を防ぐために、法律案・予算・条約・首相の指名などで衆議院の判断を優先するしくみが設けられています。</p>
+      <p>ただし、これは「いつも衆議院が勝つ」という意味ではありません。多くの法案は、両院がきちんと合意して成立しています。</p>
+    </div>
+  </details>
+
+  <!-- 用語ミニ辞典 -->
+  <div class="glossary">
+    <h3>このページに出てきた言葉</h3>
+    <dl>
+      <dt>法律案（法案）</dt><dd>法律の案。国会で話し合った結果、修正されたり、認められないこともある。</dd>
+      <dt>閣法 / 議員立法</dt><dd>内閣が出す法案が閣法、国会議員が出すのが議員立法。</dd>
+      <dt>付託（ふたく）</dt><dd>議長が、その法案にふさわしい委員会へ審査を任せること。</dd>
+      <dt>採決</dt><dd>賛成か反対か、最終的に数で決めること。</dd>
+      <dt>可決 / 否決</dt><dd>OKと決めるのが可決、NOと決めるのが否決。</dd>
+      <dt>二院制</dt><dd>議会が2つの議院（衆議院・参議院）でできているしくみ。</dd>
+      <dt>会派</dt><dd>国会の中で行動を共にする議員グループ。多くは政党が中心。</dd>
+    </dl>
+  </div>
+
+  <!-- 出典 -->
+  <div class="sources">
+    <strong>出典（一次ソース）</strong><br>
+    ・参議院「法律ができるまで」 <a href="https://www.sangiin.go.jp/japanese/aramashi/houritu.html" target="_blank" rel="noopener">sangiin.go.jp</a><br>
+    ・参議院 キッズページ「国会のしくみと法律ができるまで」 <a href="https://www.sangiin.go.jp/japanese/kids/html/shikumi/houritsu.html" target="_blank" rel="noopener">sangiin.go.jp/kids</a><br>
+    ・衆議院「法律案審議の流れ」 <a href="https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/kokkai/kokkai_gian2.htm" target="_blank" rel="noopener">shugiin.go.jp</a><br>
+    ・内閣法制局「法律ができるまで」 <a href="https://www.clb.go.jp/recent-laws/process/" target="_blank" rel="noopener">clb.go.jp</a><br>
+    <span style="display:block;margin-top:10px;">※ このページは上記の公的資料をもとに、わかりやすさを優先して再構成したものです。正確な手続きは各一次ソースをご確認ください。</span>
+  </div>
+
+</main>
+
+<footer>
+  政治見える化プロジェクト ／ 政治のしくみ解説<br>
+  事実と解釈を分け、一次ソースにリンクしています。<br>
+  <a href="index.html">立法タイムライン（実際の法案）へ →</a>
+  <span class="foot-soc">
+    <a href="https://note.com/seiji_mieru" target="_blank" rel="noopener">note ↗</a>
+    <a href="https://x.com/seiji_mieru" target="_blank" rel="noopener" aria-label="X（@seiji_mieru）"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" style="vertical-align:-1px"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg>@seiji_mieru ↗</a>
+  </span>
+</footer>
+
+</body>
+</html>
