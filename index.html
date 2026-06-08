@@ -49,6 +49,19 @@ body::after{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+/* ---------- 戻り導線バー（政治見える化 › 現在地） ---------- */
+.hubbar{display:flex;align-items:center;gap:9px;height:42px;padding:0 28px;font-size:.8rem;background:#efe7d9;border-bottom:1px solid var(--line);font-family:'Zen Kaku Gothic New',system-ui,sans-serif}
+.hubbar .hb-brand{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);text-decoration:none}
+.hubbar .hb-brand svg{width:19px;height:19px;display:block;flex:none}
+.hubbar .hb-brand:hover{text-decoration:underline}
+.hubbar .hb-sep{color:var(--muted);opacity:.6;font-size:.9rem}
+.hubbar .hb-cur{font-weight:700;color:var(--accent)}
+.hubbar .hb-soc{margin-left:auto;display:flex;gap:11px;align-items:center}
+.hubbar .hb-soc a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:4px;font-size:.74rem;font-weight:600}
+.hubbar .hb-soc a:hover{color:var(--accent)}
+.hubbar .hb-soc svg{width:12px;height:12px}
+@media(max-width:560px){.hubbar{padding:0 16px;gap:7px}.hubbar .hb-soc{gap:9px}}
+
 /* ---------- ページ切替タブ ---------- */
 .page-tabs{background:var(--paper);border-bottom:1px solid var(--line)}
 .page-tabs-in{max-width:1240px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:14px}
@@ -422,15 +435,20 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
 </head>
 <body>
 
+<header class="hubbar">
+  <a class="hb-brand" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#dbe9f6"/><g><rect x="20" y="40" width="24" height="3.5" rx="1" fill="#2f5d8c"/><g fill="#3a78b5"><rect x="22" y="31" width="2.6" height="9"/><rect x="27" y="31" width="2.6" height="9"/><rect x="33" y="31" width="2.6" height="9"/><rect x="39" y="31" width="2.6" height="9"/></g><rect x="20" y="29" width="24" height="2.4" fill="#2f5d8c"/><path d="M20 29 L32 23 L44 29 Z" fill="#3a78b5"/></g><circle cx="30" cy="31" r="11" fill="none" stroke="#1f4e8f" stroke-width="2.6"/><line x1="38" y1="39" x2="45" y2="46" stroke="#1f4e8f" stroke-width="4" stroke-linecap="round"/></svg>政治見える化</a>
+  <span class="hb-sep">›</span><span class="hb-cur">立法タイムライン</span>
+  <span class="hb-soc">
+    <a href="https://note.com/seiji_mieru" target="_blank" rel="noopener">note ↗</a>
+    <a href="https://x.com/seiji_mieru" target="_blank" rel="noopener" aria-label="X（@seiji_mieru）"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg></a>
+  </span>
+</header>
+
 <nav class="page-tabs">
   <div class="page-tabs-in">
     <span class="pt-tabs">
       <a href="index.html" class="active" aria-current="page">法案を見る</a>
       <a href="houritsu-dekirumade.html">法律ができるまで</a>
-    </span>
-    <span class="pt-soc">
-      <a href="https://note.com/seiji_mieru" target="_blank" rel="noopener">note ↗</a>
-      <a href="https://x.com/seiji_mieru" target="_blank" rel="noopener" aria-label="X（@seiji_mieru）"><svg class="si" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg></a>
     </span>
   </div>
 </nav>
