@@ -717,7 +717,7 @@ function eventCard(e, delay){
   const indivBadge = b.hasIndividual ? `<span class="indiv-badge">👤 議員ひとりずつ見られる</span>` : '';
   const lc=lcOf(b), lm=LC_META[lc]||LC_META['審議中'];
   const topBadge = lc==='成立' ? `<span class="stage-badge">${stageLabel(e.stage)}</span>` : `<span class="lc-badge lc-${lm.slug}">${lm.label}</span>`;
-  const who = b.ministry || ((b.type==='衆法'||b.type==='参法') ? '議員立法' : (b.type||''));
+  const who = b.ministry || ({'閣法':'内閣','予算':'内閣','衆法':'議員立法','参法':'議員立法'}[b.type] || b.type || '');
   const pendMsg = lc==='成立' ? 'やさしい要約は準備中（会議録の公開待ち）' : 'まだ採決されていません（審議中・要約準備中）';
   el.innerHTML=`
     <div class="event-top">
