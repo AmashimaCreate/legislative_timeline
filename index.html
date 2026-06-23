@@ -442,6 +442,27 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
 .ai-jump .aj-ic{width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
 .aj-gpt{background:#10a37f}.aj-claude{background:#d97757}.aj-gemini{background:#4285f4}.aj-perplexity{background:#20808d}
 .askai-note{font-size:.68rem;color:var(--muted);margin-top:12px;line-height:1.6}
+/* 成立／審議中 タブ */
+.life-tabs{display:flex;gap:0;border-bottom:2px solid var(--line);margin-top:14px}
+.life-tab{padding:11px 22px;font-size:1rem;font-weight:700;color:var(--muted);background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;font-family:inherit;transition:.13s}
+.life-tab:hover{color:var(--ink)}
+.life-tab.on{color:var(--accent);border-bottom-color:var(--accent)}
+.life-tab .n{font-size:.78rem;font-weight:600;opacity:.65;margin-left:6px}
+.lc-sub{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.lc-sub .lbl{font-size:.66rem;letter-spacing:.12em;color:var(--muted);margin-right:4px}
+.lc-chip{font-size:.76rem;font-weight:600;padding:5px 13px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;font-family:inherit;transition:.12s}
+.lc-chip:hover{border-color:var(--accent);color:var(--accent)}
+.lc-chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* ライフサイクル・バッジ */
+.lc-badge{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 9px;border-radius:99px;vertical-align:middle}
+.lc-shingi{background:#fbecd0;color:#9a6b1e}
+.lc-keizoku{background:#e2ecf5;color:#2f6080}
+.lc-haian{background:#ececec;color:#777}
+.lc-seiritsu{background:#e3efe6;color:#1f6b40}
+/* 審議中モーダル：いまここ step・賛否未採決 */
+.pstep.now .pnode{background:var(--accent);box-shadow:0 0 0 4px rgba(154,43,30,.16)}
+.pstep.now .pnm{color:var(--accent);font-weight:700}
+.vote-pending{background:#f7f7f4;border:1px dashed var(--line);border-radius:6px;padding:15px 16px;color:var(--muted);font-size:.86rem;line-height:1.7;text-align:center;margin-top:4px}
 </style>
 </head>
 <body>
@@ -478,6 +499,11 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
     </div>
   </div>
 
+  <div class="life-tabs">
+    <button class="life-tab on" data-tab="passed" onclick="switchTab('passed')">成立した法案<span class="n" id="tabn-passed"></span></button>
+    <button class="life-tab" data-tab="active" onclick="switchTab('active')">審議中の法案<span class="n" id="tabn-active"></span></button>
+  </div>
+
   <div class="controls">
     <div class="search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -492,6 +518,13 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
 
   <div class="legend" id="legend">
     <span class="lbl">STAGE</span>
+  </div>
+  <div class="legend lc-sub" id="lcSub" style="display:none">
+    <span class="lbl">状態</span>
+    <span class="lc-chip on" data-lc="all" onclick="switchLc('all')">すべて</span>
+    <span class="lc-chip" data-lc="審議中" onclick="switchLc('審議中')">審議中</span>
+    <span class="lc-chip" data-lc="継続" onclick="switchLc('継続')">継続審議</span>
+    <span class="lc-chip" data-lc="廃案" onclick="switchLc('廃案')">廃案</span>
   </div>
 </header>
 
@@ -577,9 +610,9 @@ function latestDate(b){ const k=latestStage(b); return k? b.stages[k] : '0000-00
 function pub(){ return BILLS.filter(b=>!b.draft); }
 
 function buildEvents(){
-  return pub().map(b=>{
+  return pub().filter(tabFilter).map(b=>{
     const k=latestStage(b);
-    return {bill:b, stage:k, date:b.stages[k]};
+    return {bill:b, stage:k, date:(k && b.stages[k]) || b.stages.submit || '0000-00-00'};
   }).sort((a,b)=> b.date.localeCompare(a.date));
 }
 
@@ -588,7 +621,38 @@ const monthKey = d => d.slice(0,7);
 const monthJP = d => { const [y,m]=d.split('-'); return `${y}年 ${parseInt(m)}月`; };
 
 /* ---- state ---- */
-const state={q:'',ministry:'',field:'',diet:'',stages:new Set(STAGES.map(s=>s.key))};
+const state={q:'',ministry:'',field:'',diet:'',stages:new Set(STAGES.map(s=>s.key)),tab:'passed',lc:'all'};
+
+/* ---- lifecycle（成立／審議中／一院通過／継続／廃案）---- */
+const LC_META={'審議中':{slug:'shingi',label:'審議中'},'一院通過':{slug:'shingi',label:'一院通過'},'継続':{slug:'keizoku',label:'継続審議'},'廃案':{slug:'haian',label:'廃案'},'成立':{slug:'seiritsu',label:'成立'}};
+const lcOf=b=>b.lifecycle||'成立';
+function tabFilter(b){
+  const lc=lcOf(b);
+  if(state.tab==='passed') return lc==='成立';
+  if(lc==='成立') return false;                       // 審議中タブ＝非成立のみ
+  if(state.lc==='all') return true;
+  if(state.lc==='審議中') return lc==='審議中'||lc==='一院通過';
+  return lc===state.lc;
+}
+function switchTab(t){
+  state.tab=t; state.lc='all';
+  document.querySelectorAll('.life-tab').forEach(x=>x.classList.toggle('on',x.dataset.tab===t));
+  document.getElementById('legend').style.display=(t==='passed')?'':'none';
+  document.getElementById('lcSub').style.display=(t==='active')?'':'none';
+  document.querySelectorAll('#lcSub .lc-chip').forEach(c=>c.classList.toggle('on',c.dataset.lc==='all'));
+  const h=document.querySelector('.tl-head h2'); if(h) h.textContent=(t==='passed')?'時系列フィード':'いま動いている法案';
+  render(); renderFeed();
+}
+function switchLc(lc){
+  state.lc=lc;
+  document.querySelectorAll('#lcSub .lc-chip').forEach(c=>c.classList.toggle('on',c.dataset.lc===lc));
+  render();
+}
+function updateTabCounts(){
+  const cnt=p=>BILLS.filter(b=>!b.draft&&(p==='passed'?lcOf(b)==='成立':lcOf(b)!=='成立')).length;
+  const p=document.getElementById('tabn-passed'),a=document.getElementById('tabn-active');
+  if(p)p.textContent=cnt('passed'); if(a)a.textContent=cnt('active');
+}
 
 /* ---- populate filters & legend ---- */
 function uniq(arr){return [...new Set(arr)]}
@@ -617,7 +681,7 @@ function passesFilter(b){
     const hay=(b.name+(b.gist||'')+b.tags.join('')+b.ministry).toLowerCase();
     if(!hay.includes(state.q.toLowerCase())) return false;
   }
-  if(!state.stages.has(latestStage(b))) return false;
+  if(state.tab==='passed' && !state.stages.has(latestStage(b))) return false;  // STAGE絞り込みは成立タブのみ
   return true;
 }
 
@@ -651,14 +715,18 @@ function eventCard(e, delay){
   let reached=0; STAGES.forEach(s=>{ if(b.stages[s.key]) reached++; });
   const segs=STAGES.map((s,i)=>`<div class="seg ${b.stages[s.key]?'done':''}"></div>`).join('');
   const indivBadge = b.hasIndividual ? `<span class="indiv-badge">👤 議員ひとりずつ見られる</span>` : '';
+  const lc=lcOf(b), lm=LC_META[lc]||LC_META['審議中'];
+  const topBadge = lc==='成立' ? `<span class="stage-badge">${stageLabel(e.stage)}</span>` : `<span class="lc-badge lc-${lm.slug}">${lm.label}</span>`;
+  const who = b.ministry || ((b.type==='衆法'||b.type==='参法') ? '議員立法' : (b.type||''));
+  const pendMsg = lc==='成立' ? 'やさしい要約は準備中（会議録の公開待ち）' : 'まだ採決されていません（審議中・要約準備中）';
   el.innerHTML=`
     <div class="event-top">
-      <span class="stage-badge">${stageLabel(e.stage)}</span>
+      ${topBadge}
       <span class="event-date">${fmt(e.date)}</span>
-      <span class="event-ministry">${b.ministry}</span>
+      <span class="event-ministry">${who}</span>
     </div>
     <h3>${b.name}</h3>
-    <div class="gist">${b.gist || '<span class="gist-pending">やさしい要約は準備中（会議録の公開待ち）</span>'}</div>
+    <div class="gist">${b.gist || `<span class="gist-pending">${pendMsg}</span>`}</div>
     <div class="tags">${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')} ${indivBadge}</div>
     <div class="track">${segs}</div>
     <div class="track-labels">${STAGES.map(s=>`<span>${s.short}</span>`).join('')}</div>
@@ -688,11 +756,57 @@ function renderFeed(){
 /* ---- modal ---- */
 function openModal(b){
   const m=document.getElementById('modal');
-  if(b.ai && b.votes){ m.innerHTML=richModal(b); window.__prompts=buildPrompts(b); bindDeeper(); }
+  if(lcOf(b)!=='成立'){ m.innerHTML=deliberatingModal(b); }
+  else if(b.ai && b.votes && b.votes.shu){ m.innerHTML=richModal(b); window.__prompts=buildPrompts(b); bindDeeper(); }
   else { m.innerHTML=simpleModal(b); }
   m.scrollTop=0;
   document.getElementById('overlay').classList.add('show');
   if(b&&b.id) location.hash='#/bill/'+encodeURIComponent(b.id);   // 共有できる深リンク
+}
+
+function deliberatingModal(b){
+  const lc=lcOf(b), lm=LC_META[lc]||LC_META['審議中'];
+  const procSteps=(b.process||[]).map(p=>{
+    const cls=p.now?'now open':'done';
+    const src=(p.src&&p.src.length)?`<div class="psrc">${p.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">📄 ${s.t} ↗</a>`).join('')}</div>`:'';
+    return `<div class="pstep ${cls}"><div class="pnode"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z"/></svg></div>
+      <div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere ${p.cls||''}">${p.where}</span><span class="pnm">${p.name}</span>${p.date?`<span class="pdt">${p.date}</span>`:''}<span class="pcv"></span></div>
+      <div class="pdetail"><div class="pdetail-in"><div class="pds">${p.desc}</div>${src}</div></div></div></div>`;
+  }).join('');
+  const proposer=(b.type==='衆法')?'衆議院議員（議員立法）':(b.type==='参法')?'参議院議員（議員立法）':(b.type==='閣法')?'内閣':(b.ministry||'—');
+  const notice=lc==='廃案'?'この法案は審議の結果、成立に至りませんでした（廃案）。下の進行と出典は確定記録です。'
+    :lc==='継続'?'この法案は会期内に議了せず、次の国会へ継続審査となりました。動きがあれば自動で更新されます。'
+    :'この法案はいま国会で審議されています。やさしい要約や賛否は、審議が進み会議録・採決が公開され次第、自動で追加されます。下の進行と出典は確定記録です。';
+  const voteNote=lc==='廃案'?'この法案は本会議での採決に至らず終了しました。'
+    :'この法案は「'+lm.label+'」で、本会議での採決は行われていません。採決されると、各会派・（参院記名なら）議員ひとりずつの賛否を収録します。';
+  const q=encodeURIComponent(b.name);
+  return `
+    <div class="modal-h">
+      <button class="close" onclick="closeModal()">×</button>
+      <h2 style="font-size:18px">${b.name}</h2>
+      <div class="mmeta"><span>📋 ${b.diet}</span><span>🏛 ${proposer}</span><span class="lc-badge lc-${lm.slug}">${b.lifecycleDetail||lm.label}</span></div>
+    </div>
+    <div class="modal-b">
+      <div class="ai-summary pending">
+        <div class="ai-banner pending">📝 <b>この法案は「${lm.label}」です</b></div>
+        <div class="ai-pending">${notice}</div>
+      </div>
+      ${b.process?`<div class="sec-t">いま、どこまで進んだか<span class="fact-tag">公式記録</span></div>
+      <div class="proc-legend"><span><span class="pl d"></span>通過した</span><span><span class="pl n"></span>いまここ</span></div>
+      <div class="ptl">${procSteps}</div>
+      <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">📖 立法の流れ（法律ができるまで）を、やさしく知る ↗</a>`:''}
+      <div class="sec-t">賛否<span class="fact-tag">公式記録</span></div>
+      <div class="vote-pending">⚖️ <b>まだ採決されていません</b><br>${voteNote}</div>
+      <div class="explore">
+        <div class="ex-t">この法案を自分で調べる</div>
+        <div class="ex-s">外部サービスへ移動します。当サイトが記事を選ぶことはしません。</div>
+        <div class="ex-grid">
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://kokkai.ndl.go.jp/#/simple?keyword=${q}"><span class="eic src"><svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/></svg></span><span class="etx"><span class="ett">国会の議論を読む</span><br><span class="ess">会議録検索 ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://news.google.com/search?q=${q}&hl=ja"><span class="eic news"><svg viewBox="0 0 24 24" width="15" height="15" fill="#fff"><path d="M20 3H4a1 1 0 0 0-1 1v14a3 3 0 0 0 3 3h13a2 2 0 0 0 2-2V4a1 1 0 0 0-1-1z"/></svg></span><span class="etx"><span class="ett">ニュースで読む</span><br><span class="ess">Googleニュース ↗</span></span></a>
+          <a class="ex-btn" target="_blank" rel="noopener" href="https://x.com/search?q=${q}&f=live"><span class="eic x"><svg viewBox="0 0 24 24" width="13" height="13" fill="#fff"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg></span><span class="etx"><span class="ett">Xで反応を見る</span><br><span class="ess">いまの声 ↗</span></span></a>
+        </div>
+      </div>
+    </div>`;
 }
 
 function richModal(b){
@@ -969,7 +1083,8 @@ function closeModal(){
 /* 深リンク #/bill/{id} で該当法案を開く（議員ページ/houan-timeline からの被リンク・共有用） */
 function openFromHash(){
   const mm=location.hash.match(/^#\/bill\/(.+)$/);
-  if(mm){ const b=BILLS.find(x=>x.id===decodeURIComponent(mm[1])); if(b) openModal(b); }
+  if(mm){ const b=BILLS.find(x=>x.id===decodeURIComponent(mm[1]));
+    if(b){ if(lcOf(b)!=='成立' && state.tab!=='active') switchTab('active'); openModal(b); } }
 }
 window.addEventListener('hashchange',openFromHash);
 document.getElementById('overlay').onclick=e=>{if(e.target.id==='overlay')closeModal()};
@@ -984,7 +1099,7 @@ document.getElementById('fDiet').onchange=e=>{state.diet=e.target.value;render()
 /* ヘッダー・「収録データ」を公開済み法案から自動算出（推測ゼロ・data由来のみ）。
    収録範囲は「成立した法律」だけ。提出議案/審議中/施行済みは成立のみ収録のため出さない。 */
 function renderStats(){
-  const bills=pub();
+  const bills=pub().filter(b=>lcOf(b)==='成立');   // サイドバー指標は「成立した法律」の事実のみ
   const dietNums=uniq(bills.map(b=>b.diet && String(b.diet).replace(/^第/,'').replace(/回$/,'')).filter(Boolean))
     .map(Number).filter(n=>!isNaN(n)).sort((a,b)=>a-b);
   const dietRange = dietNums.length
@@ -1001,7 +1116,7 @@ function renderStats(){
   document.getElementById('stat-ryoron').textContent = bills.filter(hasRyoron).length;
   document.getElementById('stat-diets').textContent = dietNums.length;
   const scope=document.getElementById('scope-note');
-  if(scope) scope.textContent = `${dietRange}国会で成立した法律を収録しています（審議未了・廃案・継続審議中は含みません）。`;
+  if(scope) scope.textContent = `「成立した法案」タブは${dietRange}国会で成立した法律。「審議中の法案」タブは現国会で審議中・継続・廃案の法案を収録しています。`;
 }
 
 async function boot(){
@@ -1016,7 +1131,7 @@ async function boot(){
     tl.innerHTML='<div class="empty">データを読み込めませんでした（'+err.message+'）。<br>ローカルで開く場合は簡易サーバ経由で：<br><code>python3 -m http.server</code> を起動し http://localhost:8000/ を開いてください。</div>';
     return;
   }
-  initFilters(); renderStats(); render(); renderFeed(); openFromHash();
+  initFilters(); renderStats(); updateTabCounts(); render(); renderFeed(); openFromHash();
 }
 boot();
 </script>

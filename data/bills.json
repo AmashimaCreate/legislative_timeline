@@ -551,7 +551,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-002",
@@ -1076,7 +1078,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-003",
@@ -1601,7 +1605,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-004",
@@ -2149,7 +2155,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-005",
@@ -2697,7 +2705,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-006",
@@ -3247,7 +3257,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-007",
@@ -3772,7 +3784,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E9%9A%9B%E9%96%8B%E7%99%BA%E5%8D%94%E4%BC%9A%E3%81%B8%E3%81%AE%E5%8A%A0%E7%9B%9F%E3%81%AB%E4%BC%B4%E3%81%86%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E7%B1%B3%E5%B7%9E%E6%8A%95%E8%B3%87%E5%85%AC%E7%A4%BE%E3%81%B8%E3%81%AE%E5%8A%A0%E7%9B%9F%E3%81%AB%E4%BC%B4%E3%81%86%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E9%9A%9B%E9%96%8B%E7%99%BA%E5%8D%94%E4%BC%9A%E3%81%B8%E3%81%AE%E5%8A%A0%E7%9B%9F%E3%81%AB%E4%BC%B4%E3%81%86%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E7%B1%B3%E5%B7%9E%E6%8A%95%E8%B3%87%E5%85%AC%E7%A4%BE%E3%81%B8%E3%81%AE%E5%8A%A0%E7%9B%9F%E3%81%AB%E4%BC%B4%E3%81%86%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-008",
@@ -4297,7 +4311,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%A4%A7%E5%AD%A6%E7%AD%89%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%BF%AE%E5%AD%A6%E3%81%AE%E6%94%AF%E6%8F%B4%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%A4%A7%E5%AD%A6%E7%AD%89%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E4%BF%AE%E5%AD%A6%E3%81%AE%E6%94%AF%E6%8F%B4%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-009",
@@ -4849,7 +4865,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%85%AC%E7%AB%8B%E3%81%AE%E7%BE%A9%E5%8B%99%E6%95%99%E8%82%B2%E8%AB%B8%E5%AD%A6%E6%A0%A1%E7%AD%89%E3%81%AE%E6%95%99%E8%82%B2%E8%81%B7%E5%93%A1%E3%81%AE%E7%B5%A6%E4%B8%8E%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%89%B9%E5%88%A5%E6%8E%AA%E7%BD%AE%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%85%AC%E7%AB%8B%E3%81%AE%E7%BE%A9%E5%8B%99%E6%95%99%E8%82%B2%E8%AB%B8%E5%AD%A6%E6%A0%A1%E7%AD%89%E3%81%AE%E6%95%99%E8%82%B2%E8%81%B7%E5%93%A1%E3%81%AE%E7%B5%A6%E4%B8%8E%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%89%B9%E5%88%A5%E6%8E%AA%E7%BD%AE%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-010",
@@ -5373,7 +5391,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%88%A6%E6%B2%A1%E8%80%85%E7%AD%89%E3%81%AE%E9%81%BA%E6%97%8F%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E7%89%B9%E5%88%A5%E5%BC%94%E6%85%B0%E9%87%91%E6%94%AF%E7%B5%A6%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%88%A6%E6%B2%A1%E8%80%85%E7%AD%89%E3%81%AE%E9%81%BA%E6%97%8F%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E7%89%B9%E5%88%A5%E5%BC%94%E6%85%B0%E9%87%91%E6%94%AF%E7%B5%A6%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-011",
@@ -5894,7 +5914,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E7%89%B9%E5%88%A5%E4%BC%9A%E8%A8%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E7%89%B9%E5%88%A5%E4%BC%9A%E8%A8%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-012",
@@ -6419,7 +6441,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%81%93%E8%B7%AF%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%81%93%E8%B7%AF%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-013",
@@ -6941,7 +6965,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B8%AF%E6%B9%BE%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B8%AF%E6%B9%BE%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-014",
@@ -7464,7 +7490,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%A3%81%E5%88%A4%E6%89%80%E8%81%B7%E5%93%A1%E5%AE%9A%E5%93%A1%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%A3%81%E5%88%A4%E6%89%80%E8%81%B7%E5%93%A1%E5%AE%9A%E5%93%A1%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-015",
@@ -7989,7 +8017,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8C%BB%E8%96%AC%E5%93%81%E3%80%81%E5%8C%BB%E7%99%82%E6%A9%9F%E5%99%A8%E7%AD%89%E3%81%AE%E5%93%81%E8%B3%AA%E3%80%81%E6%9C%89%E5%8A%B9%E6%80%A7%E5%8F%8A%E3%81%B3%E5%AE%89%E5%85%A8%E6%80%A7%E3%81%AE%E7%A2%BA%E4%BF%9D%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8C%BB%E8%96%AC%E5%93%81%E3%80%81%E5%8C%BB%E7%99%82%E6%A9%9F%E5%99%A8%E7%AD%89%E3%81%AE%E5%93%81%E8%B3%AA%E3%80%81%E6%9C%89%E5%8A%B9%E6%80%A7%E5%8F%8A%E3%81%B3%E5%AE%89%E5%85%A8%E6%80%A7%E3%81%AE%E7%A2%BA%E4%BF%9D%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-016",
@@ -8514,7 +8544,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%98%B2%E8%A1%9B%E7%9C%81%E8%A8%AD%E7%BD%AE%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%98%B2%E8%A1%9B%E7%9C%81%E8%A8%AD%E7%BD%AE%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-017",
@@ -9039,7 +9071,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%81%BD%E5%AE%B3%E5%AF%BE%E7%AD%96%E5%9F%BA%E6%9C%AC%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%81%BD%E5%AE%B3%E5%AF%BE%E7%AD%96%E5%9F%BA%E6%9C%AC%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-018",
@@ -9564,7 +9598,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E5%9C%B0%E5%9F%9F%E7%B5%8C%E6%B8%88%E6%B4%BB%E6%80%A7%E5%8C%96%E6%94%AF%E6%8F%B4%E6%A9%9F%E6%A7%8B%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E5%9C%B0%E5%9F%9F%E7%B5%8C%E6%B8%88%E6%B4%BB%E6%80%A7%E5%8C%96%E6%94%AF%E6%8F%B4%E6%A9%9F%E6%A7%8B%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-019",
@@ -10087,7 +10123,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%9B%BB%E6%B3%A2%E6%B3%95%E5%8F%8A%E3%81%B3%E6%94%BE%E9%80%81%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%9B%BB%E6%B3%A2%E6%B3%95%E5%8F%8A%E3%81%B3%E6%94%BE%E9%80%81%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-020",
@@ -10612,7 +10650,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E4%BC%9A%E8%AD%B0%E5%93%A1%E3%81%AE%E9%81%B8%E6%8C%99%E7%AD%89%E3%81%AE%E5%9F%B7%E8%A1%8C%E7%B5%8C%E8%B2%BB%E3%81%AE%E5%9F%BA%E6%BA%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E4%BC%9A%E8%AD%B0%E5%93%A1%E3%81%AE%E9%81%B8%E6%8C%99%E7%AD%89%E3%81%AE%E5%9F%B7%E8%A1%8C%E7%B5%8C%E8%B2%BB%E3%81%AE%E5%9F%BA%E6%BA%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-021",
@@ -10778,7 +10818,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8C%BB%E7%99%82%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8C%BB%E7%99%82%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-022",
@@ -11302,7 +11344,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-023",
@@ -11828,7 +11872,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%8B%AC%E7%AB%8B%E8%A1%8C%E6%94%BF%E6%B3%95%E4%BA%BA%E5%9B%BD%E9%9A%9B%E5%8D%94%E5%8A%9B%E6%A9%9F%E6%A7%8B%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%8B%AC%E7%AB%8B%E8%A1%8C%E6%94%BF%E6%B3%95%E4%BA%BA%E5%9B%BD%E9%9A%9B%E5%8D%94%E5%8A%9B%E6%A9%9F%E6%A7%8B%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-024",
@@ -12354,7 +12400,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E6%97%A5%E6%9C%AC%E6%94%BF%E7%AD%96%E6%8A%95%E8%B3%87%E9%8A%80%E8%A1%8C%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E6%97%A5%E6%9C%AC%E6%94%BF%E7%AD%96%E6%8A%95%E8%B3%87%E9%8A%80%E8%A1%8C%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-025",
@@ -12874,7 +12922,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%89%B9%E5%88%A5%E4%BC%9A%E8%A8%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%89%B9%E5%88%A5%E4%BC%9A%E8%A8%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-026",
@@ -13398,7 +13448,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%BC%81%E6%A5%AD%E7%81%BD%E5%AE%B3%E8%A3%9C%E5%84%9F%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%BC%81%E6%A5%AD%E7%81%BD%E5%AE%B3%E8%A3%9C%E5%84%9F%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-027",
@@ -13923,7 +13975,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%B3%A5%E7%8D%A3%E3%81%AE%E4%BF%9D%E8%AD%B7%E5%8F%8A%E3%81%B3%E7%AE%A1%E7%90%86%E4%B8%A6%E3%81%B3%E3%81%AB%E7%8B%A9%E7%8C%9F%E3%81%AE%E9%81%A9%E6%AD%A3%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%B3%A5%E7%8D%A3%E3%81%AE%E4%BF%9D%E8%AD%B7%E5%8F%8A%E3%81%B3%E7%AE%A1%E7%90%86%E4%B8%A6%E3%81%B3%E3%81%AB%E7%8B%A9%E7%8C%9F%E3%81%AE%E9%81%A9%E6%AD%A3%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-028",
@@ -14450,7 +14504,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%84%B1%E7%82%AD%E7%B4%A0%E6%88%90%E9%95%B7%E5%9E%8B%E7%B5%8C%E6%B8%88%E6%A7%8B%E9%80%A0%E3%81%B8%E3%81%AE%E5%86%86%E6%BB%91%E3%81%AA%E7%A7%BB%E8%A1%8C%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E8%B3%87%E6%BA%90%E3%81%AE%E6%9C%89%E5%8A%B9%E3%81%AA%E5%88%A9%E7%94%A8%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%84%B1%E7%82%AD%E7%B4%A0%E6%88%90%E9%95%B7%E5%9E%8B%E7%B5%8C%E6%B8%88%E6%A7%8B%E9%80%A0%E3%81%B8%E3%81%AE%E5%86%86%E6%BB%91%E3%81%AA%E7%A7%BB%E8%A1%8C%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E8%B3%87%E6%BA%90%E3%81%AE%E6%9C%89%E5%8A%B9%E3%81%AA%E5%88%A9%E7%94%A8%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-029",
@@ -14977,7 +15033,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E9%96%A2%E9%80%A3%E6%8A%80%E8%A1%93%E3%81%AE%E7%A0%94%E7%A9%B6%E9%96%8B%E7%99%BA%E5%8F%8A%E3%81%B3%E6%B4%BB%E7%94%A8%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E9%96%A2%E9%80%A3%E6%8A%80%E8%A1%93%E3%81%AE%E7%A0%94%E7%A9%B6%E9%96%8B%E7%99%BA%E5%8F%8A%E3%81%B3%E6%B4%BB%E7%94%A8%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-030",
@@ -15501,7 +15559,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%83%85%E5%A0%B1%E9%80%9A%E4%BF%A1%E6%8A%80%E8%A1%93%E3%81%AE%E9%80%B2%E5%B1%95%E7%AD%89%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E5%88%91%E4%BA%8B%E8%A8%B4%E8%A8%9F%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%83%85%E5%A0%B1%E9%80%9A%E4%BF%A1%E6%8A%80%E8%A1%93%E3%81%AE%E9%80%B2%E5%B1%95%E7%AD%89%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E5%88%91%E4%BA%8B%E8%A8%B4%E8%A8%9F%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-031",
@@ -16025,7 +16085,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%A3%AE%E6%9E%97%E7%B5%8C%E5%96%B6%E7%AE%A1%E7%90%86%E6%B3%95%E5%8F%8A%E3%81%B3%E6%A3%AE%E6%9E%97%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%A3%AE%E6%9E%97%E7%B5%8C%E5%96%B6%E7%AE%A1%E7%90%86%E6%B3%95%E5%8F%8A%E3%81%B3%E6%A3%AE%E6%9E%97%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-032",
@@ -16551,7 +16613,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%85%AC%E7%9B%8A%E9%80%9A%E5%A0%B1%E8%80%85%E4%BF%9D%E8%AD%B7%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%85%AC%E7%9B%8A%E9%80%9A%E5%A0%B1%E8%80%85%E4%BF%9D%E8%AD%B7%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-033",
@@ -17076,7 +17140,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%86%86%E6%BB%91%E3%81%AA%E4%BA%8B%E6%A5%AD%E5%86%8D%E7%94%9F%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BA%8B%E6%A5%AD%E8%80%85%E3%81%AE%E9%87%91%E8%9E%8D%E6%A9%9F%E9%96%A2%E7%AD%89%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%82%B5%E5%8B%99%E3%81%AE%E8%AA%BF%E6%95%B4%E3%81%AE%E6%89%8B%E7%B6%9A%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%86%86%E6%BB%91%E3%81%AA%E4%BA%8B%E6%A5%AD%E5%86%8D%E7%94%9F%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BA%8B%E6%A5%AD%E8%80%85%E3%81%AE%E9%87%91%E8%9E%8D%E6%A9%9F%E9%96%A2%E7%AD%89%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E5%82%B5%E5%8B%99%E3%81%AE%E8%AA%BF%E6%95%B4%E3%81%AE%E6%89%8B%E7%B6%9A%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-034",
@@ -17599,7 +17665,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%80%81%E6%9C%BD%E5%8C%96%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E7%AD%89%E3%81%AE%E7%AE%A1%E7%90%86%E5%8F%8A%E3%81%B3%E5%86%8D%E7%94%9F%E3%81%AE%E5%86%86%E6%BB%91%E5%8C%96%E7%AD%89%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E5%BB%BA%E7%89%A9%E3%81%AE%E5%8C%BA%E5%88%86%E6%89%80%E6%9C%89%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%80%81%E6%9C%BD%E5%8C%96%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E7%AD%89%E3%81%AE%E7%AE%A1%E7%90%86%E5%8F%8A%E3%81%B3%E5%86%8D%E7%94%9F%E3%81%AE%E5%86%86%E6%BB%91%E5%8C%96%E7%AD%89%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E5%BB%BA%E7%89%A9%E3%81%AE%E5%8C%BA%E5%88%86%E6%89%80%E6%9C%89%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-035",
@@ -18120,7 +18188,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9C%B0%E5%9F%9F%E3%81%AE%E8%87%AA%E4%B8%BB%E6%80%A7%E5%8F%8A%E3%81%B3%E8%87%AA%E7%AB%8B%E6%80%A7%E3%82%92%E9%AB%98%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%94%B9%E9%9D%A9%E3%81%AE%E6%8E%A8%E9%80%B2%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E9%96%A2%E4%BF%82%E6%B3%95%E5%BE%8B%E3%81%AE%E6%95%B4%E5%82%99%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9C%B0%E5%9F%9F%E3%81%AE%E8%87%AA%E4%B8%BB%E6%80%A7%E5%8F%8A%E3%81%B3%E8%87%AA%E7%AB%8B%E6%80%A7%E3%82%92%E9%AB%98%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%94%B9%E9%9D%A9%E3%81%AE%E6%8E%A8%E9%80%B2%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E9%96%A2%E4%BF%82%E6%B3%95%E5%BE%8B%E3%81%AE%E6%95%B4%E5%82%99%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-036",
@@ -18669,7 +18739,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%97%A5%E6%9C%AC%E5%AD%A6%E8%A1%93%E4%BC%9A%E8%AD%B0%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%97%A5%E6%9C%AC%E5%AD%A6%E8%A1%93%E4%BC%9A%E8%AD%B0%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-037",
@@ -19195,7 +19267,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BF%9D%E9%99%BA%E6%A5%AD%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BF%9D%E9%99%BA%E6%A5%AD%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-038",
@@ -19716,7 +19790,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BF%A1%E8%A8%97%E6%A5%AD%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BF%A1%E8%A8%97%E6%A5%AD%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-039",
@@ -20242,7 +20318,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%B3%87%E9%87%91%E6%B1%BA%E6%B8%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%B3%87%E9%87%91%E6%B1%BA%E6%B8%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-040",
@@ -20766,7 +20844,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%85%90%E7%AB%A5%E7%A6%8F%E7%A5%89%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%85%90%E7%AB%A5%E7%A6%8F%E7%A5%89%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-041",
@@ -21291,7 +21371,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%A1%8C%E6%94%BF%E6%89%8B%E7%B6%9A%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%89%B9%E5%AE%9A%E3%81%AE%E5%80%8B%E4%BA%BA%E3%82%92%E8%AD%98%E5%88%A5%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E7%95%AA%E5%8F%B7%E3%81%AE%E5%88%A9%E7%94%A8%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E4%BD%8F%E6%B0%91%E5%9F%BA%E6%9C%AC%E5%8F%B0%E5%B8%B3%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%A1%8C%E6%94%BF%E6%89%8B%E7%B6%9A%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%89%B9%E5%AE%9A%E3%81%AE%E5%80%8B%E4%BA%BA%E3%82%92%E8%AD%98%E5%88%A5%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E7%95%AA%E5%8F%B7%E3%81%AE%E5%88%A9%E7%94%A8%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E4%BD%8F%E6%B0%91%E5%9F%BA%E6%9C%AC%E5%8F%B0%E5%B8%B3%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-042",
@@ -21815,7 +21897,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B0%91%E4%BA%8B%E8%A3%81%E5%88%A4%E6%83%85%E5%A0%B1%E3%81%AE%E6%B4%BB%E7%94%A8%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B0%91%E4%BA%8B%E8%A3%81%E5%88%A4%E6%83%85%E5%A0%B1%E3%81%AE%E6%B4%BB%E7%94%A8%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-043",
@@ -22341,7 +22425,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-044",
@@ -22867,7 +22953,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-045",
@@ -23393,7 +23481,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%A3%9F%E5%93%81%E7%AD%89%E3%81%AE%E6%B5%81%E9%80%9A%E3%81%AE%E5%90%88%E7%90%86%E5%8C%96%E5%8F%8A%E3%81%B3%E5%8F%96%E5%BC%95%E3%81%AE%E9%81%A9%E6%AD%A3%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E5%8D%B8%E5%A3%B2%E5%B8%82%E5%A0%B4%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%A3%9F%E5%93%81%E7%AD%89%E3%81%AE%E6%B5%81%E9%80%9A%E3%81%AE%E5%90%88%E7%90%86%E5%8C%96%E5%8F%8A%E3%81%B3%E5%8F%96%E5%BC%95%E3%81%AE%E9%81%A9%E6%AD%A3%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E5%8D%B8%E5%A3%B2%E5%B8%82%E5%A0%B4%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-046",
@@ -23917,7 +24007,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B5%B7%E6%B4%8B%E5%86%8D%E7%94%9F%E5%8F%AF%E8%83%BD%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E7%99%BA%E9%9B%BB%E8%A8%AD%E5%82%99%E3%81%AE%E6%95%B4%E5%82%99%E3%81%AB%E4%BF%82%E3%82%8B%E6%B5%B7%E5%9F%9F%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B5%B7%E6%B4%8B%E5%86%8D%E7%94%9F%E5%8F%AF%E8%83%BD%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E7%99%BA%E9%9B%BB%E8%A8%AD%E5%82%99%E3%81%AE%E6%95%B4%E5%82%99%E3%81%AB%E4%BF%82%E3%82%8B%E6%B5%B7%E5%9F%9F%E3%81%AE%E5%88%A9%E7%94%A8%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-047",
@@ -24441,7 +24533,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%A2%A8%E4%BF%97%E5%96%B6%E6%A5%AD%E7%AD%89%E3%81%AE%E8%A6%8F%E5%88%B6%E5%8F%8A%E3%81%B3%E6%A5%AD%E5%8B%99%E3%81%AE%E9%81%A9%E6%AD%A3%E5%8C%96%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%A2%A8%E4%BF%97%E5%96%B6%E6%A5%AD%E7%AD%89%E3%81%AE%E8%A6%8F%E5%88%B6%E5%8F%8A%E3%81%B3%E6%A5%AD%E5%8B%99%E3%81%AE%E9%81%A9%E6%AD%A3%E5%8C%96%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-048",
@@ -24966,7 +25060,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%B8%8B%E8%AB%8B%E4%BB%A3%E9%87%91%E6%94%AF%E6%89%95%E9%81%85%E5%BB%B6%E7%AD%89%E9%98%B2%E6%AD%A2%E6%B3%95%E5%8F%8A%E3%81%B3%E4%B8%8B%E8%AB%8B%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E6%8C%AF%E8%88%88%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%B8%8B%E8%AB%8B%E4%BB%A3%E9%87%91%E6%94%AF%E6%89%95%E9%81%85%E5%BB%B6%E7%AD%89%E9%98%B2%E6%AD%A2%E6%B3%95%E5%8F%8A%E3%81%B3%E4%B8%8B%E8%AB%8B%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%E6%8C%AF%E8%88%88%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-049",
@@ -25489,7 +25585,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%9B%97%E9%9B%A3%E7%89%B9%E5%AE%9A%E9%87%91%E5%B1%9E%E8%A3%BD%E7%89%A9%E5%93%81%E3%81%AE%E5%87%A6%E5%88%86%E3%81%AE%E9%98%B2%E6%AD%A2%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%9B%97%E9%9B%A3%E7%89%B9%E5%AE%9A%E9%87%91%E5%B1%9E%E8%A3%BD%E7%89%A9%E5%93%81%E3%81%AE%E5%87%A6%E5%88%86%E3%81%AE%E9%98%B2%E6%AD%A2%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-050",
@@ -26015,7 +26113,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-051",
@@ -26539,7 +26639,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%92%B0%E5%A2%83%E5%BD%B1%E9%9F%BF%E8%A9%95%E4%BE%A1%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%92%B0%E5%A2%83%E5%BD%B1%E9%9F%BF%E8%A9%95%E4%BE%A1%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-052",
@@ -27063,7 +27165,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-053",
@@ -27587,7 +27691,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-054",
@@ -28112,7 +28218,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%9B%BB%E6%B0%97%E9%80%9A%E4%BF%A1%E4%BA%8B%E6%A5%AD%E6%B3%95%E5%8F%8A%E3%81%B3%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%9B%BB%E6%B0%97%E9%80%9A%E4%BF%A1%E4%BA%8B%E6%A5%AD%E6%B3%95%E5%8F%8A%E3%81%B3%E6%97%A5%E6%9C%AC%E9%9B%BB%E4%BF%A1%E9%9B%BB%E8%A9%B1%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-055",
@@ -28638,7 +28746,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%88%AA%E7%A9%BA%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%88%AA%E7%A9%BA%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-056",
@@ -29160,7 +29270,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%97%A5%E6%9C%AC%E5%9B%BD%E3%81%AE%E8%87%AA%E8%A1%9B%E9%9A%8A%E3%81%A8%E6%88%91%E3%81%8C%E5%9B%BD%E4%BB%A5%E5%A4%96%E3%81%AE%E7%B7%A0%E7%B4%84%E5%9B%BD%E3%81%AE%E8%BB%8D%E9%9A%8A%E3%81%A8%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%9B%B8%E4%BA%92%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%8F%8A%E3%81%B3%E5%8D%94%E5%8A%9B%E3%81%AE%E5%86%86%E6%BB%91%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%97%A5%E6%9C%AC%E5%9B%BD%E3%81%A8%E6%88%91%E3%81%8C%E5%9B%BD%E4%BB%A5%E5%A4%96%E3%81%AE%E7%B7%A0%E7%B4%84%E5%9B%BD%E3%81%A8%E3%81%AE%E9%96%93%E3%81%AE%E5%8D%94%E5%AE%9A%E3%81%AE%E5%AE%9F%E6%96%BD%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%97%A5%E6%9C%AC%E5%9B%BD%E3%81%AE%E8%87%AA%E8%A1%9B%E9%9A%8A%E3%81%A8%E6%88%91%E3%81%8C%E5%9B%BD%E4%BB%A5%E5%A4%96%E3%81%AE%E7%B7%A0%E7%B4%84%E5%9B%BD%E3%81%AE%E8%BB%8D%E9%9A%8A%E3%81%A8%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E7%9B%B8%E4%BA%92%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%8F%8A%E3%81%B3%E5%8D%94%E5%8A%9B%E3%81%AE%E5%86%86%E6%BB%91%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%97%A5%E6%9C%AC%E5%9B%BD%E3%81%A8%E6%88%91%E3%81%8C%E5%9B%BD%E4%BB%A5%E5%A4%96%E3%81%AE%E7%B7%A0%E7%B4%84%E5%9B%BD%E3%81%A8%E3%81%AE%E9%96%93%E3%81%AE%E5%8D%94%E5%AE%9A%E3%81%AE%E5%AE%9F%E6%96%BD%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-057",
@@ -29683,7 +29795,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8A%B4%E5%83%8D%E5%AE%89%E5%85%A8%E8%A1%9B%E7%94%9F%E6%B3%95%E5%8F%8A%E3%81%B3%E4%BD%9C%E6%A5%AD%E7%92%B0%E5%A2%83%E6%B8%AC%E5%AE%9A%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8A%B4%E5%83%8D%E5%AE%89%E5%85%A8%E8%A1%9B%E7%94%9F%E6%B3%95%E5%8F%8A%E3%81%B3%E4%BD%9C%E6%A5%AD%E7%92%B0%E5%A2%83%E6%B8%AC%E5%AE%9A%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-058",
@@ -30207,7 +30321,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%88%B9%E5%93%A1%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%88%B9%E5%93%A1%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-kaku-059",
@@ -30776,7 +30892,9 @@
       "number": 59,
       "lawNumber": "74",
       "status": "成立",
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%A4%BE%E4%BC%9A%E7%B5%8C%E6%B8%88%E3%81%AE%E5%A4%89%E5%8C%96%E3%82%92%E8%B8%8F%E3%81%BE%E3%81%88%E3%81%9F%E5%B9%B4%E9%87%91%E5%88%B6%E5%BA%A6%E3%81%AE%E6%A9%9F%E8%83%BD%E5%BC%B7%E5%8C%96%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E5%9B%BD%E6%B0%91%E5%B9%B4%E9%87%91%E6%B3%95%E7%AD%89"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%A4%BE%E4%BC%9A%E7%B5%8C%E6%B8%88%E3%81%AE%E5%A4%89%E5%8C%96%E3%82%92%E8%B8%8F%E3%81%BE%E3%81%88%E3%81%9F%E5%B9%B4%E9%87%91%E5%88%B6%E5%BA%A6%E3%81%AE%E6%A9%9F%E8%83%BD%E5%BC%B7%E5%8C%96%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E5%9B%BD%E6%B0%91%E5%B9%B4%E9%87%91%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-san-005",
@@ -31301,7 +31419,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-san-009",
@@ -31825,7 +31945,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%89%8B%E8%A9%B1%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%96%BD%E7%AD%96%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%89%8B%E8%A9%B1%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%96%BD%E7%AD%96%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-009",
@@ -32349,7 +32471,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-010",
@@ -32873,7 +32997,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-015",
@@ -33397,7 +33523,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9C%B0%E9%9C%87%E9%98%B2%E7%81%BD%E5%AF%BE%E7%AD%96%E5%BC%B7%E5%8C%96%E5%9C%B0%E5%9F%9F%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9C%B0%E9%9C%87%E5%AF%BE%E7%AD%96%E7%B7%8A%E6%80%A5%E6%95%B4%E5%82%99%E4%BA%8B%E6%A5%AD%E3%81%AB%E4%BF%82%E3%82%8B%E5%9B%BD%E3%81%AE%E8%B2%A1%E6%94%BF%E4%B8%8A%E3%81%AE%E7%89%B9%E5%88%A5%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9C%B0%E9%9C%87%E9%98%B2%E7%81%BD%E5%AF%BE%E7%AD%96%E5%BC%B7%E5%8C%96%E5%9C%B0%E5%9F%9F%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%9C%B0%E9%9C%87%E5%AF%BE%E7%AD%96%E7%B7%8A%E6%80%A5%E6%95%B4%E5%82%99%E4%BA%8B%E6%A5%AD%E3%81%AB%E4%BF%82%E3%82%8B%E5%9B%BD%E3%81%AE%E8%B2%A1%E6%94%BF%E4%B8%8A%E3%81%AE%E7%89%B9%E5%88%A5%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-016",
@@ -33921,7 +34049,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8D%8A%E5%B3%B6%E6%8C%AF%E8%88%88%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8D%8A%E5%B3%B6%E6%8C%AF%E8%88%88%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-017",
@@ -34445,7 +34575,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-018",
@@ -34969,7 +35101,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%AD%B0%E9%99%A2%E3%81%AB%E5%87%BA%E9%A0%AD%E3%81%99%E3%82%8B%E8%A8%BC%E4%BA%BA%E7%AD%89%E3%81%AE%E6%97%85%E8%B2%BB%E5%8F%8A%E3%81%B3%E6%97%A5%E5%BD%93%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%AD%B0%E9%99%A2%E3%81%AB%E5%87%BA%E9%A0%AD%E3%81%99%E3%82%8B%E8%A8%BC%E4%BA%BA%E7%AD%89%E3%81%AE%E6%97%85%E8%B2%BB%E5%8F%8A%E3%81%B3%E6%97%A5%E5%BD%93%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-019",
@@ -35493,7 +35627,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-020",
@@ -36017,7 +36153,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-028",
@@ -36542,7 +36680,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E4%BC%9A%E6%B3%95%E5%8F%8A%E3%81%B3%E8%AD%B0%E9%99%A2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E8%A8%BC%E4%BA%BA%E3%81%AE%E5%AE%A3%E8%AA%93%E5%8F%8A%E3%81%B3%E8%A8%BC%E8%A8%80%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E4%BC%9A%E6%B3%95%E5%8F%8A%E3%81%B3%E8%AD%B0%E9%99%A2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E8%A8%BC%E4%BA%BA%E3%81%AE%E5%AE%A3%E8%AA%93%E5%8F%8A%E3%81%B3%E8%A8%BC%E8%A8%80%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-033",
@@ -37068,7 +37208,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-034",
@@ -37594,7 +37736,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-036",
@@ -38115,7 +38259,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%A1%8C%E6%94%BF%E6%9B%B8%E5%A3%AB%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%A1%8C%E6%94%BF%E6%9B%B8%E5%A3%AB%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-037",
@@ -38637,7 +38783,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E3%82%AE%E3%83%A3%E3%83%B3%E3%83%96%E3%83%AB%E7%AD%89%E4%BE%9D%E5%AD%98%E7%97%87%E5%AF%BE%E7%AD%96%E5%9F%BA%E6%9C%AC%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E3%82%AE%E3%83%A3%E3%83%B3%E3%83%96%E3%83%AB%E7%AD%89%E4%BE%9D%E5%AD%98%E7%97%87%E5%AF%BE%E7%AD%96%E5%9F%BA%E6%9C%AC%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-048",
@@ -39161,7 +39309,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E5%9F%BA%E6%9C%AC%E6%B3%95%E5%8F%8A%E3%81%B3%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%89%E3%83%BC%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AE%E9%98%B2%E6%AD%A2%E6%B4%BB%E5%8B%95%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E5%9F%BA%E6%9C%AC%E6%B3%95%E5%8F%8A%E3%81%B3%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%89%E3%83%BC%E3%83%94%E3%83%B3%E3%82%B0%E3%81%AE%E9%98%B2%E6%AD%A2%E6%B4%BB%E5%8B%95%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-shu-049",
@@ -39684,7 +39834,9 @@
           ]
         }
       ],
-      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%99%BA%E5%8A%B4%E5%8B%99%E5%A3%AB%E6%B3%95"
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%99%BA%E5%8A%B4%E5%8B%99%E5%A3%AB%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-yosan-001",
@@ -40237,7 +40389,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-yosan-002",
@@ -40790,7 +40944,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "217-yosan-003",
@@ -41343,7 +41499,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "218-shu-001",
@@ -41509,7 +41667,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-001",
@@ -42056,7 +42216,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-002",
@@ -42603,7 +42765,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-003",
@@ -43150,7 +43314,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-004",
@@ -43696,7 +43862,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-005",
@@ -44237,7 +44405,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-006",
@@ -44779,7 +44949,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-007",
@@ -45321,7 +45493,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-008",
@@ -45862,7 +46036,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-009",
@@ -46403,7 +46579,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-kaku-010",
@@ -46944,7 +47122,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-shu-005",
@@ -47491,7 +47671,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-shu-010",
@@ -48033,7 +48215,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-shu-014",
@@ -48574,7 +48758,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-shu-015",
@@ -49115,7 +49301,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-yosan-001",
@@ -49691,7 +49879,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "219-yosan-002",
@@ -50267,7 +50457,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-001",
@@ -50835,7 +51027,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-002",
@@ -51401,7 +51595,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-003",
@@ -51969,7 +52165,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-004",
@@ -52521,7 +52719,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-005",
@@ -53073,7 +53273,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-006",
@@ -53639,7 +53841,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-007",
@@ -54191,7 +54395,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-008",
@@ -54743,7 +54949,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-009",
@@ -55296,7 +55504,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-010",
@@ -55848,7 +56058,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-011",
@@ -56400,7 +56612,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-012",
@@ -56952,6 +57166,210 @@
             }
           ]
         }
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
+    },
+    {
+      "id": "221-kaku-013",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 13,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "防災庁設置法案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-06",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%98%B2%E7%81%BD%E5%BA%81%E8%A8%AD%E7%BD%AE%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/6",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109013.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "災害対策特別委員会に付託",
+          "date": "2026/4/14",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE1612.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/5/19",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "災害対策及び東日本大震災復興特別委員会に付託",
+          "date": "2026/5/22",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE1612.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-014",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 14,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "防災庁設置法の施行に伴う関係法律の整備等に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-06",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%98%B2%E7%81%BD%E5%BA%81%E8%A8%AD%E7%BD%AE%E6%B3%95%E3%81%AE%E6%96%BD%E8%A1%8C%E3%81%AB%E4%BC%B4%E3%81%86%E9%96%A2%E4%BF%82%E6%B3%95%E5%BE%8B%E3%81%AE%E6%95%B4%E5%82%99%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/6",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109014.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "災害対策特別委員会に付託",
+          "date": "2026/4/14",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE1626.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/5/19",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "災害対策及び東日本大震災復興特別委員会に付託",
+          "date": "2026/5/22",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE1626.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
       ]
     },
     {
@@ -57430,6 +57848,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%B5%8C%E6%B8%88%E7%A4%BE%E4%BC%9A%E6%83%85%E5%8B%A2%E3%81%AE%E5%A4%89%E5%8C%96%E3%82%92%E8%B8%8F%E3%81%BE%E3%81%88%E3%81%9F%E4%BC%81%E6%A5%AD%E3%81%AE%E4%BA%8B%E6%A5%AD%E6%B4%BB%E5%8B%95%E3%81%AE%E6%8C%81%E7%B6%9A%E7%9A%84%E3%81%AA%E7%99%BA%E5%B1%95%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E7%94%A3%E6%A5%AD%E7%AB%B6%E4%BA%89%E5%8A%9B%E5%BC%B7%E5%8C%96%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -57976,6 +58396,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%89%A9%E8%B3%87%E3%81%AE%E6%B5%81%E9%80%9A%E3%81%AE%E5%8A%B9%E7%8E%87%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -58524,6 +58946,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%92%B0%E5%A2%83%E7%9C%81%E8%A8%AD%E7%BD%AE%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -58591,6 +59015,94 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0515-v006.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-018",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 18,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "防衛省設置法等の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-06",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%98%B2%E8%A1%9B%E7%9C%81%E8%A8%AD%E7%BD%AE%E6%B3%95%E7%AD%89",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/6",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109018.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "安全保障委員会に付託",
+          "date": "2026/4/16",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE1E66.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/4/28",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -59144,7 +59656,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-020",
@@ -59623,6 +60137,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%87%BA%E5%85%A5%E5%9B%BD%E7%AE%A1%E7%90%86%E5%8F%8A%E3%81%B3%E9%9B%A3%E6%B0%91%E8%AA%8D%E5%AE%9A%E6%B3%95%E5%8F%8A%E3%81%B3%E5%87%BA%E5%85%A5%E5%9B%BD%E7%AE%A1%E7%90%86%E5%8F%8A%E3%81%B3%E9%9B%A3%E6%B0%91%E8%AA%8D%E5%AE%9A%E6%B3%95%E7%AC%AC%E4%BA%8C%E6%9D%A1%E7%AC%AC%E4%BA%94%E5%8F%B7%E3%83%AD%E3%81%AE%E6%97%85%E5%88%B8%E3%82%92%E6%89%80%E6%8C%81%E3%81%99%E3%82%8B%E5%A4%96%E5%9B%BD%E4%BA%BA%E3%81%AE%E4%B8%8A%E9%99%B8%E7%94%B3%E8%AB%8B%E3%81%AE%E7%89%B9%E4%BE%8B%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -60243,7 +60759,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-022",
@@ -60722,6 +61240,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%83%BD%E5%B8%82%E5%86%8D%E7%94%9F%E7%89%B9%E5%88%A5%E6%8E%AA%E7%BD%AE%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -61269,6 +61789,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9C%B0%E5%9F%9F%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E3%81%AE%E6%B4%BB%E6%80%A7%E5%8C%96%E5%8F%8A%E3%81%B3%E5%86%8D%E7%94%9F%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -61816,6 +62338,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E5%AE%B6%E6%83%85%E5%A0%B1%E4%BC%9A%E8%AD%B0%E8%A8%AD%E7%BD%AE%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -62363,6 +62887,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%81%A5%E5%BA%B7%E4%BF%9D%E9%99%BA%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -62438,7 +62964,7 @@
       "submittedDiet": 221,
       "type": "閣法",
       "number": 26,
-      "lawNumber": null,
+      "lawNumber": "41",
       "status": "成立",
       "name": "産業技術力強化法の一部を改正する法律案",
       "ministry": "",
@@ -62452,7 +62978,7 @@
         "submit": "2026-03-13",
         "review": null,
         "passed": "2026-06-12",
-        "promulgated": null,
+        "promulgated": "2026-06-19",
         "enforced": null
       },
       "hasIndividual": true,
@@ -62909,6 +63435,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%94%A3%E6%A5%AD%E6%8A%80%E8%A1%93%E5%8A%9B%E5%BC%B7%E5%8C%96%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -63455,6 +63983,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%A4%96%E5%9B%BD%E7%82%BA%E6%9B%BF%E5%8F%8A%E3%81%B3%E5%A4%96%E5%9B%BD%E8%B2%BF%E6%98%93%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -64075,7 +64605,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-029",
@@ -64627,7 +65159,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-030",
@@ -65106,6 +65640,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%B5%8C%E6%B8%88%E6%96%BD%E7%AD%96%E3%82%92%E4%B8%80%E4%BD%93%E7%9A%84%E3%81%AB%E8%AC%9B%E3%81%9A%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E5%AE%89%E5%85%A8%E4%BF%9D%E9%9A%9C%E3%81%AE%E7%A2%BA%E4%BF%9D%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E5%9B%BD%E9%9A%9B%E5%8D%94%E5%8A%9B%E9%8A%80%E8%A1%8C%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -65653,6 +66189,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%87%8D%E8%A6%81%E6%96%BD%E8%A8%AD%E3%81%AE%E5%91%A8%E8%BE%BA%E5%9C%B0%E5%9F%9F%E3%81%AE%E4%B8%8A%E7%A9%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%B0%8F%E5%9E%8B%E7%84%A1%E4%BA%BA%E6%A9%9F%E7%AD%89%E3%81%AE%E9%A3%9B%E8%A1%8C%E3%81%AE%E7%A6%81%E6%AD%A2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -66273,7 +66811,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-033",
@@ -66753,6 +67293,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%90%BA%E5%B8%AF%E9%9F%B3%E5%A3%B0%E9%80%9A%E4%BF%A1%E4%BA%8B%E6%A5%AD%E8%80%85%E3%81%AB%E3%82%88%E3%82%8B%E5%A5%91%E7%B4%84%E8%80%85%E7%AD%89%E3%81%AE%E6%9C%AC%E4%BA%BA%E7%A2%BA%E8%AA%8D%E7%AD%89%E5%8F%8A%E3%81%B3%E6%90%BA%E5%B8%AF%E9%9F%B3%E5%A3%B0%E9%80%9A%E4%BF%A1%E5%BD%B9%E5%8B%99%E3%81%AE%E4%B8%8D%E6%AD%A3%E3%81%AA%E5%88%A9%E7%94%A8%E3%81%AE%E9%98%B2%E6%AD%A2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -66828,7 +67370,7 @@
       "submittedDiet": 221,
       "type": "閣法",
       "number": 34,
-      "lawNumber": null,
+      "lawNumber": "42",
       "status": "成立",
       "name": "郵便法及び民間事業者による信書の送達に関する法律の一部を改正する法律案",
       "ministry": "",
@@ -66842,7 +67384,7 @@
         "submit": "2026-03-24",
         "review": null,
         "passed": "2026-06-12",
-        "promulgated": null,
+        "promulgated": "2026-06-19",
         "enforced": null
       },
       "hasIndividual": true,
@@ -67299,6 +67841,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%83%B5%E4%BE%BF%E6%B3%95%E5%8F%8A%E3%81%B3%E6%B0%91%E9%96%93%E4%BA%8B%E6%A5%AD%E8%80%85%E3%81%AB%E3%82%88%E3%82%8B%E4%BF%A1%E6%9B%B8%E3%81%AE%E9%80%81%E9%81%94%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -67847,6 +68391,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%AE%B6%E7%95%9C%E4%BC%9D%E6%9F%93%E7%97%85%E4%BA%88%E9%98%B2%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -67914,6 +68460,86 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0515-v005.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-036",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 36,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "電気事業法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-24",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%9B%BB%E6%B0%97%E4%BA%8B%E6%A5%AD%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/24",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109036.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "経済産業委員会に付託",
+          "date": "2026/6/9",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE21C6.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -68394,6 +69020,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9C%B0%E5%9F%9F%E3%81%AE%E8%87%AA%E4%B8%BB%E6%80%A7%E5%8F%8A%E3%81%B3%E8%87%AA%E7%AB%8B%E6%80%A7%E3%82%92%E9%AB%98%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%94%B9%E9%9D%A9%E3%81%AE%E6%8E%A8%E9%80%B2%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E9%96%A2%E4%BF%82%E6%B3%95%E5%BE%8B%E3%81%AE%E6%95%B4%E5%82%99%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -68461,6 +69089,182 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0527-v001.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-038",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 38,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "下水道法等の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-27",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%B8%8B%E6%B0%B4%E9%81%93%E6%B3%95%E7%AD%89",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/27",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109038.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "国土交通委員会に付託",
+          "date": "2026/5/14",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2362.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/5/26",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-039",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 39,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "建築物のエネルギー消費性能の向上等に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-27",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%BB%BA%E7%AF%89%E7%89%A9%E3%81%AE%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC%E6%B6%88%E8%B2%BB%E6%80%A7%E8%83%BD%E3%81%AE%E5%90%91%E4%B8%8A%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/27",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109039.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "国土交通委員会に付託",
+          "date": "2026/5/28",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2376.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/4",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -69014,6 +69818,189 @@
             }
           ]
         }
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
+    },
+    {
+      "id": "221-kaku-041",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 41,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "科学技術・イノベーション創出の活性化に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-31",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%A7%91%E5%AD%A6%E6%8A%80%E8%A1%93%E3%83%BB%E3%82%A4%E3%83%8E%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%89%B5%E5%87%BA%E3%81%AE%E6%B4%BB%E6%80%A7%E5%8C%96%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/31",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109041.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "内閣委員会に付託",
+          "date": "2026/6/12",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2432.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-042",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 42,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "自動車の運転により人を死傷させる行為等の処罰に関する法律及び道路交通法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-17",
+        "review": null,
+        "passed": "2026-04-17",
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%87%AA%E5%8B%95%E8%BB%8A%E3%81%AE%E9%81%8B%E8%BB%A2%E3%81%AB%E3%82%88%E3%82%8A%E4%BA%BA%E3%82%92%E6%AD%BB%E5%82%B7%E3%81%95%E3%81%9B%E3%82%8B%E8%A1%8C%E7%82%BA%E7%AD%89%E3%81%AE%E5%87%A6%E7%BD%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E9%81%93%E8%B7%AF%E4%BA%A4%E9%80%9A%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/31",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109042.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "法務委員会に付託",
+          "date": "2026/4/13",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE24AA.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/4/17",
+          "desc": "参議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "法務委員会に付託",
+          "date": "2026/6/16",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE24AA.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
       ]
     },
     {
@@ -69493,6 +70480,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B0%91%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -70040,6 +71029,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%B0%91%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -70107,6 +71098,831 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0617-v005.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-045",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 45,
+      "lawNumber": null,
+      "status": "成立",
+      "name": "社会福祉法等の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-03",
+        "review": null,
+        "passed": "2026-06-19",
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": true,
+      "draft": false,
+      "votes": {
+        "san": {
+          "total": 244,
+          "yes": 228,
+          "no": 16,
+          "none": 3,
+          "date": "2026/6/19",
+          "source_url": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0619-v006.htm",
+          "parties": [
+            {
+              "name": "自由民主党・無所属の会",
+              "stance": "y",
+              "count": "99",
+              "members": {
+                "yes": [
+                  "青木 一彦",
+                  "赤松 健",
+                  "浅尾 慶一郎",
+                  "朝日 健太郎",
+                  "阿達 雅志",
+                  "有村 治子",
+                  "生稲 晃子",
+                  "石井 準一",
+                  "石井 浩郎",
+                  "石田 昌宏",
+                  "磯崎 仁彦",
+                  "井上 義行",
+                  "猪口 邦子",
+                  "今井 絵理子",
+                  "岩本 剛人",
+                  "いんどう周作",
+                  "上野 通子",
+                  "臼井 正一",
+                  "江島 潔",
+                  "大家 敏志",
+                  "岡田 直樹",
+                  "小川 克巳",
+                  "越智 俊之",
+                  "梶原 大介",
+                  "加田 裕之",
+                  "片山 さつき",
+                  "加藤 明良",
+                  "かまやち 敏",
+                  "神谷 政幸",
+                  "北村 経夫",
+                  "木村 義雄",
+                  "見坂 茂範",
+                  "上月 良祐",
+                  "古賀 友一郎",
+                  "古庄 玄知",
+                  "小林 一大",
+                  "小林 孝一郎",
+                  "こやり 隆史",
+                  "酒井 庸行",
+                  "櫻井 充",
+                  "佐藤 啓",
+                  "自見 はなこ",
+                  "清水 真人",
+                  "進藤 金日子",
+                  "末松 信介",
+                  "鈴木 大地",
+                  "鈴木 宗男",
+                  "高橋 克法",
+                  "高橋 はるみ",
+                  "滝波 宏文",
+                  "鶴保 庸介",
+                  "出川 桃子",
+                  "寺田 静",
+                  "友納 理緒",
+                  "永井 学",
+                  "中曽根 弘文",
+                  "中西 祐介",
+                  "西田 昌司",
+                  "西田 英範",
+                  "野上 浩太郎",
+                  "野村 哲郎",
+                  "橋本 聖子",
+                  "長谷川 岳",
+                  "長谷川 英晴",
+                  "馬場 成志",
+                  "東野 秀樹",
+                  "福岡 資麿",
+                  "福山 守",
+                  "藤井 一博",
+                  "藤川 政人",
+                  "藤木 眞也",
+                  "船橋 利実",
+                  "古川 俊治",
+                  "星 北斗",
+                  "堀井 巌",
+                  "本田 顕子",
+                  "舞立 昇治",
+                  "牧野 たかお",
+                  "松川 るい",
+                  "松下 新平",
+                  "松村 祥史",
+                  "松山 政司",
+                  "三原じゅん子",
+                  "宮沢 洋一",
+                  "宮本 和宏",
+                  "宮本 周司",
+                  "森 まさこ",
+                  "山下 雄平",
+                  "山田 太郎",
+                  "山田 宏",
+                  "山谷 えり子",
+                  "山本 啓介",
+                  "山本 佐知子",
+                  "山本 順三",
+                  "吉井 章",
+                  "若井 敦子",
+                  "若林 洋平",
+                  "脇 雅昭",
+                  "渡辺 猛之"
+                ],
+                "no": [],
+                "none": [
+                  "小野田 紀美",
+                  "山崎 正昭"
+                ]
+              }
+            },
+            {
+              "name": "立憲民主・無所属",
+              "stance": "y",
+              "count": "40",
+              "members": {
+                "yes": [
+                  "青木 愛",
+                  "石垣 のりこ",
+                  "石橋 通宏",
+                  "泉 房穂",
+                  "打越 さく良",
+                  "小沢 雅仁",
+                  "鬼木 誠",
+                  "勝部 賢志",
+                  "岸 真紀子",
+                  "木戸口 英司",
+                  "熊谷 裕人",
+                  "郡山 りょう",
+                  "古賀 千景",
+                  "古賀 之士",
+                  "小島 とも子",
+                  "小西 洋之",
+                  "斎藤 嘉隆",
+                  "塩村 あやか",
+                  "柴 愼一",
+                  "杉尾 秀哉",
+                  "高木 真理",
+                  "田島 麻衣子",
+                  "田名部 匡代",
+                  "辻元 清美",
+                  "徳永 エリ",
+                  "長浜 博行",
+                  "羽田 次郎",
+                  "広田 一",
+                  "福士 珠美",
+                  "牧山 ひろえ",
+                  "三上 えり",
+                  "水岡 俊一",
+                  "村田 享子",
+                  "森 ゆうこ",
+                  "森本 真治",
+                  "山内 佳菜子",
+                  "横沢 高徳",
+                  "吉川 沙織",
+                  "吉田 忠智",
+                  "蓮舫"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "国民民主党・新緑風会",
+              "stance": "y",
+              "count": "25",
+              "members": {
+                "yes": [
+                  "足立 康史",
+                  "礒崎 哲史",
+                  "伊藤 孝恵",
+                  "伊藤 辰夫",
+                  "上田 清司",
+                  "牛田 茉友",
+                  "江原 くみ子",
+                  "奥村 祥大",
+                  "かごしま彰宏",
+                  "川合 孝典",
+                  "後藤 斎",
+                  "小林 さやか",
+                  "榛葉 賀津也",
+                  "竹詰 仁",
+                  "田村 まみ",
+                  "堂込 麻紀子",
+                  "庭田 幸恵",
+                  "芳賀 道也",
+                  "浜口 誠",
+                  "浜野 喜史",
+                  "原田 秀一",
+                  "平戸 航太",
+                  "舟山 康江",
+                  "水野 孝一",
+                  "山田 吉彦"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "公明党",
+              "stance": "y",
+              "count": "21",
+              "members": {
+                "yes": [
+                  "秋野 公造",
+                  "石川 博崇",
+                  "伊藤 孝江",
+                  "上田 勇",
+                  "川村 雄大",
+                  "窪田 哲也",
+                  "佐々木 雅文",
+                  "里見 隆治",
+                  "下野 六太",
+                  "杉 久武",
+                  "高橋 光男",
+                  "竹内 真二",
+                  "竹谷 とし子",
+                  "谷合 正明",
+                  "司 隆史",
+                  "西田 実仁",
+                  "原田 大二郎",
+                  "平木 大作",
+                  "三浦 信祐",
+                  "宮崎 勝",
+                  "横山 信一"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "日本維新の会",
+              "stance": "y",
+              "count": "19",
+              "members": {
+                "yes": [
+                  "青島 健太",
+                  "浅田 均",
+                  "石井 苗子",
+                  "石井 めぐみ",
+                  "猪瀬 直樹",
+                  "上野 ほたる",
+                  "岡崎 太",
+                  "嘉田 由紀子",
+                  "片山 大介",
+                  "金子 道仁",
+                  "串田 誠一",
+                  "佐々木 りえ",
+                  "柴田 巧",
+                  "石 平",
+                  "高木 かおり",
+                  "中条 きよし",
+                  "新実 彰平",
+                  "松沢 成文",
+                  "松野 明美"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "参政党",
+              "stance": "y",
+              "count": "15",
+              "members": {
+                "yes": [
+                  "安達 悠司",
+                  "安藤 裕",
+                  "岩本 麻奈",
+                  "梅村 みずほ",
+                  "大津 力",
+                  "神谷 宗幣",
+                  "後藤 翔太",
+                  "櫻井 祥子",
+                  "塩入 清香",
+                  "杉本 純子",
+                  "中田 優子",
+                  "初鹿野 裕樹",
+                  "松田 学",
+                  "宮出 千慧",
+                  "山中 泉"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "日本共産党",
+              "stance": "n",
+              "count": "7",
+              "members": {
+                "yes": [],
+                "no": [
+                  "岩渕 友",
+                  "吉良 よし子",
+                  "小池 晃",
+                  "白川 容子",
+                  "大門 実紀史",
+                  "仁比 聡平",
+                  "山添 拓"
+                ],
+                "none": []
+              }
+            },
+            {
+              "name": "れいわ新選組",
+              "stance": "n",
+              "count": "5",
+              "members": {
+                "yes": [],
+                "no": [
+                  "伊勢崎 賢治",
+                  "大島 九州男",
+                  "奥田 ふみよ",
+                  "木村 英子",
+                  "天畠 大輔"
+                ],
+                "none": []
+              }
+            },
+            {
+              "name": "日本保守党",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "北村 晴男",
+                  "百田 尚樹"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "沖縄の風",
+              "stance": "n",
+              "count": "2",
+              "members": {
+                "yes": [],
+                "no": [
+                  "伊波 洋一",
+                  "高良 沙哉"
+                ],
+                "none": []
+              }
+            },
+            {
+              "name": "チームみらい・無所属の会",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "安野 貴博",
+                  "尾辻 朋実"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "社会民主党",
+              "stance": "n",
+              "count": "2",
+              "members": {
+                "yes": [],
+                "no": [
+                  "福島 みずほ",
+                  "ラサール石井"
+                ],
+                "none": []
+              }
+            },
+            {
+              "name": "各派に属しない議員",
+              "stance": "m",
+              "count": "賛5・反0",
+              "members": {
+                "yes": [
+                  "齊藤 健一郎",
+                  "ながえ 孝子",
+                  "平山 佐知子",
+                  "福山 哲郎",
+                  "望月 良男"
+                ],
+                "no": [],
+                "none": [
+                  "関口 昌一"
+                ]
+              }
+            }
+          ]
+        },
+        "shu": {
+          "result": "多数で可決",
+          "date": "2026/5/26",
+          "source_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE259E.htm",
+          "parties": [
+            {
+              "name": "自由民主党・無所属の会",
+              "stance": "y"
+            },
+            {
+              "name": "中道改革連合・無所属",
+              "stance": "y"
+            },
+            {
+              "name": "日本維新の会",
+              "stance": "y"
+            },
+            {
+              "name": "国民民主党・無所属クラブ",
+              "stance": "y"
+            },
+            {
+              "name": "参政党",
+              "stance": "y"
+            },
+            {
+              "name": "チームみらい",
+              "stance": "y"
+            },
+            {
+              "name": "日本共産党",
+              "stance": "n"
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "会議録の公開待ち",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%A4%BE%E4%BC%9A%E7%A6%8F%E7%A5%89%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出",
+          "date": "2026/4/3",
+          "desc": "省庁や提出者の検討を経て、法案が国会に提出されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109045.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "厚生労働委員会で審査",
+          "date": "2026/5/13",
+          "desc": "担当の委員会で専門的に審査されました。法案が実際に検討されるのは主にここです。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE259E.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/5/26",
+          "desc": "衆議院の本会議で採決され、可決されました。",
+          "jump": "shu",
+          "src": [
+            {
+              "t": "衆議院での賛否を見る",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE259E.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "厚生労働委員会で審査",
+          "date": "2026/6/10",
+          "desc": "担当の委員会で専門的に審査されました。法案が実際に検討されるのは主にここです。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE259E.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・本会議",
+          "cls": "diet2",
+          "name": "可決 → 成立",
+          "date": "2026/6/19",
+          "desc": "参議院でも可決され、衆参の両院を通って成立しました。",
+          "jump": "san",
+          "src": [
+            {
+              "t": "参議院での賛否を見る",
+              "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0619-v006.htm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-046",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 46,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "重要品種の育成及びその種苗の生産の振興に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-03",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%87%8D%E8%A6%81%E5%93%81%E7%A8%AE%E3%81%AE%E8%82%B2%E6%88%90%E5%8F%8A%E3%81%B3%E3%81%9D%E3%81%AE%E7%A8%AE%E8%8B%97%E3%81%AE%E7%94%9F%E7%94%A3%E3%81%AE%E6%8C%AF%E8%88%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/3",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109046.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "農林水産委員会に付託",
+          "date": "2026/6/8",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE25B2.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/19",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-047",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 47,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "種苗法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-03",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%A8%AE%E8%8B%97%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/3",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109047.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "農林水産委員会に付託",
+          "date": "2026/6/8",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE25C6.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/19",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-048",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 48,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "主要食糧の需給及び価格の安定に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-03",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%B8%BB%E8%A6%81%E9%A3%9F%E7%B3%A7%E3%81%AE%E9%9C%80%E7%B5%A6%E5%8F%8A%E3%81%B3%E4%BE%A1%E6%A0%BC%E3%81%AE%E5%AE%89%E5%AE%9A%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/3",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109048.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "農林水産委員会に付託",
+          "date": "2026/5/12",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE25DA.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/3",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "農林水産委員会に付託",
+          "date": "2026/6/17",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE25DA.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -70586,6 +72402,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%A4%AA%E9%99%BD%E9%9B%BB%E6%B1%A0%E5%BB%83%E6%A3%84%E7%89%A9%E3%81%AE%E5%86%8D%E8%B3%87%E6%BA%90%E5%8C%96%E7%AD%89%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -71132,6 +72950,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BA%88%E5%82%99%E8%87%AA%E8%A1%9B%E5%AE%98%E7%AD%89%E3%81%AE%E8%81%B7%E5%8B%99%E3%81%AE%E5%86%86%E6%BB%91%E3%81%AA%E9%81%82%E8%A1%8C%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8B%99%E5%93%A1%E5%8F%8A%E3%81%B3%E5%9C%B0%E6%96%B9%E5%85%AC%E5%8B%99%E5%93%A1%E3%81%AE%E5%85%BC%E6%A5%AD%E3%81%AE%E7%89%B9%E4%BE%8B%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -71754,7 +73574,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-kaku-052",
@@ -72308,6 +74130,210 @@
             }
           ]
         }
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
+    },
+    {
+      "id": "221-kaku-053",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 53,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "情報通信技術を活用した行政の推進等に関する法律及び情報処理の促進に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-07",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%83%85%E5%A0%B1%E9%80%9A%E4%BF%A1%E6%8A%80%E8%A1%93%E3%82%92%E6%B4%BB%E7%94%A8%E3%81%97%E3%81%9F%E8%A1%8C%E6%94%BF%E3%81%AE%E6%8E%A8%E9%80%B2%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/7",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109053.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "地域活性化・こども政策・デジタル社会形成に関する特別委員会に付託",
+          "date": "2026/4/21",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE26DE.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/5/26",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "デジタル社会の形成及び人工知能の活用等に関する特別委員会に付託",
+          "date": "2026/6/12",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE26DE.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-054",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 54,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "個人情報の保護に関する法律等の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-07",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E3%81%AE%E4%BF%9D%E8%AD%B7%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E7%AD%89",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/7",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109054.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "地域活性化・こども政策・デジタル社会形成に関する特別委員会に付託",
+          "date": "2026/4/21",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE26F2.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/5/26",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "デジタル社会の形成及び人工知能の活用等に関する特別委員会に付託",
+          "date": "2026/6/12",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE26F2.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
       ]
     },
     {
@@ -72786,6 +74812,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%AD%A6%E6%A0%A1%E6%95%99%E8%82%B2%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -72857,11 +74885,288 @@
       ]
     },
     {
+      "id": "221-kaku-056",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 56,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "労働者災害補償保険法等の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-07",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%8A%B4%E5%83%8D%E8%80%85%E7%81%BD%E5%AE%B3%E8%A3%9C%E5%84%9F%E4%BF%9D%E9%99%BA%E6%B3%95%E7%AD%89",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/7",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109056.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "厚生労働委員会に付託",
+          "date": "2026/5/26",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE271A.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/2",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-057",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 57,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "金融商品取引法及び資金決済に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-10",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%87%91%E8%9E%8D%E5%95%86%E5%93%81%E5%8F%96%E5%BC%95%E6%B3%95%E5%8F%8A%E3%81%B3%E8%B3%87%E9%87%91%E6%B1%BA%E6%B8%88%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/10",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109057.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "財務金融委員会に付託",
+          "date": "2026/5/28",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE278A.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/11",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "財政金融委員会に付託",
+          "date": "2026/6/15",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE278A.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-058",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 58,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "ヒトゲノム編集胚等の取扱いの規制に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-10",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E3%83%92%E3%83%88%E3%82%B2%E3%83%8E%E3%83%A0%E7%B7%A8%E9%9B%86%E8%83%9A%E7%AD%89%E3%81%AE%E5%8F%96%E6%89%B1%E3%81%84%E3%81%AE%E8%A6%8F%E5%88%B6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/10",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109058.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "厚生労働委員会に付託",
+          "date": "2026/6/9",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE279E.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/16",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
       "id": "221-kaku-059",
       "submittedDiet": 221,
       "type": "閣法",
       "number": 59,
-      "lawNumber": null,
+      "lawNumber": "43",
       "status": "成立",
       "name": "廃棄物の処理及び清掃に関する法律等の一部を改正する法律案",
       "ministry": "",
@@ -72875,7 +75180,7 @@
         "submit": "2026-04-10",
         "review": null,
         "passed": "2026-06-12",
-        "promulgated": null,
+        "promulgated": "2026-06-19",
         "enforced": null
       },
       "hasIndividual": true,
@@ -73332,6 +75637,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%BB%83%E6%A3%84%E7%89%A9%E3%81%AE%E5%87%A6%E7%90%86%E5%8F%8A%E3%81%B3%E6%B8%85%E6%8E%83%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -73407,7 +75714,7 @@
       "submittedDiet": 221,
       "type": "閣法",
       "number": 60,
-      "lawNumber": null,
+      "lawNumber": "44",
       "status": "成立",
       "name": "ポリ塩化ビフェニル廃棄物の適正な処理の推進に関する特別措置法及び中間貯蔵・環境安全事業株式会社法の一部を改正する法律案",
       "ministry": "",
@@ -73421,7 +75728,7 @@
         "submit": "2026-04-10",
         "review": null,
         "passed": "2026-06-12",
-        "promulgated": null,
+        "promulgated": "2026-06-19",
         "enforced": null
       },
       "hasIndividual": true,
@@ -73879,6 +76186,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E3%83%9D%E3%83%AA%E5%A1%A9%E5%8C%96%E3%83%93%E3%83%95%E3%82%A7%E3%83%8B%E3%83%AB%E5%BB%83%E6%A3%84%E7%89%A9%E3%81%AE%E9%81%A9%E6%AD%A3%E3%81%AA%E5%87%A6%E7%90%86%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E7%89%B9%E5%88%A5%E6%8E%AA%E7%BD%AE%E6%B3%95%E5%8F%8A%E3%81%B3%E4%B8%AD%E9%96%93%E8%B2%AF%E8%94%B5%E3%83%BB%E7%92%B0%E5%A2%83%E5%AE%89%E5%85%A8%E4%BA%8B%E6%A5%AD%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -73946,6 +76255,107 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0612-v008.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-061",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 61,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "刑事訴訟法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-05-15",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%88%91%E4%BA%8B%E8%A8%B4%E8%A8%9F%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/5/15",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109061.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "法務委員会に付託",
+          "date": "2026/5/26",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2822.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/16",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "法務委員会に付託",
+          "date": "2026/6/19",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2822.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -74425,6 +76835,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%91%97%E4%BD%9C%E6%A8%A9%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -74492,6 +76904,844 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0617-v004.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-kaku-063",
+      "submittedDiet": 221,
+      "type": "閣法",
+      "number": 63,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "予防接種法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-09",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BA%88%E9%98%B2%E6%8E%A5%E7%A8%AE%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "内閣",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/9",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22109063.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-001",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 1,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "政党交付金の交付を受ける政党の組織及び管理運営の透明性及び公正性の向上を図るための制度の導入に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%94%BF%E5%85%9A%E4%BA%A4%E4%BB%98%E9%87%91%E3%81%AE%E4%BA%A4%E4%BB%98%E3%82%92%E5%8F%97%E3%81%91%E3%82%8B%E6%94%BF%E5%85%9A%E3%81%AE%E7%B5%84%E7%B9%94%E5%8F%8A%E3%81%B3%E7%AE%A1%E7%90%86%E9%81%8B%E5%96%B6%E3%81%AE%E9%80%8F%E6%98%8E%E6%80%A7%E5%8F%8A%E3%81%B3%E5%85%AC%E6%AD%A3%E6%80%A7%E3%81%AE%E5%90%91%E4%B8%8A%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E5%88%B6%E5%BA%A6%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/19",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22106001.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-002",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 2,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "特別児童扶養手当等の支給に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%89%B9%E5%88%A5%E5%85%90%E7%AB%A5%E6%89%B6%E9%A4%8A%E6%89%8B%E5%BD%93%E7%AD%89%E3%81%AE%E6%94%AF%E7%B5%A6%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/27",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22106002.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-003",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 3,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "所得税法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%89%80%E5%BE%97%E7%A8%8E%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/27",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22106003.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-004",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 4,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "地方税法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9C%B0%E6%96%B9%E7%A8%8E%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/27",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22106004.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-005",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 5,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "防諜に関する施策の推進に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%98%B2%E8%AB%9C%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%96%BD%E7%AD%96%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/2",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22106005.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-006",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 6,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "特定秘密の保護に関する法律及び重要経済安保情報の保護及び活用に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E7%89%B9%E5%AE%9A%E7%A7%98%E5%AF%86%E3%81%AE%E4%BF%9D%E8%AD%B7%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B%E5%8F%8A%E3%81%B3%E9%87%8D%E8%A6%81%E7%B5%8C%E6%B8%88%E5%AE%89%E4%BF%9D%E6%83%85%E5%A0%B1%E3%81%AE%E4%BF%9D%E8%AD%B7%E5%8F%8A%E3%81%B3%E6%B4%BB%E7%94%A8%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/2",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22106006.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-008",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 8,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "内密出産に対応するための体制の整備等の促進に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%86%85%E5%AF%86%E5%87%BA%E7%94%A3%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E4%BD%93%E5%88%B6%E3%81%AE%E6%95%B4%E5%82%99%E7%AD%89%E3%81%AE%E4%BF%83%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/5/19",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22106008.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-san-009",
+      "submittedDiet": 221,
+      "type": "参法",
+      "number": 9,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "外国人総合政策庁の設置等による外国人政策の総合的な推進に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": null,
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%A4%96%E5%9B%BD%E4%BA%BA%E7%B7%8F%E5%90%88%E6%94%BF%E7%AD%96%E5%BA%81%E3%81%AE%E8%A8%AD%E7%BD%AE%E7%AD%89%E3%81%AB%E3%82%88%E3%82%8B%E5%A4%96%E5%9B%BD%E4%BA%BA%E6%94%BF%E7%AD%96%E3%81%AE%E7%B7%8F%E5%90%88%E7%9A%84%E3%81%AA%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "参議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/17",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2996.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-001",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 1,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "政治資金規正法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-02",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%94%BF%E6%B2%BB%E8%B3%87%E9%87%91%E8%A6%8F%E6%AD%A3%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/2",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105001.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "政治改革に関する特別委員会に付託",
+          "date": "2026/6/12",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE153E.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-002",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 2,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "令和八年度における公債の発行の特例に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-10",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BB%A4%E5%92%8C%E5%85%AB%E5%B9%B4%E5%BA%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%85%AC%E5%82%B5%E3%81%AE%E7%99%BA%E8%A1%8C%E3%81%AE%E7%89%B9%E4%BE%8B%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/10",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105002.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-003",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 3,
+      "lawNumber": null,
+      "status": "本院議了",
+      "name": "インテリジェンスに係る態勢の整備の推進に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-10",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（一院通過・もう一院で審議中）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B9%E3%81%AB%E4%BF%82%E3%82%8B%E6%85%8B%E5%8B%A2%E3%81%AE%E6%95%B4%E5%82%99%E3%81%AE%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "一院通過",
+      "lifecycleDetail": "本院議了",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/10",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105003.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "内閣委員会に付託",
+          "date": "2026/4/21",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE1E7E.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/4/23",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "審議中",
+          "date": "",
+          "desc": "現在審議中です。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -75046,7 +78296,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-shu-005",
@@ -75598,6 +78850,155 @@
             }
           ]
         }
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
+    },
+    {
+      "id": "221-shu-006",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 6,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "障害者及びその家族に対する福祉、教育等に係る支援に関する施策の総合的な推進に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-03-27",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%9A%9C%E5%AE%B3%E8%80%85%E5%8F%8A%E3%81%B3%E3%81%9D%E3%81%AE%E5%AE%B6%E6%97%8F%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E7%A6%8F%E7%A5%89%E3%80%81%E6%95%99%E8%82%B2%E7%AD%89%E3%81%AB%E4%BF%82%E3%82%8B%E6%94%AF%E6%8F%B4%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%96%BD%E7%AD%96%E3%81%AE%E7%B7%8F%E5%90%88%E7%9A%84%E3%81%AA%E6%8E%A8%E9%80%B2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/3/27",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105006.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-007",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 7,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "全ての国民が安心して医療を受けられる環境の整備を図るための高額療養費等の制度の在り方に係る措置に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-04-20",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%85%A8%E3%81%A6%E3%81%AE%E5%9B%BD%E6%B0%91%E3%81%8C%E5%AE%89%E5%BF%83%E3%81%97%E3%81%A6%E5%8C%BB%E7%99%82%E3%82%92%E5%8F%97%E3%81%91%E3%82%89%E3%82%8C%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%AE%E6%95%B4%E5%82%99%E3%82%92%E5%9B%B3%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E9%AB%98%E9%A1%8D%E7%99%82%E9%A4%8A%E8%B2%BB%E7%AD%89%E3%81%AE%E5%88%B6%E5%BA%A6%E3%81%AE%E5%9C%A8%E3%82%8A%E6%96%B9%E3%81%AB%E4%BF%82%E3%82%8B%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/4/20",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105007.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "厚生労働委員会に付託",
+          "date": "2026/4/20",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE280A.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
       ]
     },
     {
@@ -76076,6 +79477,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%A3%9F%E8%82%B2%E5%9F%BA%E6%9C%AC%E6%B3%95",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "衆議院（議員提出）",
@@ -76143,6 +79546,94 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0520-v001.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-shu-009",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 9,
+      "lawNumber": null,
+      "status": "本院議了",
+      "name": "刑事訴訟法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-05-15",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（一院通過・もう一院で審議中）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%88%91%E4%BA%8B%E8%A8%B4%E8%A8%9F%E6%B3%95",
+      "lifecycle": "一院通過",
+      "lifecycleDetail": "本院議了",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/5/15",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105009.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "法務委員会に付託",
+          "date": "2026/5/26",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE2846.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/16",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "審議中",
+          "date": "",
+          "desc": "現在審議中です。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -76624,6 +80115,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E4%BC%9A%E8%AD%B0%E5%93%A1%E3%81%AE%E6%AD%B3%E8%B2%BB%E3%80%81%E6%97%85%E8%B2%BB%E5%8F%8A%E3%81%B3%E6%89%8B%E5%BD%93%E7%AD%89%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "衆議院（議員提出）",
@@ -76691,6 +80184,1552 @@
               "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0529-v010.htm"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "221-shu-011",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 11,
+      "lawNumber": null,
+      "status": "参議院で審議中",
+      "name": "日本国憲法の改正手続に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-05",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%97%A5%E6%9C%AC%E5%9B%BD%E6%86%B2%E6%B3%95%E3%81%AE%E6%94%B9%E6%AD%A3%E6%89%8B%E7%B6%9A%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "参議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/5",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105011.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "憲法審査会委員会に付託",
+          "date": "2026/6/10",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE28DE.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/19",
+          "desc": "衆議院の本会議で可決されました。",
+          "src": []
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "参議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-012",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 12,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "政党等の政治資金の収入に関する制度の在り方に係る措置に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-10",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%94%BF%E5%85%9A%E7%AD%89%E3%81%AE%E6%94%BF%E6%B2%BB%E8%B3%87%E9%87%91%E3%81%AE%E5%8F%8E%E5%85%A5%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E5%88%B6%E5%BA%A6%E3%81%AE%E5%9C%A8%E3%82%8A%E6%96%B9%E3%81%AB%E4%BF%82%E3%82%8B%E6%8E%AA%E7%BD%AE%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/10",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105012.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "政治改革に関する特別委員会に付託",
+          "date": "2026/6/12",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE290A.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-013",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 13,
+      "lawNumber": null,
+      "status": "成立",
+      "name": "郵政民営化法等の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-11",
+        "review": null,
+        "passed": "2026-06-19",
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": true,
+      "draft": false,
+      "votes": {
+        "san": {
+          "total": 244,
+          "yes": 232,
+          "no": 12,
+          "none": 3,
+          "date": "2026/6/19",
+          "source_url": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0619-v005.htm",
+          "parties": [
+            {
+              "name": "自由民主党・無所属の会",
+              "stance": "y",
+              "count": "99",
+              "members": {
+                "yes": [
+                  "青木 一彦",
+                  "赤松 健",
+                  "浅尾 慶一郎",
+                  "朝日 健太郎",
+                  "阿達 雅志",
+                  "有村 治子",
+                  "生稲 晃子",
+                  "石井 準一",
+                  "石井 浩郎",
+                  "石田 昌宏",
+                  "磯崎 仁彦",
+                  "井上 義行",
+                  "猪口 邦子",
+                  "今井 絵理子",
+                  "岩本 剛人",
+                  "いんどう周作",
+                  "上野 通子",
+                  "臼井 正一",
+                  "江島 潔",
+                  "大家 敏志",
+                  "岡田 直樹",
+                  "小川 克巳",
+                  "越智 俊之",
+                  "梶原 大介",
+                  "加田 裕之",
+                  "片山 さつき",
+                  "加藤 明良",
+                  "かまやち 敏",
+                  "神谷 政幸",
+                  "北村 経夫",
+                  "木村 義雄",
+                  "見坂 茂範",
+                  "上月 良祐",
+                  "古賀 友一郎",
+                  "古庄 玄知",
+                  "小林 一大",
+                  "小林 孝一郎",
+                  "こやり 隆史",
+                  "酒井 庸行",
+                  "櫻井 充",
+                  "佐藤 啓",
+                  "自見 はなこ",
+                  "清水 真人",
+                  "進藤 金日子",
+                  "末松 信介",
+                  "鈴木 大地",
+                  "鈴木 宗男",
+                  "高橋 克法",
+                  "高橋 はるみ",
+                  "滝波 宏文",
+                  "鶴保 庸介",
+                  "出川 桃子",
+                  "寺田 静",
+                  "友納 理緒",
+                  "永井 学",
+                  "中曽根 弘文",
+                  "中西 祐介",
+                  "西田 昌司",
+                  "西田 英範",
+                  "野上 浩太郎",
+                  "野村 哲郎",
+                  "橋本 聖子",
+                  "長谷川 岳",
+                  "長谷川 英晴",
+                  "馬場 成志",
+                  "東野 秀樹",
+                  "福岡 資麿",
+                  "福山 守",
+                  "藤井 一博",
+                  "藤川 政人",
+                  "藤木 眞也",
+                  "船橋 利実",
+                  "古川 俊治",
+                  "星 北斗",
+                  "堀井 巌",
+                  "本田 顕子",
+                  "舞立 昇治",
+                  "牧野 たかお",
+                  "松川 るい",
+                  "松下 新平",
+                  "松村 祥史",
+                  "松山 政司",
+                  "三原じゅん子",
+                  "宮沢 洋一",
+                  "宮本 和宏",
+                  "宮本 周司",
+                  "森 まさこ",
+                  "山下 雄平",
+                  "山田 太郎",
+                  "山田 宏",
+                  "山谷 えり子",
+                  "山本 啓介",
+                  "山本 佐知子",
+                  "山本 順三",
+                  "吉井 章",
+                  "若井 敦子",
+                  "若林 洋平",
+                  "脇 雅昭",
+                  "渡辺 猛之"
+                ],
+                "no": [],
+                "none": [
+                  "小野田 紀美",
+                  "山崎 正昭"
+                ]
+              }
+            },
+            {
+              "name": "立憲民主・無所属",
+              "stance": "y",
+              "count": "40",
+              "members": {
+                "yes": [
+                  "青木 愛",
+                  "石垣 のりこ",
+                  "石橋 通宏",
+                  "泉 房穂",
+                  "打越 さく良",
+                  "小沢 雅仁",
+                  "鬼木 誠",
+                  "勝部 賢志",
+                  "岸 真紀子",
+                  "木戸口 英司",
+                  "熊谷 裕人",
+                  "郡山 りょう",
+                  "古賀 千景",
+                  "古賀 之士",
+                  "小島 とも子",
+                  "小西 洋之",
+                  "斎藤 嘉隆",
+                  "塩村 あやか",
+                  "柴 愼一",
+                  "杉尾 秀哉",
+                  "高木 真理",
+                  "田島 麻衣子",
+                  "田名部 匡代",
+                  "辻元 清美",
+                  "徳永 エリ",
+                  "長浜 博行",
+                  "羽田 次郎",
+                  "広田 一",
+                  "福士 珠美",
+                  "牧山 ひろえ",
+                  "三上 えり",
+                  "水岡 俊一",
+                  "村田 享子",
+                  "森 ゆうこ",
+                  "森本 真治",
+                  "山内 佳菜子",
+                  "横沢 高徳",
+                  "吉川 沙織",
+                  "吉田 忠智",
+                  "蓮舫"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "国民民主党・新緑風会",
+              "stance": "y",
+              "count": "25",
+              "members": {
+                "yes": [
+                  "足立 康史",
+                  "礒崎 哲史",
+                  "伊藤 孝恵",
+                  "伊藤 辰夫",
+                  "上田 清司",
+                  "牛田 茉友",
+                  "江原 くみ子",
+                  "奥村 祥大",
+                  "かごしま彰宏",
+                  "川合 孝典",
+                  "後藤 斎",
+                  "小林 さやか",
+                  "榛葉 賀津也",
+                  "竹詰 仁",
+                  "田村 まみ",
+                  "堂込 麻紀子",
+                  "庭田 幸恵",
+                  "芳賀 道也",
+                  "浜口 誠",
+                  "浜野 喜史",
+                  "原田 秀一",
+                  "平戸 航太",
+                  "舟山 康江",
+                  "水野 孝一",
+                  "山田 吉彦"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "公明党",
+              "stance": "y",
+              "count": "21",
+              "members": {
+                "yes": [
+                  "秋野 公造",
+                  "石川 博崇",
+                  "伊藤 孝江",
+                  "上田 勇",
+                  "川村 雄大",
+                  "窪田 哲也",
+                  "佐々木 雅文",
+                  "里見 隆治",
+                  "下野 六太",
+                  "杉 久武",
+                  "高橋 光男",
+                  "竹内 真二",
+                  "竹谷 とし子",
+                  "谷合 正明",
+                  "司 隆史",
+                  "西田 実仁",
+                  "原田 大二郎",
+                  "平木 大作",
+                  "三浦 信祐",
+                  "宮崎 勝",
+                  "横山 信一"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "日本維新の会",
+              "stance": "y",
+              "count": "19",
+              "members": {
+                "yes": [
+                  "青島 健太",
+                  "浅田 均",
+                  "石井 苗子",
+                  "石井 めぐみ",
+                  "猪瀬 直樹",
+                  "上野 ほたる",
+                  "岡崎 太",
+                  "嘉田 由紀子",
+                  "片山 大介",
+                  "金子 道仁",
+                  "串田 誠一",
+                  "佐々木 りえ",
+                  "柴田 巧",
+                  "石 平",
+                  "高木 かおり",
+                  "中条 きよし",
+                  "新実 彰平",
+                  "松沢 成文",
+                  "松野 明美"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "参政党",
+              "stance": "y",
+              "count": "15",
+              "members": {
+                "yes": [
+                  "安達 悠司",
+                  "安藤 裕",
+                  "岩本 麻奈",
+                  "梅村 みずほ",
+                  "大津 力",
+                  "神谷 宗幣",
+                  "後藤 翔太",
+                  "櫻井 祥子",
+                  "塩入 清香",
+                  "杉本 純子",
+                  "中田 優子",
+                  "初鹿野 裕樹",
+                  "松田 学",
+                  "宮出 千慧",
+                  "山中 泉"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "日本共産党",
+              "stance": "n",
+              "count": "7",
+              "members": {
+                "yes": [],
+                "no": [
+                  "岩渕 友",
+                  "吉良 よし子",
+                  "小池 晃",
+                  "白川 容子",
+                  "大門 実紀史",
+                  "仁比 聡平",
+                  "山添 拓"
+                ],
+                "none": []
+              }
+            },
+            {
+              "name": "れいわ新選組",
+              "stance": "n",
+              "count": "5",
+              "members": {
+                "yes": [],
+                "no": [
+                  "伊勢崎 賢治",
+                  "大島 九州男",
+                  "奥田 ふみよ",
+                  "木村 英子",
+                  "天畠 大輔"
+                ],
+                "none": []
+              }
+            },
+            {
+              "name": "日本保守党",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "北村 晴男",
+                  "百田 尚樹"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "沖縄の風",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "伊波 洋一",
+                  "高良 沙哉"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "チームみらい・無所属の会",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "安野 貴博",
+                  "尾辻 朋実"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "社会民主党",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "福島 みずほ",
+                  "ラサール石井"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "各派に属しない議員",
+              "stance": "m",
+              "count": "賛5・反0",
+              "members": {
+                "yes": [
+                  "齊藤 健一郎",
+                  "ながえ 孝子",
+                  "平山 佐知子",
+                  "福山 哲郎",
+                  "望月 良男"
+                ],
+                "no": [],
+                "none": [
+                  "関口 昌一"
+                ]
+              }
+            }
+          ]
+        },
+        "shu": {
+          "result": "多数で可決",
+          "date": "2026/6/16",
+          "source_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE28F6.htm",
+          "parties": [
+            {
+              "name": "自由民主党・無所属の会",
+              "stance": "y"
+            },
+            {
+              "name": "中道改革連合・無所属",
+              "stance": "y"
+            },
+            {
+              "name": "日本維新の会",
+              "stance": "y"
+            },
+            {
+              "name": "国民民主党・無所属クラブ",
+              "stance": "y"
+            },
+            {
+              "name": "参政党",
+              "stance": "y"
+            },
+            {
+              "name": "チームみらい",
+              "stance": "y"
+            },
+            {
+              "name": "日本共産党",
+              "stance": "n"
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "会議録の公開待ち",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E9%83%B5%E6%94%BF%E6%B0%91%E5%96%B6%E5%8C%96%E6%B3%95%E7%AD%89",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出",
+          "date": "2026/6/11",
+          "desc": "省庁や提出者の検討を経て、法案が国会に提出されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105013.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "委員会審査を省略",
+          "date": "",
+          "desc": "この院では委員会での審査が省略されました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE28F6.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/16",
+          "desc": "衆議院の本会議で採決され、可決されました。",
+          "jump": "shu",
+          "src": [
+            {
+              "t": "衆議院での賛否を見る",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE28F6.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "総務委員会で審査",
+          "date": "2026/6/17",
+          "desc": "担当の委員会で専門的に審査されました。法案が実際に検討されるのは主にここです。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE28F6.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・本会議",
+          "cls": "diet2",
+          "name": "可決 → 成立",
+          "date": "2026/6/19",
+          "desc": "参議院でも可決され、衆参の両院を通って成立しました。",
+          "jump": "san",
+          "src": [
+            {
+              "t": "参議院での賛否を見る",
+              "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0619-v005.htm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "221-shu-014",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 14,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "政治資金規正法の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-12",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E6%94%BF%E6%B2%BB%E8%B3%87%E9%87%91%E8%A6%8F%E6%AD%A3%E6%B3%95",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/12",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105014.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "政治改革に関する特別委員会に付託",
+          "date": "2026/6/15",
+          "desc": "担当の委員会に付託され、審査に入りました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE293A.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会で審査中",
+          "date": "",
+          "desc": "委員会で審査中です。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-015",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 15,
+      "lawNumber": null,
+      "status": "成立",
+      "name": "国立国会図書館法及び国立国会図書館法の規定により行政各部門に置かれる支部図書館及びその職員に関する法律の一部を改正する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-16",
+        "review": null,
+        "passed": "2026-06-19",
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": true,
+      "draft": false,
+      "votes": {
+        "san": {
+          "total": 243,
+          "yes": 238,
+          "no": 5,
+          "none": 4,
+          "date": "2026/6/19",
+          "source_url": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0619-v007.htm",
+          "parties": [
+            {
+              "name": "自由民主党・無所属の会",
+              "stance": "y",
+              "count": "99",
+              "members": {
+                "yes": [
+                  "青木 一彦",
+                  "赤松 健",
+                  "浅尾 慶一郎",
+                  "朝日 健太郎",
+                  "阿達 雅志",
+                  "有村 治子",
+                  "生稲 晃子",
+                  "石井 準一",
+                  "石井 浩郎",
+                  "石田 昌宏",
+                  "磯崎 仁彦",
+                  "井上 義行",
+                  "猪口 邦子",
+                  "今井 絵理子",
+                  "岩本 剛人",
+                  "いんどう周作",
+                  "上野 通子",
+                  "臼井 正一",
+                  "江島 潔",
+                  "大家 敏志",
+                  "岡田 直樹",
+                  "小川 克巳",
+                  "越智 俊之",
+                  "梶原 大介",
+                  "加田 裕之",
+                  "片山 さつき",
+                  "加藤 明良",
+                  "かまやち 敏",
+                  "神谷 政幸",
+                  "北村 経夫",
+                  "木村 義雄",
+                  "見坂 茂範",
+                  "上月 良祐",
+                  "古賀 友一郎",
+                  "古庄 玄知",
+                  "小林 一大",
+                  "小林 孝一郎",
+                  "こやり 隆史",
+                  "酒井 庸行",
+                  "櫻井 充",
+                  "佐藤 啓",
+                  "自見 はなこ",
+                  "清水 真人",
+                  "進藤 金日子",
+                  "末松 信介",
+                  "鈴木 大地",
+                  "鈴木 宗男",
+                  "高橋 克法",
+                  "高橋 はるみ",
+                  "滝波 宏文",
+                  "鶴保 庸介",
+                  "出川 桃子",
+                  "寺田 静",
+                  "友納 理緒",
+                  "永井 学",
+                  "中曽根 弘文",
+                  "中西 祐介",
+                  "西田 昌司",
+                  "西田 英範",
+                  "野上 浩太郎",
+                  "野村 哲郎",
+                  "橋本 聖子",
+                  "長谷川 岳",
+                  "長谷川 英晴",
+                  "馬場 成志",
+                  "東野 秀樹",
+                  "福岡 資麿",
+                  "福山 守",
+                  "藤井 一博",
+                  "藤川 政人",
+                  "藤木 眞也",
+                  "船橋 利実",
+                  "古川 俊治",
+                  "星 北斗",
+                  "堀井 巌",
+                  "本田 顕子",
+                  "舞立 昇治",
+                  "牧野 たかお",
+                  "松川 るい",
+                  "松下 新平",
+                  "松村 祥史",
+                  "松山 政司",
+                  "三原じゅん子",
+                  "宮沢 洋一",
+                  "宮本 和宏",
+                  "宮本 周司",
+                  "森 まさこ",
+                  "山下 雄平",
+                  "山田 太郎",
+                  "山田 宏",
+                  "山谷 えり子",
+                  "山本 啓介",
+                  "山本 佐知子",
+                  "山本 順三",
+                  "吉井 章",
+                  "若井 敦子",
+                  "若林 洋平",
+                  "脇 雅昭",
+                  "渡辺 猛之"
+                ],
+                "no": [],
+                "none": [
+                  "小野田 紀美",
+                  "山崎 正昭"
+                ]
+              }
+            },
+            {
+              "name": "立憲民主・無所属",
+              "stance": "y",
+              "count": "39",
+              "members": {
+                "yes": [
+                  "青木 愛",
+                  "石垣 のりこ",
+                  "石橋 通宏",
+                  "泉 房穂",
+                  "打越 さく良",
+                  "小沢 雅仁",
+                  "鬼木 誠",
+                  "勝部 賢志",
+                  "岸 真紀子",
+                  "木戸口 英司",
+                  "熊谷 裕人",
+                  "郡山 りょう",
+                  "古賀 千景",
+                  "古賀 之士",
+                  "小島 とも子",
+                  "小西 洋之",
+                  "斎藤 嘉隆",
+                  "塩村 あやか",
+                  "柴 愼一",
+                  "高木 真理",
+                  "田島 麻衣子",
+                  "田名部 匡代",
+                  "辻元 清美",
+                  "徳永 エリ",
+                  "長浜 博行",
+                  "羽田 次郎",
+                  "広田 一",
+                  "福士 珠美",
+                  "牧山 ひろえ",
+                  "三上 えり",
+                  "水岡 俊一",
+                  "村田 享子",
+                  "森 ゆうこ",
+                  "森本 真治",
+                  "山内 佳菜子",
+                  "横沢 高徳",
+                  "吉川 沙織",
+                  "吉田 忠智",
+                  "蓮舫"
+                ],
+                "no": [],
+                "none": [
+                  "杉尾 秀哉"
+                ]
+              }
+            },
+            {
+              "name": "国民民主党・新緑風会",
+              "stance": "y",
+              "count": "25",
+              "members": {
+                "yes": [
+                  "足立 康史",
+                  "礒崎 哲史",
+                  "伊藤 孝恵",
+                  "伊藤 辰夫",
+                  "上田 清司",
+                  "牛田 茉友",
+                  "江原 くみ子",
+                  "奥村 祥大",
+                  "かごしま彰宏",
+                  "川合 孝典",
+                  "後藤 斎",
+                  "小林 さやか",
+                  "榛葉 賀津也",
+                  "竹詰 仁",
+                  "田村 まみ",
+                  "堂込 麻紀子",
+                  "庭田 幸恵",
+                  "芳賀 道也",
+                  "浜口 誠",
+                  "浜野 喜史",
+                  "原田 秀一",
+                  "平戸 航太",
+                  "舟山 康江",
+                  "水野 孝一",
+                  "山田 吉彦"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "公明党",
+              "stance": "y",
+              "count": "21",
+              "members": {
+                "yes": [
+                  "秋野 公造",
+                  "石川 博崇",
+                  "伊藤 孝江",
+                  "上田 勇",
+                  "川村 雄大",
+                  "窪田 哲也",
+                  "佐々木 雅文",
+                  "里見 隆治",
+                  "下野 六太",
+                  "杉 久武",
+                  "高橋 光男",
+                  "竹内 真二",
+                  "竹谷 とし子",
+                  "谷合 正明",
+                  "司 隆史",
+                  "西田 実仁",
+                  "原田 大二郎",
+                  "平木 大作",
+                  "三浦 信祐",
+                  "宮崎 勝",
+                  "横山 信一"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "日本維新の会",
+              "stance": "y",
+              "count": "19",
+              "members": {
+                "yes": [
+                  "青島 健太",
+                  "浅田 均",
+                  "石井 苗子",
+                  "石井 めぐみ",
+                  "猪瀬 直樹",
+                  "上野 ほたる",
+                  "岡崎 太",
+                  "嘉田 由紀子",
+                  "片山 大介",
+                  "金子 道仁",
+                  "串田 誠一",
+                  "佐々木 りえ",
+                  "柴田 巧",
+                  "石 平",
+                  "高木 かおり",
+                  "中条 きよし",
+                  "新実 彰平",
+                  "松沢 成文",
+                  "松野 明美"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "参政党",
+              "stance": "y",
+              "count": "15",
+              "members": {
+                "yes": [
+                  "安達 悠司",
+                  "安藤 裕",
+                  "岩本 麻奈",
+                  "梅村 みずほ",
+                  "大津 力",
+                  "神谷 宗幣",
+                  "後藤 翔太",
+                  "櫻井 祥子",
+                  "塩入 清香",
+                  "杉本 純子",
+                  "中田 優子",
+                  "初鹿野 裕樹",
+                  "松田 学",
+                  "宮出 千慧",
+                  "山中 泉"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "日本共産党",
+              "stance": "y",
+              "count": "7",
+              "members": {
+                "yes": [
+                  "岩渕 友",
+                  "吉良 よし子",
+                  "小池 晃",
+                  "白川 容子",
+                  "大門 実紀史",
+                  "仁比 聡平",
+                  "山添 拓"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "れいわ新選組",
+              "stance": "n",
+              "count": "5",
+              "members": {
+                "yes": [],
+                "no": [
+                  "伊勢崎 賢治",
+                  "大島 九州男",
+                  "奥田 ふみよ",
+                  "木村 英子",
+                  "天畠 大輔"
+                ],
+                "none": []
+              }
+            },
+            {
+              "name": "日本保守党",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "北村 晴男",
+                  "百田 尚樹"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "沖縄の風",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "伊波 洋一",
+                  "高良 沙哉"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "チームみらい・無所属の会",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "安野 貴博",
+                  "尾辻 朋実"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "社会民主党",
+              "stance": "y",
+              "count": "2",
+              "members": {
+                "yes": [
+                  "福島 みずほ",
+                  "ラサール石井"
+                ],
+                "no": [],
+                "none": []
+              }
+            },
+            {
+              "name": "各派に属しない議員",
+              "stance": "m",
+              "count": "賛5・反0",
+              "members": {
+                "yes": [
+                  "齊藤 健一郎",
+                  "ながえ 孝子",
+                  "平山 佐知子",
+                  "福山 哲郎",
+                  "望月 良男"
+                ],
+                "no": [],
+                "none": [
+                  "関口 昌一"
+                ]
+              }
+            }
+          ]
+        },
+        "shu": {
+          "result": "多数で可決",
+          "date": "2026/6/16",
+          "source_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE293E.htm",
+          "parties": [
+            {
+              "name": "自由民主党・無所属の会",
+              "stance": "y"
+            },
+            {
+              "name": "中道改革連合・無所属",
+              "stance": "y"
+            },
+            {
+              "name": "日本維新の会",
+              "stance": "y"
+            },
+            {
+              "name": "国民民主党・無所属クラブ",
+              "stance": "y"
+            },
+            {
+              "name": "参政党",
+              "stance": "y"
+            },
+            {
+              "name": "チームみらい",
+              "stance": "y"
+            },
+            {
+              "name": "日本共産党",
+              "stance": "y"
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "会議録の公開待ち",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E7%AB%8B%E5%9B%BD%E4%BC%9A%E5%9B%B3%E6%9B%B8%E9%A4%A8%E6%B3%95%E5%8F%8A%E3%81%B3%E5%9B%BD%E7%AB%8B%E5%9B%BD%E4%BC%9A%E5%9B%B3%E6%9B%B8%E9%A4%A8%E6%B3%95%E3%81%AE%E8%A6%8F%E5%AE%9A%E3%81%AB%E3%82%88%E3%82%8A%E8%A1%8C%E6%94%BF%E5%90%84%E9%83%A8%E9%96%80%E3%81%AB%E7%BD%AE%E3%81%8B%E3%82%8C%E3%82%8B%E6%94%AF%E9%83%A8%E5%9B%B3%E6%9B%B8%E9%A4%A8%E5%8F%8A%E3%81%B3%E3%81%9D%E3%81%AE%E8%81%B7%E5%93%A1%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出",
+          "date": "2026/6/16",
+          "desc": "省庁や提出者の検討を経て、法案が国会に提出されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105015.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・委員会",
+          "cls": "diet2",
+          "name": "委員会審査を省略",
+          "date": "",
+          "desc": "この院では委員会での審査が省略されました。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE293E.htm"
+            }
+          ]
+        },
+        {
+          "where": "衆議院・本会議",
+          "cls": "diet2",
+          "name": "可決",
+          "date": "2026/6/16",
+          "desc": "衆議院の本会議で採決され、可決されました。",
+          "jump": "shu",
+          "src": [
+            {
+              "t": "衆議院での賛否を見る",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE293E.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・委員会",
+          "cls": "diet2",
+          "name": "議院運営委員会で審査",
+          "date": "2026/6/18",
+          "desc": "担当の委員会で専門的に審査されました。法案が実際に検討されるのは主にここです。",
+          "src": [
+            {
+              "t": "議案の審議経過（議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DE293E.htm"
+            }
+          ]
+        },
+        {
+          "where": "参議院・本会議",
+          "cls": "diet2",
+          "name": "可決 → 成立",
+          "date": "2026/6/19",
+          "desc": "参議院でも可決され、衆参の両院を通って成立しました。",
+          "jump": "san",
+          "src": [
+            {
+              "t": "参議院での賛否を見る",
+              "u": "https://www.sangiin.go.jp/japanese/touhyoulist/221/221-0619-v007.htm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "221-shu-016",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 16,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "自動車税及び軽自動車税の税率の上乗せに係る特例の廃止に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-16",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%87%AA%E5%8B%95%E8%BB%8A%E7%A8%8E%E5%8F%8A%E3%81%B3%E8%BB%BD%E8%87%AA%E5%8B%95%E8%BB%8A%E7%A8%8E%E3%81%AE%E7%A8%8E%E7%8E%87%E3%81%AE%E4%B8%8A%E4%B9%97%E3%81%9B%E3%81%AB%E4%BF%82%E3%82%8B%E7%89%B9%E4%BE%8B%E3%81%AE%E5%BB%83%E6%AD%A2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/16",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105016.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-017",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 17,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "自動車重量税率の上乗せに係る特例の廃止に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-16",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E8%87%AA%E5%8B%95%E8%BB%8A%E9%87%8D%E9%87%8F%E7%A8%8E%E7%8E%87%E3%81%AE%E4%B8%8A%E4%B9%97%E3%81%9B%E3%81%AB%E4%BF%82%E3%82%8B%E7%89%B9%E4%BE%8B%E3%81%AE%E5%BB%83%E6%AD%A2%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/16",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105017.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
+        }
+      ]
+    },
+    {
+      "id": "221-shu-018",
+      "submittedDiet": 221,
+      "type": "衆法",
+      "number": 18,
+      "lawNumber": null,
+      "status": "衆議院で審議中",
+      "name": "国旗の損壊等の処罰に関する法律案",
+      "ministry": "",
+      "field": "",
+      "diet": "第221回",
+      "gist": null,
+      "tags": [],
+      "stages": {
+        "plan": null,
+        "cabinet": null,
+        "submit": "2026-06-16",
+        "review": null,
+        "passed": null,
+        "promulgated": null,
+        "enforced": null
+      },
+      "hasIndividual": false,
+      "draft": false,
+      "votes": {
+        "notYetVoted": true
+      },
+      "ai": {
+        "generated": false,
+        "pending": true,
+        "pendingReason": "審議中（採決前）",
+        "model": null,
+        "plain": null,
+        "changed": [],
+        "issue": null,
+        "summarySource": null,
+        "pro": [],
+        "con": []
+      },
+      "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E5%9B%BD%E6%97%97%E3%81%AE%E6%90%8D%E5%A3%8A%E7%AD%89%E3%81%AE%E5%87%A6%E7%BD%B0%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%95%E5%BE%8B",
+      "lifecycle": "審議中",
+      "lifecycleDetail": "衆議院で審議中",
+      "process": [
+        {
+          "where": "衆議院（議員提出）",
+          "cls": "",
+          "name": "国会に提出・受理",
+          "date": "2026/6/16",
+          "desc": "国会に提出され、受理されました。",
+          "src": [
+            {
+              "t": "法案の本文（衆議院 議案情報）",
+              "u": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g22105018.htm"
+            }
+          ]
+        },
+        {
+          "where": "いまここ",
+          "cls": "now",
+          "name": "衆議院 委員会付託待ち",
+          "date": "",
+          "desc": "受理され、委員会への付託を待っています。まだ採決されていません。",
+          "now": true,
+          "src": []
         }
       ]
     },
@@ -77277,7 +82316,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-yosan-002",
@@ -77862,7 +82903,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-yosan-003",
@@ -78447,7 +83490,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-yosan-004",
@@ -78999,7 +84044,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-yosan-005",
@@ -79551,7 +84598,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-yosan-006",
@@ -80103,7 +85152,9 @@
             }
           ]
         }
-      ]
+      ],
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立"
     },
     {
       "id": "221-yosan-007",
@@ -80582,6 +85633,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BB%A4%E5%92%8C%E5%85%AB%E5%B9%B4%E5%BA%A6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -81129,6 +86182,8 @@
         "con": []
       },
       "egovUrl": "https://laws.e-gov.go.jp/?searchLawName=%E4%BB%A4%E5%92%8C%E5%85%AB%E5%B9%B4%E5%BA%A6%E7%89%B9%E5%88%A5%E4%BC%9A%E8%A8%88%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97",
+      "lifecycle": "成立",
+      "lifecycleDetail": "成立",
       "process": [
         {
           "where": "内閣",
@@ -81200,5 +86255,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-06-22"
+  "generatedAt": "2026-06-23"
 }
