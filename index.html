@@ -558,6 +558,22 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .pjump{background:rgba(30,58,138,.08)!important;color:var(--accent)!important}
 .ai-src,.gp-src{color:var(--accent)}
 .issue{background:var(--paper-2)!important;border-left:4px solid var(--accent)!important}
+/* (d2) 両論・出典・タグ・要約ハイライトを濃紺/緑/グレーへ（赤茶#7a2116・金#f0d49b・ベージュ#a59c8aを解消） */
+.arg.con h4,.arg.con .gp-name{color:var(--accent)!important}
+.arg .who{color:var(--muted)!important}
+.fact-tag{color:var(--accent)!important;background:rgba(30,58,138,.08)!important}
+.proc-learn{color:var(--accent)!important}
+.proc-learn:hover{border-color:var(--accent)!important}
+.mb-plain .hl{background:linear-gradient(transparent 58%,rgba(30,58,138,.14) 58%)!important}
+/* ヘッダーmeta：絵文字を外したので中黒「·」区切りでデータ行に */
+.modal-h .mmeta{gap:9px}
+.modal-h .mmeta>span:empty{display:none}
+.modal-h .mmeta>span:not(:first-child)::before{content:"·";margin-right:9px;color:#c8cfdb}
+/* AIに聞いてみる：和紙ベージュのバッジ→濃紺、ヘッダー背景→白 */
+.askai-h{background:#fff!important}
+.askai-h .aic{background:var(--accent)!important}
+/* ライフサイクル・バッジ：審議中/一院通過の金茶(#fbecd0/#9a6b1e)→濃紺 */
+.lc-shingi{background:rgba(30,58,138,.1)!important;color:var(--accent)!important}
 </style>
 </head>
 <body>
@@ -896,7 +912,7 @@ function deliberatingModal(b){
   const lc=lcOf(b), lm=LC_META[lc]||LC_META['審議中'];
   const procSteps=(b.process||[]).map(p=>{
     const cls=p.now?'now open':'done';
-    const src=(p.src&&p.src.length)?`<div class="psrc">${p.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">📄 ${s.t} ↗</a>`).join('')}</div>`:'';
+    const src=(p.src&&p.src.length)?`<div class="psrc">${p.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">${s.t} ↗</a>`).join('')}</div>`:'';
     return `<div class="pstep ${cls}"><div class="pnode"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z"/></svg></div>
       <div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere ${p.cls||''}">${p.where}</span><span class="pnm">${p.name}</span>${p.date?`<span class="pdt">${p.date}</span>`:''}<span class="pcv"></span></div>
       <div class="pdetail"><div class="pdetail-in"><div class="pds">${p.desc}</div>${src}</div></div></div></div>`;
@@ -912,19 +928,19 @@ function deliberatingModal(b){
     <div class="modal-h">
       <button class="close" onclick="closeModal()">×</button>
       <h2 style="font-size:18px">${b.name}</h2>
-      <div class="mmeta"><span>📋 ${b.diet}</span><span>🏛 ${proposer}</span><span class="lc-badge lc-${lm.slug}">${b.lifecycleDetail||lm.label}</span></div>
+      <div class="mmeta"><span>${b.diet}</span><span>${proposer}</span><span class="lc-badge lc-${lm.slug}">${b.lifecycleDetail||lm.label}</span></div>
     </div>
     <div class="modal-b">
       <div class="ai-summary pending">
-        <div class="ai-banner pending">📝 <b>この法案は「${lm.label}」です</b></div>
+        <div class="ai-banner pending"><b>この法案は「${lm.label}」です</b></div>
         <div class="ai-pending">${notice}</div>
       </div>
       ${b.process?`<div class="sec-t">いま、どこまで進んだか<span class="fact-tag">公式記録</span></div>
       <div class="proc-legend"><span><span class="pl d"></span>通過した</span><span><span class="pl n"></span>いまここ</span></div>
       <div class="ptl">${procSteps}</div>
-      <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">📖 立法の流れ（法律ができるまで）を、やさしく知る ↗</a>`:''}
+      <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">立法の流れ（法律ができるまで）を、やさしく知る ↗</a>`:''}
       <div class="sec-t">賛否<span class="fact-tag">公式記録</span></div>
-      <div class="vote-pending">⚖️ <b>まだ採決されていません</b><br>${voteNote}</div>
+      <div class="vote-pending"><b>まだ採決されていません</b><br>${voteNote}</div>
       <div class="explore">
         <div class="ex-t">この法案を自分で調べる</div>
         <div class="ex-s">外部サービスへ移動します。当サイトが記事を選ぶことはしません。</div>
@@ -943,7 +959,7 @@ function richModal(b){
     const cls = p.now?'now open':'done';
     const extra = p.extra?`<div class="pex">${p.extra}</div>`:'';
     const jump = p.jump?`<a class="pjump" href="#" onclick="scrollHouse('${p.jump}');return false;">▼ ${p.jump==='san'?'参議院':'衆議院'}での賛否を見る</a>`:'';
-    const src = p.src?`<div class="psrc">${p.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">📄 ${s.t} ↗</a>`).join('')}</div>`:'';
+    const src = p.src?`<div class="psrc">${p.src.map(s=>`<a href="${s.u}" target="_blank" rel="noopener">${s.t} ↗</a>`).join('')}</div>`:'';
     return `<div class="pstep ${cls}"><div class="pnode"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z"/></svg></div>
       <div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere ${p.cls}">${p.where}</span><span class="pnm">${p.name}</span>${p.date?`<span class="pdt">${p.date}</span>`:''}<span class="pcv"></span></div>
       <div class="pdetail"><div class="pdetail-in"><div class="pds">${p.desc}</div>${extra}${jump}${src}</div></div></div></div>`;
@@ -953,7 +969,7 @@ function richModal(b){
   const prom=b.stages&&b.stages.promulgated, enf=b.stages&&b.stages.enforced;
   const dNode=`<div class="pnode"><svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.4-1.4z"/></svg></div>`;
   const futureSteps = b.type==='予算' ? '' : `
-    <div class="pstep ${prom?'done':'future'}">${prom?dNode:'<div class="pnode"></div>'}<div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere">政府</span><span class="pnm">公布</span>${prom?`<span class="pdt">${ymd(prom)}</span>`:''}<span class="pcv"></span></div><div class="pdetail"><div class="pdetail-in"><div class="pds">成立した法律を正式に世に知らせる手続きです。${b.lawNumber?`（法律第${b.lawNumber}号）`:''}</div>${b.egovUrl?`<div class="psrc"><a href="${b.egovUrl}" target="_blank" rel="noopener">📄 e-Gov法令検索で見る ↗</a></div>`:''}</div></div></div></div>
+    <div class="pstep ${prom?'done':'future'}">${prom?dNode:'<div class="pnode"></div>'}<div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere">政府</span><span class="pnm">公布</span>${prom?`<span class="pdt">${ymd(prom)}</span>`:''}<span class="pcv"></span></div><div class="pdetail"><div class="pdetail-in"><div class="pds">成立した法律を正式に世に知らせる手続きです。${b.lawNumber?`（法律第${b.lawNumber}号）`:''}</div>${b.egovUrl?`<div class="psrc"><a href="${b.egovUrl}" target="_blank" rel="noopener">e-Gov法令検索で見る ↗</a></div>`:''}</div></div></div></div>
     <div class="pstep ${enf?'done':'future'}">${enf?dNode:'<div class="pnode"></div>'}<div class="pbx"><div class="ptp" onclick="this.closest('.pstep').classList.toggle('open')"><span class="pwhere">—</span><span class="pnm">施行（実際に効力を持つ）</span>${enf?`<span class="pdt">${ymd(enf)}</span>`:''}<span class="pcv"></span></div><div class="pdetail"><div class="pdetail-in"><div class="pds">公布後、決められた日から暮らしに適用されます。項目ごとに段階的に始まることがあります。</div></div></div></div></div>`;
 
   // 個人別（参院・各会派の中に畳む）
@@ -995,30 +1011,30 @@ function richModal(b){
     <div class="modal-h">
       <button class="close" onclick="closeModal()">×</button>
       <h2 style="font-size:18px">${b.name}</h2>
-      <div class="mmeta"><span>📋 ${b.diet}</span><span>🏛 ${b.ministry}</span><span>🗂 ${b.field}</span><span style="color:var(--s-passed);font-weight:700">成立</span></div>
+      <div class="mmeta"><span>${b.diet}</span><span>${b.ministry}</span><span>${b.field}</span><span style="color:var(--s-passed);font-weight:700">成立</span></div>
     </div>
     <div class="modal-b">
       ${b.ai.plain ? `<div class="ai-summary">
-        <div class="ai-banner">🤖 <b>AIによる要約</b> 会議録をもとに自動作成・正確には原文リンクでご確認ください</div>
+        <div class="ai-banner"><b>AIによる要約</b> 会議録をもとに自動作成・正確には原文リンクでご確認ください</div>
         <div class="mb-plain">${b.ai.plain}</div>
         <div class="sec-t">ざっくり、何が変わる？</div>
         <div class="changed"><ul>${b.ai.changed.map(c=>`<li>${c}</li>`).join('')}</ul></div>
-        <a class="ai-src" href="${b.ai.summarySource.url}" target="_blank" rel="noopener">📄 ${b.ai.summarySource.label} ↗</a>${b.ai.issue ? `
+        <a class="ai-src" href="${b.ai.summarySource.url}" target="_blank" rel="noopener">${b.ai.summarySource.label} ↗</a>${b.ai.issue ? `
         <div class="sec-t">何をめぐって賛否が分かれたか</div>
         <div class="issue"><p>${b.ai.issue}</p></div>
         <div class="args">
-          <div class="arg pro"><h4>◎ 賛成する立場</h4>${b.ai.pro.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">📄 ${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
-          <div class="arg con"><h4>● 反対する立場</h4>${b.ai.con.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">📄 ${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
+          <div class="arg pro"><h4>◎ 賛成する立場</h4>${b.ai.pro.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
+          <div class="arg con"><h4>● 反対する立場</h4>${b.ai.con.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
         </div>` : ''}
       </div>` : `<div class="ai-summary pending">
-        <div class="ai-banner pending">📝 <b>やさしい要約・両論は準備中</b></div>
+        <div class="ai-banner pending"><b>やさしい要約・両論は準備中</b></div>
         <div class="ai-pending">この法案の会議録（委員長報告）はまだ公開されていません。やさしい要約と賛否の理由は、会議録が公開され次第、自動で追加されます。<br>下の<b>賛否・プロセス・出典</b>はすでに確定しています。</div>
       </div>`}
 
       ${b.process ? `<div class="sec-t">どこを通って成立したか<span class="fact-tag">公式記録</span></div>
       <div class="proc-legend"><span><span class="pl d"></span>通過した</span><span><span class="pl n"></span>いまここ</span><span><span class="pl f"></span>この先の一般的な流れ</span></div>
       <div class="ptl">${procSteps}${futureSteps}</div>
-      <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">📖 立法の流れ（法律ができるまで）を、やさしく知る ↗</a>` : ''}
+      <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">立法の流れ（法律ができるまで）を、やさしく知る ↗</a>` : ''}
 
       <div class="sec-t">どの政党が賛成したか<span class="fact-tag">公式記録</span></div>
 
@@ -1067,7 +1083,7 @@ function richModal(b){
 
       <div class="askai" id="askai">
         <div class="askai-h" onclick="document.getElementById('askai').classList.toggle('open')">
-          <span class="aic">🤖</span>
+          <span class="aic"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M12 2l1.7 5.6L19.5 9l-5.8 1.4L12 16l-1.7-5.6L4.5 9l5.8-1.4z"/></svg></span>
           <span><span class="att">AIに聞いてみる</span><br><span class="ass">目的に合わせた質問の雛形を用意しました</span></span>
           <span class="achev"></span>
         </div>
@@ -1081,7 +1097,7 @@ function richModal(b){
               <button class="ptab" data-k="background" onclick="switchPrompt('background')">経緯・背景</button>
             </div>
             <div class="prompt-box" id="prompt-text">${buildPrompts(b).summary.text}</div>
-            <button class="copy-btn" onclick="copyPrompt(this)">📋 <span class="cl">この質問をコピー</span></button>
+            <button class="copy-btn" onclick="copyPrompt(this)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg> <span class="cl">この質問をコピー</span></button>
             <div class="ai-jump-label">コピーして、そのままAIを開く（開いた画面に貼り付け）</div>
             <div class="ai-jumps">
               <button class="ai-jump" onclick="copyAndOpen('https://chatgpt.com/')"><span class="aj-ic aj-gpt">G</span>ChatGPT</button>
@@ -1096,7 +1112,7 @@ function richModal(b){
 
       <div class="src-note">
         出典（一次資料）: 参議院 本会議投票結果（議員別）／衆議院 会派態度・進行日付（スマートニュース メディア研究所 議案DB・MIT）／やさしい要約・賛否の理由は国会会議録をもとにAIが作成<br>
-        事実（賛否数・議員名・日付・プロセス）は公式記録、🤖印の要約はAI生成です。
+        事実（賛否数・議員名・日付・プロセス）は公式記録、要約はAI生成です。
       </div>
     </div>`;
 }
@@ -1187,7 +1203,7 @@ function simpleModal(b){
       <button class="close" onclick="closeModal()">×</button>
       <h2>${b.name}</h2>
       <div class="mmeta">
-        <span>📋 ${b.diet}</span><span>🏛 ${b.ministry}</span><span>🗂 ${b.field}</span>
+        <span>${b.diet}</span><span>${b.ministry}</span><span>${b.field}</span>
       </div>
     </div>
     <div class="modal-b">
