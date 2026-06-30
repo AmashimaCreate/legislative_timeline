@@ -204,6 +204,13 @@ header{
 .track .seg{flex:1;height:4px;border-radius:2px;background:var(--paper-2)}
 .track .seg.done{background:var(--stage,#999)}
 .track-labels{display:flex;justify-content:space-between;margin-top:4px;font-size:9px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+/* カード進捗：5段マイルストーンバー（提出→委員会→本会議→成立→公布）＋いまここ */
+.cbar{display:flex;gap:4px;margin-top:12px}
+.cbar .cseg{flex:1;height:6px;border-radius:3px;background:#e4dccb}
+.clab{display:flex;gap:4px;margin-top:5px}
+.clab span{flex:1;text-align:center;font-size:10px;color:var(--muted)}
+.clab span.cur{color:var(--accent);font-weight:700}
+.chere{font-size:12px;color:var(--accent);font-weight:600;margin-top:7px;line-height:1.5}
 
 /* ---------- Sidebar ---------- */
 aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:column;gap:22px}
@@ -727,14 +734,47 @@ function render(){
   });
 }
 
+const CARD_STAGES=['提出','委員会','本会議','成立','公布'];
+/* カード進捗：lifecycle/process から 到達マイルストーン(reached)・現在地(current)・いまここ文言 を算出。stages{}依存をやめ歯抜けを解消。 */
+function cardStage(b){
+  const proc=b.process||[], st=b.stages||{}, lc=lcOf(b);
+  let inCommittee=false, passedHonkaigi=0;
+  for(const p of proc){
+    if(p.now) continue;
+    if(/委員会/.test(p.where||'')) inCommittee=true;
+    if(/本会議/.test(p.where||'') && /可決|成立/.test(p.name||'')) passedHonkaigi++;
+  }
+  const nowStep=proc.find(p=>p.now);
+  let reached, current=-1, hereText='';
+  if(lc==='成立'){
+    reached = st.promulgated ? 4 : 3;                 // 公布まで／成立まで（審議は必ず塗る＝歯抜けなし）
+  } else {
+    hereText = nowStep ? nowStep.name : '';
+    if(lc==='廃案' || lc==='継続'){
+      reached = passedHonkaigi>0 ? 2 : (inCommittee ? 1 : 0);   // 止まった所まで・現在地なし
+    } else {                                           // 審議中／一院通過（進行中）
+      if(passedHonkaigi>0){ reached=2; current=3; }    // 1院の本会議通過→本会議まで済み、成立が現在地（もう一院へ。精密な位置はテキスト）
+      else if(inCommittee){ reached=1; current=1; }    // 委員会で審査中
+      else { reached=0; current=1; }                   // 提出のみ→委員会付託へ
+    }
+  }
+  return {reached, current, hereText, lc};
+}
+
 function eventCard(e, delay){
   const b=e.bill, col=stageColor(e.stage);
   const el=document.createElement('div');
   el.className='event'; el.style.setProperty('--stage',col);
   el.style.animationDelay=delay+'s';
-  // mini progress
-  let reached=0; STAGES.forEach(s=>{ if(b.stages[s.key]) reached++; });
-  const segs=STAGES.map((s,i)=>`<div class="seg ${b.stages[s.key]?'done':''}"></div>`).join('');
+  // 進捗（5段マイルストーン：提出→委員会→本会議→成立→公布）
+  const cs=cardStage(b);
+  const doneColor = cs.lc==='廃案' ? '#9c958a' : cs.lc==='継続' ? '#3a78b5' : 'var(--accent-2)';
+  const cbar=CARD_STAGES.map((lab,i)=>{
+    const bg = (i===cs.current) ? 'var(--accent)' : (i<=cs.reached ? doneColor : '#e4dccb');
+    return `<i class="cseg" style="background:${bg}"></i>`;
+  }).join('');
+  const clab=CARD_STAGES.map((lab,i)=>`<span class="${i===cs.current?'cur':''}">${lab}</span>`).join('');
+  const hereHTML = cs.hereText ? `<div class="chere">▶ いまここ：${cs.hereText}</div>` : '';
   const indivBadge = b.hasIndividual ? `<span class="indiv-badge">👤 議員ひとりずつ見られる</span>` : '';
   const lc=lcOf(b), lm=LC_META[lc]||LC_META['審議中'];
   const topBadge = lc==='成立' ? `<span class="stage-badge">${stageLabel(e.stage)}</span>` : `<span class="lc-badge lc-${lm.slug}">${lm.label}</span>`;
@@ -749,8 +789,9 @@ function eventCard(e, delay){
     <h3>${b.name}</h3>
     <div class="gist">${b.gist || `<span class="gist-pending">${pendMsg}</span>`}</div>
     <div class="tags">${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')} ${indivBadge}</div>
-    <div class="track">${segs}</div>
-    <div class="track-labels">${STAGES.map(s=>`<span>${s.short}</span>`).join('')}</div>
+    <div class="cbar">${cbar}</div>
+    <div class="clab">${clab}</div>
+    ${hereHTML}
   `;
   el.onclick=()=>openModal(b);
   return el;
