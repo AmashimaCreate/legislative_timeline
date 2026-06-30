@@ -490,6 +490,47 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
 .ss-total .strong{color:var(--accent-2);font-weight:700}
 @media(max-width:560px){.ss-nums{gap:22px}.ss-n b{font-size:2rem}.ss-diet{font-size:1.25rem}.ss-leg span[style]{margin-left:0 !important}}
 </style>
+<style id="redesign2026">
+/* ===== トップ デザイン刷新（白基調・ゴシック・青アクセント・角丸・余白）。既存CSS/JS/HTML構造は無改修、これで上書き ===== */
+:root{
+  --paper:#ffffff; --paper-2:#f3f6fb; --line:#e5e9f1; --ink:#18233b; --muted:#5f6b85;
+  --accent:#1e3a8a;          /* 差し色：A=明るい青 / B=濃紺インディゴ で差し替え */
+  --accent-2:#15a24a;        /* 成立＝グリーン */
+  --gold:#1e3a8a;
+  --font-head:'Zen Kaku Gothic New','Inter',system-ui,sans-serif;
+}
+body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;color:var(--ink)}
+/* 明朝を完全廃止→ゴシック（CSS21箇所＋モーダル内インライン1箇所） */
+.pt-tabs a,.foot-name,.brand h1,.brand .sub,.tl-head h2,.month-label,.event h3,.panel-h,.stat .n,.modal-h h2,.modal-b .sec-t,.empty,.mb-plain,.mb-formal,.pnm,.hcn,.dph .dtt,.explore .ex-t,.askai-h .att,.ss-diet,.ss-n b{font-family:var(--font-head)}
+[style*="Shippori"]{font-family:var(--font-head)!important}
+.brand h1{font-weight:800;letter-spacing:.005em;font-size:33px}
+.brand .sub{letter-spacing:.12em}
+.tl-head h2,.month-label{letter-spacing:.02em}
+/* 上部ストリップを白に */
+.hubbar{background:#fff;border-bottom:1px solid var(--line)}
+.page-tabs{background:#fff;border-bottom:1px solid var(--line)}
+/* カード：角丸・クリーンな境界・ホバー */
+.event{border-radius:14px;border:1px solid var(--line);padding:18px 20px;box-shadow:0 1px 2px rgba(16,24,40,.05);transition:box-shadow .16s,border-color .16s,transform .16s}
+.event:hover{box-shadow:0 8px 24px rgba(30,58,138,.10);border-color:#cfd9ec;transform:translateY(-1px)}
+.event h3{font-weight:700;letter-spacing:0;font-size:16px;line-height:1.5}
+.event-ministry{border-radius:999px;border-color:var(--line)}
+.stage-badge{border-radius:7px}
+.tag{background:rgba(30,58,138,.07);color:var(--accent);border-radius:6px}
+/* パネル・サマリー・入力：角丸＋余白 */
+.panel{border-radius:14px;border:1px solid var(--line)}
+.panel-h{background:var(--paper-2);border-bottom-color:var(--line);letter-spacing:.04em}
+.session-summary{border-radius:18px;border:1px solid var(--line);background:var(--paper-2);padding:20px 24px}
+.search{border-radius:12px;border:1px solid var(--line);background:#fff}
+.filter-group select{border-radius:10px;border:1px solid var(--line)}
+/* 進捗バーの空き色を寒色グレーに（和紙ベージュをやめる） */
+.cbar .cseg{background:#e7ecf4} .ss-bar{background:#e7ecf4}
+/* モーダル：硬い影→柔らかい影・角丸 */
+.modal{border-radius:18px;border:1px solid var(--line);box-shadow:0 24px 64px rgba(16,24,40,.24)}
+.modal-b .sec-t{border-bottom:1px solid var(--line)} .modal-b .sec-t::before{background:var(--accent)}
+.ai-summary{background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px}
+.issue{border-left-color:var(--accent)}
+.changed,.arg,.gp,.hcard,.pbx,.explore{border-radius:10px}
+</style>
 </head>
 <body>
 
