@@ -498,13 +498,16 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
   --accent-2:#15a24a;        /* 成立＝グリーン */
   --gold:#1e3a8a;
   --font-head:'Zen Kaku Gothic New','Inter',system-ui,sans-serif;
+  /* STAGEチップ等の段階色を青系（＋成立=緑）に揃え、濃紺基調に馴染ませる */
+  --s-plan:#9aa3b2; --s-cabinet:#6b7689; --s-submit:#3b82f6; --s-review:#1e3a8a;
+  --s-passed:#15a24a; --s-promulgated:#6366f1; --s-enforced:#51607a;
 }
 body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;color:var(--ink)}
 /* 明朝を完全廃止→ゴシック（CSS21箇所＋モーダル内インライン1箇所） */
 .pt-tabs a,.foot-name,.brand h1,.brand .sub,.tl-head h2,.month-label,.event h3,.panel-h,.stat .n,.modal-h h2,.modal-b .sec-t,.empty,.mb-plain,.mb-formal,.pnm,.hcn,.dph .dtt,.explore .ex-t,.askai-h .att,.ss-diet,.ss-n b{font-family:var(--font-head)}
 [style*="Shippori"]{font-family:var(--font-head)!important}
-.brand h1{font-weight:800;letter-spacing:.005em;font-size:33px}
-.brand .sub{letter-spacing:.12em}
+.masthead .brand h1,.brand h1{font-family:var(--font-head)!important;font-weight:800;letter-spacing:.005em;font-size:33px}
+.masthead .brand .sub,.brand .sub{font-family:var(--font-head)!important;letter-spacing:.12em}
 .tl-head h2,.month-label{letter-spacing:.02em}
 /* 上部ストリップを白に */
 .hubbar{background:#fff;border-bottom:1px solid var(--line)}
@@ -530,6 +533,31 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .ai-summary{background:var(--paper-2);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:14px}
 .issue{border-left-color:var(--accent)}
 .changed,.arg,.gp,.hcard,.pbx,.explore{border-radius:10px}
+/* (b) カード進捗：丸＋線のステッパー（5段が視覚的に分かる） */
+.cprog{display:flex;margin-top:14px}
+.cprog .cst{flex:1;position:relative;display:flex;flex-direction:column;align-items:center;gap:6px}
+.cprog .cst::before{content:"";position:absolute;top:6px;left:-50%;width:100%;height:2px;background:#dde3ec;z-index:0}
+.cprog .cst:first-child::before{display:none}
+.cprog .cst .cdot{width:13px;height:13px;border-radius:50%;background:#e7ecf4;box-shadow:0 0 0 1.5px #dde3ec;position:relative;z-index:1}
+.cprog .cst .cnm{font-size:10px;color:var(--muted)}
+.cprog .cst.done .cdot{background:var(--accent-2);box-shadow:0 0 0 1.5px var(--accent-2)}
+.cprog .cst.done::before{background:var(--accent-2)}
+.cprog .cst.cur .cdot{background:var(--accent);box-shadow:0 0 0 3px rgba(30,58,138,.18)}
+.cprog .cst.cur .cnm{color:var(--accent);font-weight:700}
+.cprog .cst.cur::before{background:var(--accent-2)}
+.cprog.lc-dead .cst.done .cdot{background:#9aa3b2;box-shadow:0 0 0 1.5px #9aa3b2}
+.cprog.lc-dead .cst.done::before{background:#9aa3b2}
+/* (c) サイドバー：収録データはサマリーバーと重複→非表示。フィードを馴染ませる */
+.panel:has(.stat-grid){display:none}
+.feed-item .fdate{color:var(--muted)}
+.feed-item:hover{background:var(--paper-2)}
+/* (d) モーダル内も白・濃紺・ゴシックに統一（和紙ベージュ/朱/橙を解消） */
+.ai-summary.pending{background:var(--paper-2)!important;border-left:4px solid var(--accent)!important}
+.ai-pending{color:var(--ink)}
+.pl.n{background:var(--accent)!important;box-shadow:0 0 0 3px rgba(30,58,138,.18)!important}
+.pjump{background:rgba(30,58,138,.08)!important;color:var(--accent)!important}
+.ai-src,.gp-src{color:var(--accent)}
+.issue{background:var(--paper-2)!important;border-left:4px solid var(--accent)!important}
 </style>
 </head>
 <body>
@@ -809,12 +837,10 @@ function eventCard(e, delay){
   el.style.animationDelay=delay+'s';
   // 進捗（5段マイルストーン：提出→委員会→本会議→成立→公布）
   const cs=cardStage(b);
-  const doneColor = cs.lc==='廃案' ? '#9c958a' : cs.lc==='継続' ? '#3a78b5' : 'var(--accent-2)';
-  const cbar=CARD_STAGES.map((lab,i)=>{
-    const bg = (i===cs.current) ? 'var(--accent)' : (i<=cs.reached ? doneColor : '#e4dccb');
-    return `<i class="cseg" style="background:${bg}"></i>`;
+  const cprog=CARD_STAGES.map((lab,i)=>{
+    const st = i===cs.current ? 'cur' : (i<=cs.reached ? 'done' : '');
+    return `<div class="cst ${st}"><span class="cdot"></span><span class="cnm">${lab}</span></div>`;
   }).join('');
-  const clab=CARD_STAGES.map((lab,i)=>`<span class="${i===cs.current?'cur':''}">${lab}</span>`).join('');
   const hereHTML = cs.hereText ? `<div class="chere">▶ いまここ：${cs.hereText}</div>` : '';
   const indivBadge = b.hasIndividual ? `<span class="indiv-badge">👤 議員ひとりずつ見られる</span>` : '';
   const lc=lcOf(b), lm=LC_META[lc]||LC_META['審議中'];
@@ -830,8 +856,7 @@ function eventCard(e, delay){
     <h3>${b.name}</h3>
     <div class="gist">${b.gist || `<span class="gist-pending">${pendMsg}</span>`}</div>
     <div class="tags">${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')} ${indivBadge}</div>
-    <div class="cbar">${cbar}</div>
-    <div class="clab">${clab}</div>
+    <div class="cprog${cs.lc==='廃案'?' lc-dead':''}">${cprog}</div>
     ${hereHTML}
   `;
   el.onclick=()=>openModal(b);
