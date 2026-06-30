@@ -463,6 +463,25 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
 .pstep.now .pnode{background:var(--accent);box-shadow:0 0 0 4px rgba(154,43,30,.16)}
 .pstep.now .pnm{color:var(--accent);font-weight:700}
 .vote-pending{background:#f7f7f4;border:1px dashed var(--line);border-radius:6px;padding:15px 16px;color:var(--muted);font-size:.86rem;line-height:1.7;text-align:center;margin-top:4px}
+/* 会期 俯瞰サマリーバー（タイトル直下・タブ上） */
+.masthead .meta{display:none}   /* 旧メタは会期サマリーバーが上位互換（155 vs 193 の重複解消）。renderStatsは無改修＝要素は残す */
+.session-summary{background:var(--paper-2);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-top:14px}
+.ss-top{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.ss-diet{font-family:'Shippori Mincho',serif;font-weight:800;font-size:1.5rem;letter-spacing:.03em}
+.ss-status{font-size:.72rem;font-weight:700;padding:3px 12px;border-radius:99px;vertical-align:middle;margin-left:8px}
+.ss-status.open{background:var(--accent-2);color:#fff}
+.ss-status.closed{background:#9c958a;color:#fff}
+.ss-upd{font-size:.72rem;color:var(--muted)}
+.ss-nums{display:flex;gap:38px;margin-bottom:14px}
+.ss-n b{font-family:'Shippori Mincho',serif;font-weight:800;font-size:2.4rem;line-height:1;display:block}
+.ss-n span{font-size:.8rem;color:var(--muted);margin-top:5px;display:block}
+.ss-bar{height:13px;border-radius:99px;overflow:hidden;display:flex;background:#ddd3bf}
+.ss-bar i{display:block}
+.ss-leg{display:flex;gap:16px;align-items:center;margin-top:8px;font-size:.72rem;color:var(--muted);flex-wrap:wrap}
+.ss-leg .dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.ss-total{margin-top:13px;padding-top:12px;border-top:1px solid var(--line);font-size:.76rem;color:var(--muted)}
+.ss-total .strong{color:var(--accent-2);font-weight:700}
+@media(max-width:560px){.ss-nums{gap:22px}.ss-n b{font-size:2rem}.ss-diet{font-size:1.25rem}.ss-leg span[style]{margin-left:0 !important}}
 </style>
 </head>
 <body>
@@ -498,6 +517,8 @@ aside{position:sticky;top:18px;align-self:start;display:flex;flex-direction:colu
       <div class="live">データ最終更新 <span id="meta-updated">—</span></div>
     </div>
   </div>
+
+  <div class="session-summary" id="sessionSummary"></div>
 
   <div class="life-tabs">
     <button class="life-tab on" data-tab="passed" onclick="switchTab('passed')">成立した法案<span class="n" id="tabn-passed"></span></button>
@@ -1119,6 +1140,44 @@ function renderStats(){
   if(scope) scope.textContent = `「成立した法案」タブは${dietRange}国会で成立した法律。「審議中の法案」タブは現国会で審議中・継続・廃案の法案を収録しています。`;
 }
 
+/* 会期 俯瞰サマリー：現会期(審議中がある最大回次)を主役に、全体を下段に併記。bills.jsonのみから算出。 */
+function renderSessionSummary(){
+  const el=document.getElementById('sessionSummary'); if(!el) return;
+  const bills=pub(); if(!bills.length){ el.style.display='none'; return; }
+  const isActive=b=>lcOf(b)==='審議中'||lcOf(b)==='一院通過';
+  const active=bills.filter(isActive);
+  const diets=[...new Set(bills.map(b=>b.submittedDiet).filter(Boolean))].sort((a,b)=>a-b);
+  const cur=active.length?Math.max(...active.map(b=>b.submittedDiet)):diets[diets.length-1];
+  const inCur=bills.filter(b=>b.submittedDiet===cur);
+  const seiritsu=inCur.filter(b=>lcOf(b)==='成立').length;
+  const shingi=inCur.filter(isActive).length;
+  const haian=inCur.filter(b=>lcOf(b)==='廃案').length;
+  const keizoku=inCur.filter(b=>lcOf(b)==='継続').length;
+  const open=active.some(b=>b.submittedDiet===cur);
+  const tot=seiritsu+shingi+haian+keizoku||1;
+  const segs=[['成立',seiritsu,'var(--accent-2)'],['審議中',shingi,'var(--accent)'],['廃案',haian,'#9c958a'],['継続',keizoku,'#3a78b5']];
+  const bar=segs.filter(s=>s[1]>0).map(s=>`<i style="width:${(s[1]/tot*100).toFixed(1)}%;background:${s[2]}"></i>`).join('');
+  const leg=segs.filter(s=>s[1]>0).map(s=>`<span><span class="dot" style="background:${s[2]}"></span>${s[0]} ${s[1]}</span>`).join('');
+  const range=diets.length>1?`第${diets[0]}〜${diets[diets.length-1]}回`:`第${diets[0]}回`;
+  const totSei=bills.filter(b=>lcOf(b)==='成立').length;
+  const totShi=bills.filter(isActive).length;
+  const indiv=bills.filter(b=>b.hasIndividual).length;
+  el.innerHTML=`
+    <div class="ss-top">
+      <div class="ss-diet">第${cur}回国会<span class="ss-status ${open?'open':'closed'}">${open?'開会中':'閉会'}</span></div>
+      <div class="ss-upd">データ更新 ${GENERATED_AT?GENERATED_AT.replace(/-/g,'/'):'—'}</div>
+    </div>
+    <div class="ss-nums">
+      <div class="ss-n"><b style="color:var(--accent-2)">${seiritsu}</b><span>成立</span></div>
+      <div class="ss-n"><b style="color:var(--accent)">${shingi}</b><span>審議中</span></div>
+      <div class="ss-n"><b style="color:#9c958a">${haian}</b><span>廃案</span></div>
+    </div>
+    <div class="ss-bar">${bar}</div>
+    <div class="ss-leg">${leg}<span style="margin-left:auto">この会期で追跡中 ${tot}本</span></div>
+    <div class="ss-total">全体 ${range}・${bills.length}本（成立 ${totSei} ／ 審議中 ${totShi}）　<span class="strong">議員別の賛否まで見られる ${indiv}本</span></div>
+  `;
+}
+
 async function boot(){
   const tl=document.getElementById('timeline');
   try{
@@ -1131,7 +1190,7 @@ async function boot(){
     tl.innerHTML='<div class="empty">データを読み込めませんでした（'+err.message+'）。<br>ローカルで開く場合は簡易サーバ経由で：<br><code>python3 -m http.server</code> を起動し http://localhost:8000/ を開いてください。</div>';
     return;
   }
-  initFilters(); renderStats(); updateTabCounts(); render(); renderFeed(); openFromHash();
+  initFilters(); renderStats(); updateTabCounts(); renderSessionSummary(); render(); renderFeed(); openFromHash();
 }
 boot();
 </script>
