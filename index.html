@@ -574,6 +574,9 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .askai-h .aic{background:var(--accent)!important}
 /* ライフサイクル・バッジ：審議中/一院通過の金茶(#fbecd0/#9a6b1e)→濃紺 */
 .lc-shingi{background:rgba(30,58,138,.1)!important;color:var(--accent)!important}
+/* 分野バッジ（fields[]）：カードは.tags行・モーダルはmmetaに。濃紺淡地ピル */
+.fchip{display:inline-block;font-size:11px;font-weight:600;line-height:1;padding:4px 9px;border-radius:99px;background:rgba(30,58,138,.07);color:var(--accent);white-space:nowrap}
+.fwrap{display:inline-flex;gap:5px;flex-wrap:wrap;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -793,7 +796,7 @@ function passesFilter(b){
   if(state.field && !(b.fields||[]).includes(state.field)) return false;
   if(state.diet && b.diet!==state.diet) return false;
   if(state.q){
-    const hay=(b.name+(b.gist||'')+b.tags.join('')+b.ministry).toLowerCase();
+    const hay=(b.name+(b.gist||'')+b.tags.join('')+(b.fields||[]).join('')+b.ministry).toLowerCase();
     if(!hay.includes(state.q.toLowerCase())) return false;
   }
   if(state.tab==='passed' && !state.stages.has(latestStage(b))) return false;  // STAGE絞り込みは成立タブのみ
@@ -873,7 +876,7 @@ function eventCard(e, delay){
     </div>
     <h3>${b.name}</h3>
     <div class="gist">${b.gist || `<span class="gist-pending">${pendMsg}</span>`}</div>
-    <div class="tags">${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')} ${indivBadge}</div>
+    <div class="tags">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')} ${indivBadge}</div>
     <div class="cprog${cs.lc==='廃案'?' lc-dead':''}">${cprog}</div>
     ${hereHTML}
   `;
@@ -930,7 +933,7 @@ function deliberatingModal(b){
     <div class="modal-h">
       <button class="close" onclick="closeModal()">×</button>
       <h2 style="font-size:18px">${b.name}</h2>
-      <div class="mmeta"><span>${b.diet}</span><span>${proposer}</span><span class="lc-badge lc-${lm.slug}">${b.lifecycleDetail||lm.label}</span></div>
+      <div class="mmeta"><span>${b.diet}</span><span>${proposer}</span><span class="fwrap">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}</span><span class="lc-badge lc-${lm.slug}">${b.lifecycleDetail||lm.label}</span></div>
     </div>
     <div class="modal-b">
       <div class="ai-summary pending">
@@ -1013,7 +1016,7 @@ function richModal(b){
     <div class="modal-h">
       <button class="close" onclick="closeModal()">×</button>
       <h2 style="font-size:18px">${b.name}</h2>
-      <div class="mmeta"><span>${b.diet}</span><span>${b.ministry}</span><span>${b.field}</span><span style="color:var(--s-passed);font-weight:700">成立</span></div>
+      <div class="mmeta"><span>${b.diet}</span><span>${b.ministry}</span><span class="fwrap">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}</span><span style="color:var(--s-passed);font-weight:700">成立</span></div>
     </div>
     <div class="modal-b">
       ${b.ai.plain ? `<div class="ai-summary">
@@ -1205,7 +1208,7 @@ function simpleModal(b){
       <button class="close" onclick="closeModal()">×</button>
       <h2>${b.name}</h2>
       <div class="mmeta">
-        <span>${b.diet}</span><span>${b.ministry}</span><span>${b.field}</span>
+        <span>${b.diet}</span><span>${b.ministry}</span><span class="fwrap">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}</span>
       </div>
     </div>
     <div class="modal-b">
