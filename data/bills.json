@@ -9,7 +9,7 @@
       "lawNumber": "13",
       "status": "成立",
       "name": "所得税法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -566,7 +566,7 @@
       "lawNumber": "7",
       "status": "成立",
       "name": "地方税法及び地方税法等の一部を改正する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -1096,7 +1096,7 @@
       "lawNumber": "8",
       "status": "成立",
       "name": "地方交付税法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -1626,7 +1626,7 @@
       "lawNumber": "42",
       "status": "成立",
       "name": "重要電子計算機に対する不正な行為による被害の防止に関する法律案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "外交・安全保障",
@@ -2180,7 +2180,7 @@
       "lawNumber": "43",
       "status": "成立",
       "name": "重要電子計算機に対する不正な行為による被害の防止に関する法律の施行に伴う関係法律の整備等に関する法律案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "外交・安全保障",
@@ -2734,7 +2734,7 @@
       "lawNumber": "16",
       "status": "成立",
       "name": "関税定率法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -3289,7 +3289,7 @@
       "lawNumber": "24",
       "status": "成立",
       "name": "国際開発協会への加盟に伴う措置に関する法律及び米州投資公社への加盟に伴う措置に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -3820,7 +3820,7 @@
       "lawNumber": "17",
       "status": "成立",
       "name": "大学等における修学の支援に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "文部科学省",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -4350,7 +4350,7 @@
       "lawNumber": "68",
       "status": "成立",
       "name": "公立の義務教育諸学校等の教育職員の給与等に関する特別措置法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "文部科学省",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -4907,7 +4907,7 @@
       "lawNumber": "18",
       "status": "成立",
       "name": "戦没者等の遺族に対する特別弔慰金支給法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -5436,7 +5436,7 @@
       "lawNumber": "30",
       "status": "成立",
       "name": "情報処理の促進に関する法律及び特別会計に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "経済産業省",
       "field": "",
       "fields": [
         "税・財政・予算",
@@ -5963,7 +5963,7 @@
       "lawNumber": "22",
       "status": "成立",
       "name": "道路法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -6493,7 +6493,7 @@
       "lawNumber": "25",
       "status": "成立",
       "name": "港湾法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -7020,7 +7020,7 @@
       "lawNumber": "23",
       "status": "成立",
       "name": "裁判所職員定員法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -7548,7 +7548,7 @@
       "lawNumber": "37",
       "status": "成立",
       "name": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -8078,7 +8078,7 @@
       "lawNumber": "44",
       "status": "成立",
       "name": "防衛省設置法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "防衛省",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -8608,7 +8608,7 @@
       "lawNumber": "51",
       "status": "成立",
       "name": "災害対策基本法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -9138,7 +9138,7 @@
       "lawNumber": "58",
       "status": "成立",
       "name": "株式会社地域経済活性化支援機構法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -9668,7 +9668,7 @@
       "lawNumber": "27",
       "status": "成立",
       "name": "電波法及び放送法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "デジタル・通信"
@@ -10196,7 +10196,7 @@
       "lawNumber": "50",
       "status": "成立",
       "name": "国会議員の選挙等の執行経費の基準に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "政治・選挙・行政"
@@ -10726,7 +10726,7 @@
       "lawNumber": "87",
       "status": "成立",
       "name": "医療法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -10897,7 +10897,7 @@
       "lawNumber": "14",
       "status": "成立",
       "name": "土地改良法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -11426,7 +11426,7 @@
       "lawNumber": "21",
       "status": "成立",
       "name": "独立行政法人国際協力機構法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "外務省",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -11957,7 +11957,7 @@
       "lawNumber": "36",
       "status": "成立",
       "name": "株式会社日本政策投資銀行法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -12488,7 +12488,7 @@
       "lawNumber": "40",
       "status": "成立",
       "name": "特別会計に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -13013,7 +13013,7 @@
       "lawNumber": "31",
       "status": "成立",
       "name": "漁業災害補償法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -13542,7 +13542,7 @@
       "lawNumber": "28",
       "status": "成立",
       "name": "鳥獣の保護及び管理並びに狩猟の適正化に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "環境省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -14072,7 +14072,7 @@
       "lawNumber": "52",
       "status": "成立",
       "name": "脱炭素成長型経済構造への円滑な移行の推進に関する法律及び資源の有効な利用の促進に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "経済産業省",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -14605,7 +14605,7 @@
       "lawNumber": "53",
       "status": "成立",
       "name": "人工知能関連技術の研究開発及び活用の推進に関する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "教育・科学・文化",
@@ -15138,7 +15138,7 @@
       "lawNumber": "39",
       "status": "成立",
       "name": "情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安",
@@ -15668,7 +15668,7 @@
       "lawNumber": "48",
       "status": "成立",
       "name": "森林経営管理法及び森林法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -16197,7 +16197,7 @@
       "lawNumber": "62",
       "status": "成立",
       "name": "公益通報者保護法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "消費者庁",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -16728,7 +16728,7 @@
       "lawNumber": "67",
       "status": "成立",
       "name": "円滑な事業再生を図るための事業者の金融機関等に対する債務の調整の手続等に関する法律案",
-      "ministry": "",
+      "ministry": "経済産業省",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -17258,7 +17258,7 @@
       "lawNumber": "47",
       "status": "成立",
       "name": "老朽化マンション等の管理及び再生の円滑化等を図るための建物の区分所有等に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -17786,7 +17786,7 @@
       "lawNumber": "35",
       "status": "成立",
       "name": "地域の自主性及び自立性を高めるための改革の推進を図るための関係法律の整備に関する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "政治・選挙・行政"
@@ -18312,7 +18312,7 @@
       "lawNumber": "70",
       "status": "成立",
       "name": "日本学術会議法案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -18866,7 +18866,7 @@
       "lawNumber": "54",
       "status": "成立",
       "name": "保険業法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "金融庁",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -19397,7 +19397,7 @@
       "lawNumber": "72",
       "status": "成立",
       "name": "信託業法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "金融庁",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -19923,7 +19923,7 @@
       "lawNumber": "66",
       "status": "成立",
       "name": "資金決済に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "金融庁",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -20454,7 +20454,7 @@
       "lawNumber": "29",
       "status": "成立",
       "name": "児童福祉法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "こども家庭庁",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -20983,7 +20983,7 @@
       "lawNumber": "38",
       "status": "成立",
       "name": "行政手続における特定の個人を識別するための番号の利用等に関する法律及び住民基本台帳法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "デジタル庁",
       "field": "",
       "fields": [
         "政治・選挙・行政"
@@ -21513,7 +21513,7 @@
       "lawNumber": "49",
       "status": "成立",
       "name": "民事裁判情報の活用の促進に関する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -22042,7 +22042,7 @@
       "lawNumber": "56",
       "status": "成立",
       "name": "譲渡担保契約及び所有権留保契約に関する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -22573,7 +22573,7 @@
       "lawNumber": "57",
       "status": "成立",
       "name": "譲渡担保契約及び所有権留保契約に関する法律の施行に伴う関係法律の整備等に関する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -23104,7 +23104,7 @@
       "lawNumber": "69",
       "status": "成立",
       "name": "食品等の流通の合理化及び取引の適正化に関する法律及び卸売市場法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -23635,7 +23635,7 @@
       "lawNumber": "59",
       "status": "成立",
       "name": "海洋再生可能エネルギー発電設備の整備に係る海域の利用の促進に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "環境・エネルギー"
@@ -24164,7 +24164,7 @@
       "lawNumber": "45",
       "status": "成立",
       "name": "風俗営業等の規制及び業務の適正化等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "警察庁",
       "field": "",
       "fields": [
         "司法・治安"
@@ -24693,7 +24693,7 @@
       "lawNumber": "41",
       "status": "成立",
       "name": "下請代金支払遅延等防止法及び下請中小企業振興法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "公正取引委員会",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -25223,7 +25223,7 @@
       "lawNumber": "75",
       "status": "成立",
       "name": "盗難特定金属製物品の処分の防止等に関する法律案",
-      "ministry": "",
+      "ministry": "警察庁",
       "field": "",
       "fields": [
         "司法・治安"
@@ -25751,7 +25751,7 @@
       "lawNumber": "63",
       "status": "成立",
       "name": "労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -26282,7 +26282,7 @@
       "lawNumber": "73",
       "status": "成立",
       "name": "環境影響評価法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "環境省",
       "field": "",
       "fields": [
         "環境・エネルギー"
@@ -26811,7 +26811,7 @@
       "lawNumber": "79",
       "status": "成立",
       "name": "独立行政法人男女共同参画機構法案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -27340,7 +27340,7 @@
       "lawNumber": "80",
       "status": "成立",
       "name": "独立行政法人男女共同参画機構法の施行に伴う関係法律の整備等に関する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -27869,7 +27869,7 @@
       "lawNumber": "46",
       "status": "成立",
       "name": "電気通信事業法及び日本電信電話株式会社等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -28400,7 +28400,7 @@
       "lawNumber": "55",
       "status": "成立",
       "name": "航空法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -28931,7 +28931,7 @@
       "lawNumber": "26",
       "status": "成立",
       "name": "日本国の自衛隊と我が国以外の締約国の軍隊との間における相互のアクセス及び協力の円滑化に関する日本国と我が国以外の締約国との間の協定の実施に関する法律案",
-      "ministry": "",
+      "ministry": "防衛省",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -29458,7 +29458,7 @@
       "lawNumber": "33",
       "status": "成立",
       "name": "労働安全衛生法及び作業環境測定法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -29986,7 +29986,7 @@
       "lawNumber": "32",
       "status": "成立",
       "name": "船員法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -41928,7 +41928,7 @@
       "lawNumber": "83",
       "status": "成立",
       "name": "ストーカー行為等の規制等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "警察庁",
       "field": "",
       "fields": [
         "司法・治安"
@@ -42480,7 +42480,7 @@
       "lawNumber": "84",
       "status": "成立",
       "name": "配偶者からの暴力の防止及び被害者の保護等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "司法・治安"
@@ -43032,7 +43032,7 @@
       "lawNumber": "82",
       "status": "成立",
       "name": "更生保護制度の充実を図るための保護司法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -43584,7 +43584,7 @@
       "lawNumber": "86",
       "status": "成立",
       "name": "気象業務法及び水防法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -44135,7 +44135,7 @@
       "lawNumber": "89",
       "status": "成立",
       "name": "一般職の職員の給与に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "政治・選挙・行政"
@@ -44681,7 +44681,7 @@
       "lawNumber": "90",
       "status": "成立",
       "name": "特別職の職員の給与に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "政治・選挙・行政"
@@ -45228,7 +45228,7 @@
       "lawNumber": "88",
       "status": "成立",
       "name": "地方交付税法及び特別会計に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -45775,7 +45775,7 @@
       "lawNumber": "93",
       "status": "成立",
       "name": "裁判官の報酬等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -46321,7 +46321,7 @@
       "lawNumber": "94",
       "status": "成立",
       "name": "検察官の俸給等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -46867,7 +46867,7 @@
       "lawNumber": "95",
       "status": "成立",
       "name": "防衛省の職員の給与等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "防衛省",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -50766,7 +50766,7 @@
       "lawNumber": "13",
       "status": "成立",
       "name": "財政運営に必要な財源の確保を図るための公債の発行の特例に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -51339,7 +51339,7 @@
       "lawNumber": "6",
       "status": "成立",
       "name": "東日本大震災からの復興のための施策を実施するために必要な財源の確保に関する特別措置法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -51910,7 +51910,7 @@
       "lawNumber": "12",
       "status": "成立",
       "name": "所得税法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -52483,7 +52483,7 @@
       "lawNumber": "2",
       "status": "成立",
       "name": "地方税法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -53040,7 +53040,7 @@
       "lawNumber": "3",
       "status": "成立",
       "name": "地方交付税法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -53597,7 +53597,7 @@
       "lawNumber": "5",
       "status": "成立",
       "name": "関税定率法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -54168,7 +54168,7 @@
       "lawNumber": "15",
       "status": "成立",
       "name": "金融機能の強化のための特別措置に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "金融庁",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -54725,7 +54725,7 @@
       "lawNumber": "8",
       "status": "成立",
       "name": "高等学校等就学支援金の支給に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "文部科学省",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -55282,7 +55282,7 @@
       "lawNumber": "7",
       "status": "成立",
       "name": "公立義務教育諸学校の学級編制及び教職員定数の標準に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "文部科学省",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -55840,7 +55840,7 @@
       "lawNumber": "1",
       "status": "成立",
       "name": "在外公館の名称及び位置並びに在外公館に勤務する外務公務員の給与に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "外務省",
       "field": "",
       "fields": [
         "外交・安全保障",
@@ -56398,7 +56398,7 @@
       "lawNumber": "10",
       "status": "成立",
       "name": "農業構造転換の推進に必要な施策の集中的な実施の財源に充てるための日本中央競馬会の国庫納付金の納付に関する臨時措置法案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "税・財政・予算",
@@ -56957,7 +56957,7 @@
       "lawNumber": "11",
       "status": "成立",
       "name": "日本中央競馬会法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -57514,7 +57514,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "防災庁設置法案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -57618,7 +57618,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "防災庁設置法の施行に伴う関係法律の整備等に関する法律案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -57722,7 +57722,7 @@
       "lawNumber": "29",
       "status": "成立",
       "name": "経済社会情勢の変化を踏まえた企業の事業活動の持続的な発展を図るための産業競争力強化法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "経済産業省",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -58273,7 +58273,7 @@
       "lawNumber": "21",
       "status": "成立",
       "name": "物資の流通の効率化に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -58825,7 +58825,7 @@
       "lawNumber": "22",
       "status": "成立",
       "name": "環境省設置法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "環境省",
       "field": "",
       "fields": [
         "環境・エネルギー"
@@ -59378,7 +59378,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "防衛省設置法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "防衛省",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -59482,7 +59482,7 @@
       "lawNumber": "14",
       "status": "成立",
       "name": "裁判所職員定員法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -60039,7 +60039,7 @@
       "lawNumber": "32",
       "status": "成立",
       "name": "出入国管理及び難民認定法及び出入国管理及び難民認定法第二条第五号ロの旅券を所持する外国人の上陸申請の特例に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -60591,7 +60591,7 @@
       "lawNumber": "19",
       "status": "成立",
       "name": "旅券法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "外務省",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -61148,7 +61148,7 @@
       "lawNumber": "23",
       "status": "成立",
       "name": "都市再生特別措置法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -61700,7 +61700,7 @@
       "lawNumber": "35",
       "status": "成立",
       "name": "地域公共交通の活性化及び再生に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -62252,7 +62252,7 @@
       "lawNumber": "28",
       "status": "成立",
       "name": "国家情報会議設置法案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -62804,7 +62804,7 @@
       "lawNumber": "31",
       "status": "成立",
       "name": "健康保険法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -63356,7 +63356,7 @@
       "lawNumber": "41",
       "status": "成立",
       "name": "産業技術力強化法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "経済産業省",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -63907,7 +63907,7 @@
       "lawNumber": "30",
       "status": "成立",
       "name": "外国為替及び外国貿易法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "財務省",
       "field": "",
       "fields": [
         "税・財政・予算"
@@ -64458,7 +64458,7 @@
       "lawNumber": "16",
       "status": "成立",
       "name": "農林中央金庫法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -65015,7 +65015,7 @@
       "lawNumber": "17",
       "status": "成立",
       "name": "農業近代化資金融通法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -65573,7 +65573,7 @@
       "lawNumber": "38",
       "status": "成立",
       "name": "経済施策を一体的に講ずることによる安全保障の確保の推進に関する法律及び株式会社国際協力銀行法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -66126,7 +66126,7 @@
       "lawNumber": "47",
       "status": "成立",
       "name": "重要施設の周辺地域の上空における小型無人機等の飛行の禁止に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "警察庁",
       "field": "",
       "fields": [
         "外交・安全保障"
@@ -66678,7 +66678,7 @@
       "lawNumber": "18",
       "status": "成立",
       "name": "株式会社海外通信・放送・郵便事業支援機構法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -67237,7 +67237,7 @@
       "lawNumber": "25",
       "status": "成立",
       "name": "携帯音声通信事業者による契約者等の本人確認等及び携帯音声通信役務の不正な利用の防止に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "デジタル・通信"
@@ -67790,7 +67790,7 @@
       "lawNumber": "42",
       "status": "成立",
       "name": "郵便法及び民間事業者による信書の送達に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "総務省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -68341,7 +68341,7 @@
       "lawNumber": "20",
       "status": "成立",
       "name": "家畜伝染病予防法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -68894,7 +68894,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "電気事業法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "経済産業省",
       "field": "",
       "fields": [
         "環境・エネルギー"
@@ -68985,7 +68985,7 @@
       "lawNumber": "27",
       "status": "成立",
       "name": "地域の自主性及び自立性を高めるための改革の推進を図るための関係法律の整備に関する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "政治・選挙・行政"
@@ -69537,7 +69537,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "下水道法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災"
@@ -69628,7 +69628,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "建築物のエネルギー消費性能の向上等に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "国土交通省",
       "field": "",
       "fields": [
         "国土・交通・防災",
@@ -69720,7 +69720,7 @@
       "lawNumber": null,
       "status": "成立",
       "name": "人工衛星等の打上げ及び人工衛星の管理に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -70277,7 +70277,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "科学技術・イノベーション創出の活性化に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣府",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -70368,7 +70368,7 @@
       "lawNumber": null,
       "status": "成立",
       "name": "自動車の運転により人を死傷させる行為等の処罰に関する法律及び道路交通法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "国土・交通・防災",
@@ -70928,7 +70928,7 @@
       "lawNumber": "45",
       "status": "成立",
       "name": "民法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -71480,7 +71480,7 @@
       "lawNumber": "46",
       "status": "成立",
       "name": "民法等の一部を改正する法律の施行に伴う関係法律の整備等に関する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -72032,7 +72032,7 @@
       "lawNumber": "51",
       "status": "成立",
       "name": "社会福祉法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -72583,7 +72583,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "重要品種の育成及びその種苗の生産の振興に関する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -72674,7 +72674,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "種苗法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -72765,7 +72765,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "主要食糧の需給及び価格の安定に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "農林水産省",
       "field": "",
       "fields": [
         "農林水産・食"
@@ -72869,7 +72869,7 @@
       "lawNumber": "33",
       "status": "成立",
       "name": "太陽電池廃棄物の再資源化等の推進に関する法律案",
-      "ministry": "",
+      "ministry": "環境省",
       "field": "",
       "fields": [
         "環境・エネルギー"
@@ -73420,7 +73420,7 @@
       "lawNumber": "40",
       "status": "成立",
       "name": "予備自衛官等の職務の円滑な遂行を図るための国家公務員及び地方公務員の兼業の特例に関する法律案",
-      "ministry": "",
+      "ministry": "防衛省",
       "field": "",
       "fields": [
         "外交・安全保障",
@@ -73972,7 +73972,7 @@
       "lawNumber": null,
       "status": "成立",
       "name": "犯罪による収益の移転防止に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "警察庁",
       "field": "",
       "fields": [
         "司法・治安"
@@ -74531,7 +74531,7 @@
       "lawNumber": null,
       "status": "成立",
       "name": "南極地域の環境の保護に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "環境省",
       "field": "",
       "fields": [
         "環境・エネルギー"
@@ -75090,7 +75090,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "情報通信技術を活用した行政の推進等に関する法律及び情報処理の促進に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "内閣官房",
       "field": "",
       "fields": [
         "政治・選挙・行政",
@@ -75195,7 +75195,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "個人情報の保護に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "個人情報保護委員会",
       "field": "",
       "fields": [
         "デジタル・通信"
@@ -75299,7 +75299,7 @@
       "lawNumber": "37",
       "status": "成立",
       "name": "学校教育法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "文部科学省",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -75850,7 +75850,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "労働者災害補償保険法等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -75941,7 +75941,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "金融商品取引法及び資金決済に関する法律の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "金融庁",
       "field": "",
       "fields": [
         "経済・産業・金融"
@@ -76045,7 +76045,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "ヒトゲノム編集胚等の取扱いの規制に関する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
@@ -76136,7 +76136,7 @@
       "lawNumber": "43",
       "status": "成立",
       "name": "廃棄物の処理及び清掃に関する法律等の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "環境省",
       "field": "",
       "fields": [
         "環境・エネルギー"
@@ -76687,7 +76687,7 @@
       "lawNumber": "44",
       "status": "成立",
       "name": "ポリ塩化ビフェニル廃棄物の適正な処理の推進に関する特別措置法及び中間貯蔵・環境安全事業株式会社法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "環境省",
       "field": "",
       "fields": [
         "経済・産業・金融",
@@ -77240,7 +77240,7 @@
       "lawNumber": null,
       "status": "参議院で審議中",
       "name": "刑事訴訟法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "法務省",
       "field": "",
       "fields": [
         "司法・治安"
@@ -77344,7 +77344,7 @@
       "lawNumber": "48",
       "status": "成立",
       "name": "著作権法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "文部科学省",
       "field": "",
       "fields": [
         "教育・科学・文化"
@@ -77895,7 +77895,7 @@
       "lawNumber": null,
       "status": "衆議院で審議中",
       "name": "予防接種法の一部を改正する法律案",
-      "ministry": "",
+      "ministry": "厚生労働省",
       "field": "",
       "fields": [
         "くらし・社会保障・労働"
