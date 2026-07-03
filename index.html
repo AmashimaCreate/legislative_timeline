@@ -640,6 +640,12 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 }
 .event:focus-visible,.rel-item:focus-visible,.fs-item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto!important}}
+/* トップ帯の縦圧縮: ファーストビューにサマリーバーを入れる（kickerは情報行化済み） */
+.masthead{padding-top:14px!important;padding-bottom:10px!important}
+.brand h1{font-size:30px!important}
+.brand .kicker{letter-spacing:.14em;text-transform:none;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700}
+.brand .sub{margin-top:3px}
+@media(max-width:560px){.brand h1{font-size:24px!important}.masthead{padding-top:10px!important;padding-bottom:8px!important}}
 </style>
 </head>
 <body>
@@ -665,7 +671,7 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 <header>
   <div class="masthead">
     <div class="brand">
-      <span class="kicker">Legislative Timeline · 立法情報</span>
+      <span class="kicker" id="kicker">立法情報・毎週自動更新</span>
       <h1>立法タイムライン</h1>
       <span class="sub">法案の流れと、だれが賛成したかを時系列で</span>
     </div>
@@ -893,7 +899,11 @@ function jumpTab(t,lc){ switchTab(t); if(lc) switchLc(lc); const el=document.que
 /* ---- populate filters & legend ---- */
 function uniq(arr){return [...new Set(arr)]}
 function initFilters(){
-  ['内閣','議員立法'].forEach(m=>addOpt('fMinistry',m));   // 提出者（府省庁データは空のため置換）
+  // 提出者（制度上、法案の提出者は内閣か議員の2種のみ。省庁は「所管」＝別属性でデータ未収録）
+  [['内閣','内閣（閣法・予算）'],['議員立法','議員立法（衆法・参法）']].forEach(([v,l])=>{
+    const o=document.createElement('option'); o.value=v; o.textContent=l;
+    document.getElementById('fMinistry').appendChild(o);
+  });
   const _pf=new Set(pub().flatMap(b=>b.fields||[])); FIELD_ORDER.filter(f=>_pf.has(f)).forEach(f=>addOpt('fField',f));
   uniq(pub().map(b=>b.diet)).sort().forEach(d=>addOpt('fDiet',d));
   const lg=document.getElementById('legend');
@@ -1521,6 +1531,8 @@ function renderSessionSummary(){
   const bar=segs.filter(s=>s[1]>0).map(s=>`<i style="width:${(s[1]/tot*100).toFixed(1)}%;background:${s[2]}"></i>`).join('');
   const leg=segs.filter(s=>s[1]>0).map(s=>`<span><span class="dot" style="background:${s[2]}"></span>${s[0]} ${s[1]}</span>`).join('');
   const range=diets.length>1?`第${diets[0]}〜${diets[diets.length-1]}回`:`第${diets[0]}回`;
+  // 飾りだった英字kickerを「範囲・収録数・鮮度」の情報行に（数字はデータから自動＝週次で勝手に更新）
+  const kk=document.getElementById('kicker'); if(kk) kk.textContent=`${range}国会・${bills.length}本収録 ｜ 毎週月曜 自動更新`;
   const totSei=bills.filter(b=>lcOf(b)==='成立').length;
   const totShi=bills.filter(isActive).length;
   const indiv=bills.filter(b=>b.hasIndividual).length;
