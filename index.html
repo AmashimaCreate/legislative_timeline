@@ -7,7 +7,7 @@
 <meta name="description" content="国会で成立した法律を一本ずつ。やさしい要約・賛否・成立までの流れを、一次資料へのリンク付きで時系列にたどる。">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#9a2b1e">
+<meta name="theme-color" content="#1e3a8a">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://seiji-mieru.com/houan/">
 <meta property="og:title" content="立法タイムライン — 法案の流れを時系列で">
@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="法案を主役に、成立までの流れを時系列で。">
 <meta name="twitter:image" content="https://seiji-mieru.com/houan/og-image.jpg">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
 
 :root{
   --ink:#1a1410;
@@ -574,9 +574,34 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .askai-h .aic{background:var(--accent)!important}
 /* ライフサイクル・バッジ：審議中/一院通過の金茶(#fbecd0/#9a6b1e)→濃紺 */
 .lc-shingi{background:rgba(30,58,138,.1)!important;color:var(--accent)!important}
-/* 分野バッジ（fields[]）：カードは.tags行・モーダルはmmetaに。濃紺淡地ピル */
-.fchip{display:inline-block;font-size:11px;font-weight:600;line-height:1;padding:4px 9px;border-radius:99px;background:rgba(30,58,138,.07);color:var(--accent);white-space:nowrap}
+/* 分野バッジ（fields[]）：カードは.tags行・モーダルはmmetaに。濃紺淡地ピル。クリックで絞り込み */
+.fchip{display:inline-block;font-size:11px;font-weight:600;line-height:1;padding:4px 9px;border-radius:99px;background:rgba(30,58,138,.07);color:var(--accent);white-space:nowrap;cursor:pointer;transition:background .12s}
+.fchip:hover{background:rgba(30,58,138,.15)}
 .fwrap{display:inline-flex;gap:5px;flex-wrap:wrap;vertical-align:middle}
+/* 分野チップ列（11分類の見える入口）。モバイルは横スクロール1行 */
+.field-chips{display:flex;gap:7px;flex-wrap:wrap;padding:11px 0 2px}
+.f-chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:#fff;color:#51607a;cursor:pointer;font-family:inherit;white-space:nowrap;transition:.12s}
+.f-chip:hover{border-color:var(--accent);color:var(--accent)}
+.f-chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.f-chip .fcn{font-size:10px;opacity:.72;margin-left:2px}
+.f-chip.zero{opacity:.4}
+@media(max-width:640px){.field-chips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}}
+/* 審議中サブフィルタの件数・0件グレー */
+.lc-chip .lcn{font-size:10px;opacity:.7;margin-left:2px}
+.lc-chip.zero{opacity:.45}
+/* サマリーバーの数字はクリック可能 */
+.ss-n{cursor:pointer;border-radius:10px;padding:2px 8px;margin:-2px -8px;transition:background .12s}
+.ss-n:hover{background:rgba(30,58,138,.06)}
+/* 検索クリア（×） */
+.search{position:relative}
+#qClear{position:absolute;right:9px;top:50%;transform:translateY(-50%);border:none;width:22px;height:22px;border-radius:50%;background:#e7ecf4;color:#51607a;cursor:pointer;font-size:14px;line-height:1;display:none;place-items:center;font-family:inherit}
+#qClear:hover{background:#dbe3ef}
+/* モーダル内プロセス：院チップの和紙ベージュ(#eee7d8)→寒色、いまここ光彩の橙/朱→濃紺 */
+.pwhere{background:#eef1f6!important;color:#51607a!important}
+.pwhere.diet2{background:rgba(30,58,138,.08)!important;color:var(--accent)!important}
+.pstep.now .pnode{box-shadow:0 0 0 5px rgba(30,58,138,.16)!important}
+/* 個別票バッジ：👤絵文字→SVG＋濃紺アウトラインピル（旧CSSは変数名タイポで背景無効だった） */
+.indiv-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--accent)!important;background:rgba(30,58,138,.05)!important;border:1px solid rgba(30,58,138,.3);border-radius:99px;padding:3px 10px}
 </style>
 </head>
 <body>
@@ -624,13 +649,16 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
     <div class="search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <input id="q" type="text" placeholder="法案名・キーワードで検索（例：個人情報、エネルギー、税）">
+      <button id="qClear" aria-label="検索をクリア" style="display:none">×</button>
     </div>
     <div class="filter-group">
-      <select id="fMinistry"><option value="">全府省庁</option></select>
+      <select id="fMinistry"><option value="">全提出者</option></select>
       <select id="fField"><option value="">全分野</option></select>
       <select id="fDiet"><option value="">全回次</option></select>
     </div>
   </div>
+
+  <div class="field-chips" id="fieldChips"></div>
 
   <div class="legend" id="legend">
     <span class="lbl">STAGE</span>
@@ -759,7 +787,7 @@ function switchTab(t){
   document.getElementById('lcSub').style.display=(t==='active')?'':'none';
   document.querySelectorAll('#lcSub .lc-chip').forEach(c=>c.classList.toggle('on',c.dataset.lc==='all'));
   const h=document.querySelector('.tl-head h2'); if(h) h.textContent=(t==='passed')?'時系列フィード':'いま動いている法案';
-  render(); renderFeed();
+  renderFieldChips(); render(); renderFeed();
 }
 function switchLc(lc){
   state.lc=lc;
@@ -771,11 +799,42 @@ function updateTabCounts(){
   const p=document.getElementById('tabn-passed'),a=document.getElementById('tabn-active');
   if(p)p.textContent=cnt('passed'); if(a)a.textContent=cnt('active');
 }
+/* 審議中サブフィルタに件数を併記（0件はグレーアウト） */
+function updateLcCounts(){
+  const act=pub().filter(b=>lcOf(b)!=='成立');
+  const n={all:act.length,
+    '審議中':act.filter(b=>lcOf(b)==='審議中'||lcOf(b)==='一院通過').length,
+    '継続':act.filter(b=>lcOf(b)==='継続').length,
+    '廃案':act.filter(b=>lcOf(b)==='廃案').length};
+  const label={all:'すべて','審議中':'審議中','継続':'継続審議','廃案':'廃案'};
+  document.querySelectorAll('#lcSub .lc-chip').forEach(c=>{
+    const k=c.dataset.lc, v=n[k]||0;
+    c.innerHTML=`${label[k]} <span class="lcn">${v}</span>`;
+    c.classList.toggle('zero', k!=='all'&&v===0);
+  });
+}
+/* 分野チップ列（11分類の見える入口）。件数は現在タブ基準・クリックで絞り込み */
+function renderFieldChips(){
+  const box=document.getElementById('fieldChips'); if(!box) return;
+  const base=pub().filter(b=> state.tab==='passed' ? lcOf(b)==='成立' : lcOf(b)!=='成立');
+  const cnt={}; FIELD_ORDER.forEach(f=>cnt[f]=0);
+  base.forEach(b=>(b.fields||[]).forEach(f=>{ if(f in cnt) cnt[f]++; }));
+  const chip=(lab,val,n)=>`<button class="f-chip${state.field===val?' on':''}${(val&&n===0)?' zero':''}" onclick="toggleField('${val}')">${lab}${val?` <span class="fcn">${n}</span>`:''}</button>`;
+  box.innerHTML = chip('全分野','',base.length) + FIELD_ORDER.map(f=>chip(f,f,cnt[f])).join('');
+}
+function setField(f){
+  state.field=f;
+  const sel=document.getElementById('fField'); if(sel) sel.value=f;
+  renderFieldChips(); render();
+}
+function toggleField(f){ setField(state.field===f ? '' : f); }
+/* サマリーバーの数字→該当タブへ */
+function jumpTab(t,lc){ switchTab(t); if(lc) switchLc(lc); const el=document.querySelector('.life-tabs'); if(el) el.scrollIntoView({block:'start'}); }
 
 /* ---- populate filters & legend ---- */
 function uniq(arr){return [...new Set(arr)]}
 function initFilters(){
-  uniq(pub().map(b=>b.ministry)).sort().forEach(m=>addOpt('fMinistry',m));
+  ['内閣','議員立法'].forEach(m=>addOpt('fMinistry',m));   // 提出者（府省庁データは空のため置換）
   const _pf=new Set(pub().flatMap(b=>b.fields||[])); FIELD_ORDER.filter(f=>_pf.has(f)).forEach(f=>addOpt('fField',f));
   uniq(pub().map(b=>b.diet)).sort().forEach(d=>addOpt('fDiet',d));
   const lg=document.getElementById('legend');
@@ -792,7 +851,7 @@ function addOpt(id,v){const o=document.createElement('option');o.value=v;o.textC
 
 /* ---- render timeline ---- */
 function passesFilter(b){
-  if(state.ministry && b.ministry!==state.ministry) return false;
+  if(state.ministry){ const who=(b.type==='衆法'||b.type==='参法')?'議員立法':'内閣'; if(who!==state.ministry) return false; }
   if(state.field && !(b.fields||[]).includes(state.field)) return false;
   if(state.diet && b.diet!==state.diet) return false;
   if(state.q){
@@ -863,7 +922,7 @@ function eventCard(e, delay){
     return `<div class="cst ${st}"><span class="cdot"></span><span class="cnm">${lab}</span></div>`;
   }).join('');
   const hereHTML = cs.hereText ? `<div class="chere">▶ いまここ：${cs.hereText}</div>` : '';
-  const indivBadge = b.hasIndividual ? `<span class="indiv-badge">👤 議員ひとりずつ見られる</span>` : '';
+  const indivBadge = b.hasIndividual ? `<span class="indiv-badge"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5z"/></svg>議員別の賛否あり</span>` : '';
   const lc=lcOf(b), lm=LC_META[lc]||LC_META['審議中'];
   const topBadge = lc==='成立' ? `<span class="stage-badge">${stageLabel(e.stage)}</span>` : `<span class="lc-badge lc-${lm.slug}">${lm.label}</span>`;
   const who = b.ministry || ({'閣法':'内閣','予算':'内閣','衆法':'議員立法','参法':'議員立法'}[b.type] || b.type || '');
@@ -880,7 +939,7 @@ function eventCard(e, delay){
     <div class="cprog${cs.lc==='廃案'?' lc-dead':''}">${cprog}</div>
     ${hereHTML}
   `;
-  el.onclick=()=>openModal(b);
+  el.onclick=ev=>{ const f=ev.target.closest('.fchip'); if(f){ toggleField(f.textContent); return; } openModal(b); };
   return el;
 }
 
@@ -1240,9 +1299,11 @@ document.getElementById('overlay').onclick=e=>{if(e.target.id==='overlay')closeM
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 
 /* ---- bindings ---- */
-document.getElementById('q').oninput=e=>{state.q=e.target.value;render()};
+document.getElementById('q').oninput=e=>{state.q=e.target.value;document.getElementById('qClear').style.display=e.target.value?'grid':'none';render()};
+document.getElementById('qClear').onclick=()=>{const q=document.getElementById('q');q.value='';state.q='';document.getElementById('qClear').style.display='none';render();q.focus()};
+document.getElementById('modal').addEventListener('click',e=>{const f=e.target.closest('.fchip'); if(f){ closeModal(); toggleField(f.textContent); const h=document.querySelector('.tl-head'); if(h) h.scrollIntoView({block:'start'}); }});
 document.getElementById('fMinistry').onchange=e=>{state.ministry=e.target.value;render()};
-document.getElementById('fField').onchange=e=>{state.field=e.target.value;render()};
+document.getElementById('fField').onchange=e=>{setField(e.target.value)};
 document.getElementById('fDiet').onchange=e=>{state.diet=e.target.value;render()};
 
 /* ヘッダー・「収録データ」を公開済み法案から自動算出（推測ゼロ・data由来のみ）。
@@ -1296,9 +1357,9 @@ function renderSessionSummary(){
       <div class="ss-upd">データ更新 ${GENERATED_AT?GENERATED_AT.replace(/-/g,'/'):'—'}</div>
     </div>
     <div class="ss-nums">
-      <div class="ss-n"><b style="color:var(--accent-2)">${seiritsu}</b><span>成立</span></div>
-      <div class="ss-n"><b style="color:var(--accent)">${shingi}</b><span>審議中</span></div>
-      <div class="ss-n"><b style="color:#9c958a">${haian}</b><span>廃案</span></div>
+      <div class="ss-n" onclick="jumpTab('passed')" title="成立した法案を見る"><b style="color:var(--accent-2)">${seiritsu}</b><span>成立</span></div>
+      <div class="ss-n" onclick="jumpTab('active')" title="審議中の法案を見る"><b style="color:var(--accent)">${shingi}</b><span>審議中</span></div>
+      <div class="ss-n" onclick="jumpTab('active','廃案')" title="廃案を見る"><b style="color:#9c958a">${haian}</b><span>廃案</span></div>
     </div>
     <div class="ss-bar">${bar}</div>
     <div class="ss-leg">${leg}<span style="margin-left:auto">この会期で追跡中 ${tot}本</span></div>
@@ -1318,7 +1379,7 @@ async function boot(){
     tl.innerHTML='<div class="empty">データを読み込めませんでした（'+err.message+'）。<br>ローカルで開く場合は簡易サーバ経由で：<br><code>python3 -m http.server</code> を起動し http://localhost:8000/ を開いてください。</div>';
     return;
   }
-  initFilters(); renderStats(); updateTabCounts(); renderSessionSummary(); render(); renderFeed(); openFromHash();
+  initFilters(); renderStats(); updateTabCounts(); updateLcCounts(); renderFieldChips(); renderSessionSummary(); render(); renderFeed(); openFromHash();
 }
 boot();
 </script>

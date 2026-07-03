@@ -7,7 +7,7 @@
 <meta name="description" content="法案が国会に提出されてから成立・公布されるまでの流れを、図とやさしい解説で。二院制・委員会・本会議・採決のしくみがわかる。">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#9a2b1e">
+<meta name="theme-color" content="#1e3a8a">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://seiji-mieru.com/houan/houritsu-dekirumade.html">
 <meta property="og:title" content="法律ができるまで｜立法タイムライン">
@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="法案が提出から成立・公布されるまでの流れを、図とやさしい解説で。">
 <meta name="twitter:image" content="https://seiji-mieru.com/houan/og-image.jpg">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap');
 
   /* 本体（立法タイムライン）と同じパレット：和紙色・朱・深緑・金 */
   :root{
@@ -213,6 +213,32 @@
     .glossary dl{grid-template-columns:1fr;gap:4px 0;}
     .glossary dt{margin-top:8px;}
   }
+</style>
+<style id="redesign2026">
+/* ===== 本体トップと同じ今風化（白基調・ゴシック・濃紺）。既存CSS/HTML/SVG構造は無改修、上書きのみ ===== */
+:root{
+  --ink:#18233b; --paper:#ffffff; --card:#ffffff; --line:#e5e9f1; --muted:#5f6b85;
+  --accent:#1e3a8a;                    /* 朱→濃紺 */
+  --accent-soft:rgba(30,58,138,.08);
+  --gov:#3b82f6; --gov-soft:#e3edfd;   /* 内閣・行政の青を明るく */
+  --diet:#15a24a; --diet-soft:#e2f4e8; /* 国会の緑を成立グリーン系に */
+  --gold:#6366f1;                      /* 公布の金→インディゴ（本体のステージ色と統一） */
+}
+/* 明朝を全廃（SVG内のtextも含めて一括ゴシック化） */
+body, body *{font-family:'Zen Kaku Gothic New','Inter',system-ui,sans-serif !important}
+/* 戻り導線バーの和紙ベージュ→白 */
+.hubbar{background:#fff !important}
+/* SVGフロー図の暖色（和紙・朱・金）だけ差し替え。青・緑系は新世界観と整合するので温存 */
+[stroke="#b3a994"]{stroke:#c8d2e2} [fill="#b3a994"]{fill:#c8d2e2}
+[stroke="#d8cdb8"]{stroke:#e5e9f1}
+[fill="#fffdf8"]{fill:#ffffff} [fill="#f4efe6"]{fill:#ffffff}
+[fill="#9a2b1e"]{fill:#15a24a} [stroke="#7d2218"]{stroke:#0f8a3d}   /* ⑤成立＝朱→グリーン */
+[fill="#8a6526"]{fill:#6366f1} [stroke="#a87f32"]{stroke:#6366f1}   /* ⑥公布＝金→インディゴ */
+[fill="#ffe9e3"]{fill:#eef1f6}                                       /* 薄朱→寒色グレー */
+[fill="#6b5f4d"]{fill:#5f6b85} [fill="#544e45"]{fill:#51607a} [fill="#5a6657"]{fill:#5f6b85}
+[fill="#1a1410"]{fill:#18233b}
+/* 角丸をカード基準に少しだけ丸く（構造無改修） */
+.step,.glossary,.cta{border-radius:14px}
 </style>
 </head>
 <body>
