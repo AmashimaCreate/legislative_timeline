@@ -899,11 +899,19 @@ function jumpTab(t,lc){ switchTab(t); if(lc) switchLc(lc); const el=document.que
 /* ---- populate filters & legend ---- */
 function uniq(arr){return [...new Set(arr)]}
 function initFilters(){
-  // 提出者（制度上、法案の提出者は内閣か議員の2種のみ。省庁は「所管」＝別属性でデータ未収録）
+  // 提出者（制度上、法案の提出者は内閣か議員の2種のみ）＋所管省庁（内閣法制局・閣法のみ）をoptgroupで統合
+  const _fm=document.getElementById('fMinistry');
   [['内閣','内閣（閣法・予算）'],['議員立法','議員立法（衆法・参法）']].forEach(([v,l])=>{
-    const o=document.createElement('option'); o.value=v; o.textContent=l;
-    document.getElementById('fMinistry').appendChild(o);
+    const o=document.createElement('option'); o.value=v; o.textContent=l; _fm.appendChild(o);
   });
+  const _mc={};
+  pub().forEach(b=>{ if(b.type==='閣法'&&b.ministry) _mc[b.ministry]=(_mc[b.ministry]||0)+1; });
+  const _ms=Object.keys(_mc).sort((a,b)=>(_mc[b]-_mc[a])||a.localeCompare(b,'ja'));
+  if(_ms.length){
+    const g=document.createElement('optgroup'); g.label='所管省庁（閣法）';
+    _ms.forEach(m=>{ const o=document.createElement('option'); o.value=m; o.textContent=`${m}（${_mc[m]}）`; g.appendChild(o); });
+    _fm.appendChild(g);
+  }
   const _pf=new Set(pub().flatMap(b=>b.fields||[])); FIELD_ORDER.filter(f=>_pf.has(f)).forEach(f=>addOpt('fField',f));
   uniq(pub().map(b=>b.diet)).sort().forEach(d=>addOpt('fDiet',d));
   const lg=document.getElementById('legend');
@@ -920,7 +928,10 @@ function addOpt(id,v){const o=document.createElement('option');o.value=v;o.textC
 
 /* ---- render timeline ---- */
 function passesFilter(b){
-  if(state.ministry){ const who=(b.type==='衆法'||b.type==='参法')?'議員立法':'内閣'; if(who!==state.ministry) return false; }
+  if(state.ministry){
+    if(state.ministry==='内閣'||state.ministry==='議員立法'){ const who=(b.type==='衆法'||b.type==='参法')?'議員立法':'内閣'; if(who!==state.ministry) return false; }
+    else if(b.ministry!==state.ministry) return false;   // 所管省庁で絞る（閣法のみ該当）
+  }
   if(state.field && !(b.fields||[]).includes(state.field)) return false;
   if(state.diet && b.diet!==state.diet) return false;
   if(state.q){
