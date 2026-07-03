@@ -618,6 +618,28 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .rel-st.act{background:rgba(30,58,138,.1);color:var(--accent)}
 .rel-nm{font-size:12.5px;font-weight:600;line-height:1.5;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 #m-sum,#m-proc,#m-vote,#m-rel,#m-explore{scroll-margin-top:56px}   /* stickyナビに隠れない */
+/* 第3弾: NEW・段階レンダ・月ジャンプ・上へ戻る・モバイル動きストリップ・a11y */
+.new-badge{font-size:9.5px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--accent);border-radius:99px;padding:2px 7px}
+.more-wrap{text-align:center;padding:18px 0 6px}
+.more-btn{font-family:inherit;font-size:13px;font-weight:700;color:var(--accent);background:#fff;border:1.5px solid var(--accent);border-radius:99px;padding:10px 26px;cursor:pointer;transition:.12s}
+.more-btn:hover{background:rgba(30,58,138,.06)}
+.month-nav{display:flex;gap:5px;flex-wrap:wrap;margin:4px 0 2px}
+.month-nav:empty{display:none}
+.month-nav button{font-family:inherit;font-size:10.5px;font-weight:600;color:var(--muted);background:none;border:1px solid var(--line);border-radius:7px;padding:3px 8px;cursor:pointer;transition:.12s}
+.month-nav button:hover{color:var(--accent);border-color:var(--accent)}
+.month-group{scroll-margin-top:12px}
+#toTop{position:fixed;right:18px;bottom:18px;z-index:900;width:44px;height:44px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 6px 18px rgba(16,24,40,.28);display:none;place-items:center;font-family:inherit}
+#toTop.show{display:grid}
+.feed-strip{display:none}
+@media(max-width:980px){
+  .feed-strip{display:flex;align-items:center;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 0 4px;margin-top:6px}
+  .fs-label{flex:none;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--accent)}
+  .fs-item{flex:none;display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:#fff;max-width:210px;cursor:pointer}
+  .fs-date{font-size:9.5px;color:var(--muted);font-family:'JetBrains Mono',monospace}
+  .fs-nm{font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+.event:focus-visible,.rel-item:focus-visible,.fs-item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
@@ -690,10 +712,12 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 
 <div class="wrap">
   <main>
+    <div id="feedStrip" class="feed-strip"></div>
     <div class="tl-head">
       <h2>時系列フィード</h2>
       <span class="count" id="count"></span>
     </div>
+    <div class="month-nav" id="monthNav"></div>
     <div id="timeline"></div>
   </main>
 
@@ -723,8 +747,9 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 </div>
 
 <div class="overlay" id="overlay">
-  <div class="modal" id="modal"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="法案の詳細"></div>
 </div>
+<button id="toTop" aria-label="フィルタへ戻る" onclick="document.querySelector('.life-tabs').scrollIntoView({block:'start'})">↑</button>
 
 <footer class="site-foot">
   <div class="site-foot-in">
@@ -769,11 +794,29 @@ function latestDate(b){ const k=latestStage(b); return k? b.stages[k] : '0000-00
 /* 公開対象＝draftでない法案だけ（draftはデータには残すが表示しない） */
 function pub(){ return BILLS.filter(b=>!b.draft); }
 
+/* 審議中系は「最後に動いた日」（processの最大日付）を時系列軸に＝動いた順で並び、埋もれない */
+function lastMoveDate(b){
+  let mx='';
+  (b.process||[]).forEach(p=>{
+    if(!p.date) return;
+    const [y,m,d]=String(p.date).split('/');
+    if(y&&m&&d){ const iso=`${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`; if(iso>mx) mx=iso; }
+  });
+  return mx;
+}
 function buildEvents(){
   return pub().filter(tabFilter).map(b=>{
     const k=latestStage(b);
-    return {bill:b, stage:k, date:(k && b.stages[k]) || b.stages.submit || '0000-00-00'};
+    const base=(k && b.stages[k]) || b.stages.submit || '0000-00-00';
+    const date=lcOf(b)==='成立' ? base : (lastMoveDate(b)||base);
+    return {bill:b, stage:k, date};
   }).sort((a,b)=> b.date.localeCompare(a.date));
+}
+/* 今週追加＝データ生成日から7日以内に提出された法案（決定的・AI不要） */
+function isNew(b){
+  const s=b.stages&&b.stages.submit; if(!s||!GENERATED_AT) return false;
+  const diff=(new Date(GENERATED_AT)-new Date(s))/86400000;
+  return diff>=0 && diff<=7;
 }
 
 const fmt = d => { if(!d) return '—'; const [y,m,da]=d.split('-'); return `${y}.${m}.${da}`; };
@@ -878,26 +921,50 @@ function passesFilter(b){
   return true;
 }
 
+let RENDER_LIMIT=40, _lastFilterSig='';
 function render(){
   const events=buildEvents().filter(e=>passesFilter(e.bill));
+  const sig=[state.tab,state.lc,state.field,state.ministry,state.diet,state.q,[...state.stages].join(',')].join('|');
+  if(sig!==_lastFilterSig){ _lastFilterSig=sig; RENDER_LIMIT=40; }   // 絞り込みが変わったら先頭から
   const tl=document.getElementById('timeline');
-  document.getElementById('count').textContent=`${events.length} 件表示`;
+  document.getElementById('count').textContent=`${events.length} 件`;
   syncHash();
+  renderMonthNav(events);
   tl.innerHTML='';
   if(!events.length){ tl.innerHTML='<div class="empty">該当する法案がありません</div>'; return; }
 
   let curMonth=null, group=null, delay=0;
-  events.forEach(e=>{
+  events.slice(0,RENDER_LIMIT).forEach(e=>{
     const mk=monthKey(e.date);
     if(mk!==curMonth){
       curMonth=mk;
-      const mg=document.createElement('div'); mg.className='month-group';
+      const mg=document.createElement('div'); mg.className='month-group'; mg.dataset.mk=mk;
       mg.innerHTML=`<div class="month-label">${monthJP(e.date)}</div>`;
       group=document.createElement('div'); group.className='timeline';
       mg.appendChild(group); tl.appendChild(mg);
     }
-    group.appendChild(eventCard(e, delay)); delay+=0.04;
+    group.appendChild(eventCard(e, delay)); delay=Math.min(delay+0.04,0.6);   // アニメ遅延は0.6sで頭打ち（旧: 156枚で6秒超の白帯）
   });
+  if(events.length>RENDER_LIMIT){
+    const w=document.createElement('div'); w.className='more-wrap';
+    w.innerHTML=`<button class="more-btn" onclick="showMore()">さらに表示（残り ${events.length-RENDER_LIMIT} 件）</button>`;
+    tl.appendChild(w);
+  }
+}
+function showMore(){ RENDER_LIMIT+=80; render(); }
+/* 月ジャンプ（未レンダ月はRENDER_LIMITを広げてから飛ぶ） */
+function renderMonthNav(events){
+  const nav=document.getElementById('monthNav'); if(!nav) return;
+  const seen=[]; events.forEach(e=>{ const mk=monthKey(e.date); if(!seen.includes(mk)) seen.push(mk); });
+  nav.innerHTML = seen.length>1 ? seen.map(mk=>{ const [y,m]=mk.split('-'); return `<button onclick="jumpMonth('${mk}')">${y}.${parseInt(m)}</button>`; }).join('') : '';
+}
+function jumpMonth(mk){
+  const events=buildEvents().filter(e=>passesFilter(e.bill));
+  const idx=events.findIndex(e=>monthKey(e.date)===mk);
+  if(idx<0) return;
+  if(idx>=RENDER_LIMIT){ RENDER_LIMIT=idx+40; render(); }
+  const el=document.querySelector(`.month-group[data-mk="${mk}"]`);
+  if(el) el.scrollIntoView({block:'start'});
 }
 
 const CARD_STAGES=['提出','委員会','本会議','成立','公布'];
@@ -947,7 +1014,7 @@ function eventCard(e, delay){
   el.innerHTML=`
     <div class="event-top">
       ${topBadge}
-      <span class="event-date">${fmt(e.date)}</span>
+      <span class="event-date">${fmt(e.date)}</span>${isNew(b)?'<span class="new-badge">NEW</span>':''}
       <span class="event-ministry">${who}</span>
     </div>
     <h3>${b.name}</h3>
@@ -956,6 +1023,8 @@ function eventCard(e, delay){
     <div class="cprog${cs.lc==='廃案'?' lc-dead':''}">${cprog}</div>
     ${hereHTML}
   `;
+  el.tabIndex=0; el.setAttribute('role','button'); el.setAttribute('aria-label',b.name);
+  el.onkeydown=ev=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); openModal(b); } };
   el.onclick=ev=>{ const f=ev.target.closest('.fchip'); if(f){ toggleField(f.textContent); return; } openModal(b); };
   return el;
 }
@@ -976,6 +1045,14 @@ function renderFeed(){
   f.querySelectorAll('.feed-item').forEach(it=>it.onclick=()=>{
     openModal(BILLS.find(b=>b.id===it.dataset.id));
   });
+  // モバイル: サイドバーが下に落ちて埋もれるため、フィード上部に横スクロールの「いま動いた」ストリップを出す
+  const strip=document.getElementById('feedStrip');
+  if(strip){
+    strip.innerHTML = recent.length ? `<span class="fs-label">いま動いた</span>`+recent.map(e=>{
+      const nm=e.bill.name.length>16 ? e.bill.name.slice(0,16)+'…' : e.bill.name;
+      return `<div class="fs-item" role="button" tabindex="0" onclick="openById('${e.bill.id}')" onkeydown="if(event.key==='Enter')openById('${e.bill.id}')"><span class="fs-date">${fmt(e.date).slice(5)} ${stageLabel(e.stage)}</span><span class="fs-nm">${nm}</span></div>`;
+    }).join('') : '';
+  }
 }
 
 /* ---- modal ---- */
@@ -987,6 +1064,8 @@ function openModal(b){
   m.scrollTop=0;
   document.getElementById('overlay').classList.add('show');
   if(b&&b.id) location.hash='#/bill/'+encodeURIComponent(b.id);   // 共有できる深リンク
+  window.__lastFocus=document.activeElement;                       // 閉じたら元の場所へフォーカスを返す
+  m.setAttribute('tabindex','-1'); m.focus({preventScroll:true});
 }
 
 function deliberatingModal(b){
@@ -1245,7 +1324,7 @@ function relatedHTML(b){
   const rows=pool.map(x=>{
     const lc=lcOf(x), lm=LC_META[lc]||LC_META['審議中'];
     const st=lc==='成立'?`<span class="rel-st sei">成立</span>`:`<span class="rel-st act">${lm.label}</span>`;
-    return `<div class="rel-item" onclick="openById('${x.id}')">${st}<span class="rel-nm">${x.name}</span></div>`;
+    return `<div class="rel-item" role="button" tabindex="0" onclick="openById('${x.id}')" onkeydown="if(event.key==='Enter')openById('${x.id}')">${st}<span class="rel-nm">${x.name}</span></div>`;
   }).join('');
   return `<div class="sec-t" id="m-rel">同じ分野の法案</div><div class="rel-list">${rows}</div>`;
 }
@@ -1378,6 +1457,7 @@ function closeModal(){
   document.getElementById('overlay').classList.remove('show');
   if(location.hash.indexOf('#/bill/')===0) history.replaceState(null,'',location.pathname+location.search);
   syncHash();   // 閉じたらフィルタ状態のURLへ戻す
+  if(window.__lastFocus&&window.__lastFocus.focus){ try{window.__lastFocus.focus({preventScroll:true});}catch(_e){} window.__lastFocus=null; }
 }
 /* 深リンク #/bill/{id} で該当法案を開く（議員ページ/houan-timeline からの被リンク・共有用） */
 function openFromHash(){
@@ -1389,6 +1469,7 @@ function openFromHash(){
 window.addEventListener('hashchange',openFromHash);
 document.getElementById('overlay').onclick=e=>{if(e.target.id==='overlay')closeModal()};
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+window.addEventListener('scroll',()=>{const t=document.getElementById('toTop'); if(t) t.classList.toggle('show',scrollY>700);},{passive:true});
 
 /* ---- bindings ---- */
 document.getElementById('q').oninput=e=>{state.q=e.target.value;document.getElementById('qClear').style.display=e.target.value?'grid':'none';render()};
