@@ -631,6 +631,10 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 #toTop{position:fixed;right:18px;bottom:18px;z-index:900;width:44px;height:44px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 6px 18px rgba(16,24,40,.28);display:none;place-items:center;font-family:inherit}
 #toTop.show{display:grid}
 .feed-strip{display:none}
+/* モバイル崩れ修正: grid子(main)が横スクロール帯の中身幅(≈1500px)につられて広がり、
+   ページ全体がビューポートを突き破ってスマホがズームアウトしていた。min-width:0で縮小を許可 */
+.wrap>main,.wrap>aside{min-width:0}
+.feed-strip,.field-chips,.month-nav{max-width:100%}
 @media(max-width:980px){
   .feed-strip{display:flex;align-items:center;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 0 4px;margin-top:6px}
   .fs-label{flex:none;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--accent)}
