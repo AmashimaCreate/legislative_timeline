@@ -1084,7 +1084,7 @@ function renderFeed(){
 /* ---- modal ---- */
 function openModal(b){
   const m=document.getElementById('modal');
-  if(lcOf(b)!=='成立'){ m.innerHTML=deliberatingModal(b); }
+  if(lcOf(b)!=='成立'){ m.innerHTML=deliberatingModal(b); window.__prompts=buildPrompts(b); }
   else if(b.ai && b.votes && b.votes.shu){ m.innerHTML=richModal(b); window.__prompts=buildPrompts(b); bindDeeper(); }
   else { m.innerHTML=simpleModal(b); }
   m.scrollTop=0;
@@ -1138,6 +1138,7 @@ function deliberatingModal(b){
           <a class="ex-btn" target="_blank" rel="noopener" href="https://x.com/search?q=${q}&f=live"><span class="eic x"><svg viewBox="0 0 24 24" width="13" height="13" fill="#fff"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg></span><span class="etx"><span class="ett">Xで反応を見る</span><br><span class="ess">いまの声 ↗</span></span></a>
         </div>
       </div>
+      ${askaiHTML(b)}
     </div>`;
 }
 
@@ -1280,34 +1281,7 @@ function richModal(b){
         </div>
       </div>
 
-      <div class="askai" id="askai">
-        <div class="askai-h" onclick="document.getElementById('askai').classList.toggle('open')">
-          <span class="aic"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M12 2l1.7 5.6L19.5 9l-5.8 1.4L12 16l-1.7-5.6L4.5 9l5.8-1.4z"/></svg></span>
-          <span><span class="att">AIに聞いてみる</span><br><span class="ass">目的に合わせた質問の雛形を用意しました</span></span>
-          <span class="achev"></span>
-        </div>
-        <div class="askai-b">
-          <div class="askai-in">
-            <div class="ptabs">
-              <button class="ptab on" data-k="summary" onclick="switchPrompt('summary')">要約して</button>
-              <button class="ptab" data-k="both" onclick="switchPrompt('both')">賛成と反対</button>
-              <button class="ptab" data-k="pro" onclick="switchPrompt('pro')">賛成側を詳しく</button>
-              <button class="ptab" data-k="con" onclick="switchPrompt('con')">反対側を詳しく</button>
-              <button class="ptab" data-k="background" onclick="switchPrompt('background')">経緯・背景</button>
-            </div>
-            <div class="prompt-box" id="prompt-text">${buildPrompts(b).summary.text}</div>
-            <button class="copy-btn" onclick="copyPrompt(this)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg> <span class="cl">この質問をコピー</span></button>
-            <div class="ai-jump-label">コピーして、そのままAIを開く（開いた画面に貼り付け）</div>
-            <div class="ai-jumps">
-              <button class="ai-jump" onclick="copyAndOpen('https://chatgpt.com/')"><span class="aj-ic aj-gpt">G</span>ChatGPT</button>
-              <button class="ai-jump" onclick="copyAndOpen('https://claude.ai/new')"><span class="aj-ic aj-claude">C</span>Claude</button>
-              <button class="ai-jump" onclick="copyAndOpen('https://gemini.google.com/app')"><span class="aj-ic aj-gemini">G</span>Gemini</button>
-              <button class="ai-jump" onclick="copyAndOpen('https://www.perplexity.ai/')"><span class="aj-ic aj-perplexity">P</span>Perplexity</button>
-            </div>
-            <div class="askai-note">※ ボタンを押すと質問をコピーしてからAIが開きます。貼り付けて送信してください。AIの回答は誤ることがあるので、上の検索ボタンから公式・報道で確認を。</div>
-          </div>
-        </div>
-      </div>
+      ${askaiHTML(b)}
 
       <div class="src-note">
         出典（一次資料）: 参議院 本会議投票結果（議員別）／衆議院 会派態度・進行日付（スマートニュース メディア研究所 議案DB・MIT）／やさしい要約・賛否の理由は国会会議録をもとにAIが作成<br>
@@ -1383,6 +1357,7 @@ function applyHashFilters(){
 
 /* AIに聞く：目的別の質問雛形 */
 function buildPrompts(b){
+  if(lcOf(b)!=='成立') return buildPromptsPending(b);   // 審議中・一院通過・継続・廃案は審議中向けの雛形
   const nick = b.nickname ? `（通称：${b.nickname}）\n` : '';   // 通称が無い法案は行ごと省く（正式名称だけで成立）
   const head=`次の日本の法律について教えてください。\n\n法律名：${b.name}\n${nick}\n`;
   return {
@@ -1427,6 +1402,88 @@ function buildPrompts(b){
 - 出典を示し、確実でない点は「分からない」と述べてください`
     }
   };
+}
+/* 審議中の法案向けの雛形（キーは成立版と同じ5つ＝switchPrompt無改修）。
+   まだ法律でない・採決前・情報が流動的、をプロンプト側に織り込む */
+function buildPromptsPending(b){
+  const who=(b.type==='衆法')?'衆議院議員（議員立法）':(b.type==='参法')?'参議院議員（議員立法）':(b.ministry?`内閣（主管：${b.ministry}）`:'内閣');
+  const sub=(b.stages&&b.stages.submit)?b.stages.submit.replace(/-/g,'/'):'';
+  const nowStep=(b.process||[]).find(p=>p.now);
+  const head=`次の日本の「国会で審議中の法案」について教えてください。まだ成立していない法案です（採決前）。\n\n法案名：${b.name}\n提出：${who}${sub?`（${sub} 提出）`:''}\n現在の状況：${b.lifecycleDetail||'審議中'}${nowStep?`（${nowStep.name}）`:''}\n\n`;
+  const care=`- 審議中のため情報が少なく、状況が変わっている可能性があります。最新の審議状況を確認し、確実でない点は「分からない」と述べてください
+- 過去の類似法や成立済みの法律と混同しないでください
+- できるだけ出典（国会会議録・公式サイト・報道）を示してください`;
+  return {
+    summary:{
+      label:'要約して',
+      text:head+`# お願い
+- この法案が「何を変えようとしているのか」を、政治にくわしくない人にも分かるように3〜4行で説明してください
+- 主な内容を、かんたんな言葉で3つほど挙げてください
+- いま国会のどの段階にあり、この先どうなれば成立するのかも1〜2行で添えてください
+${care}`
+    },
+    both:{
+      label:'論点・賛否',
+      text:head+`# お願い
+- この法案をめぐって「賛成・推進する意見」と「反対・慎重な意見」を、どちらにも偏らず両方、同じくらいの分量で整理してください
+- まだ採決されていないので、表明されている主張や報道ベースで、誰の主張か（政党・団体など）を添えてください
+- どちらが正しいという結論は出さず、判断は私にゆだねてください
+${care}`
+    },
+    pro:{
+      label:'賛成側の主張',
+      text:head+`# お願い
+- この法案を「推進する立場」の論拠を、できるだけ具体的に説明してください（提出者の提案理由・国会答弁・会見など）
+- どの政党・団体がどんな理由で支持しているかを示してください
+- ただし、その立場への批判や懸念も最後に簡単に添えて、一方的にならないようにしてください
+${care}`
+    },
+    con:{
+      label:'反対・懸念',
+      text:head+`# お願い
+- この法案に「反対・慎重な立場」の論拠や、指摘されている懸念を、できるだけ具体的に説明してください
+- どの政党・団体・専門家がどんな理由で反対・懸念を示しているかを示してください
+- ただし、推進側の言い分も最後に簡単に添えて、一方的にならないようにしてください
+${care}`
+    },
+    background:{
+      label:'経緯・背景',
+      text:head+`# お願い
+- この法案がいま提出された背景・経緯を教えてください
+- いつ頃から議論され、何がきっかけだったかを説明してください
+- どの省庁や政党が推進したかを、どちらの立場にも偏らず示してください
+${care}`
+    }
+  };
+}
+/* 「AIに聞いてみる」ブロック（rich/審議中で共通。タブ名は buildPrompts の label から出し分け） */
+function askaiHTML(b){
+  const ps=buildPrompts(b);
+  const tabs=['summary','both','pro','con','background'].map((k,i)=>
+    `<button class="ptab${i===0?' on':''}" data-k="${k}" onclick="switchPrompt('${k}')">${ps[k].label}</button>`).join('');
+  return `
+      <div class="askai" id="askai">
+        <div class="askai-h" onclick="document.getElementById('askai').classList.toggle('open')">
+          <span class="aic"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M12 2l1.7 5.6L19.5 9l-5.8 1.4L12 16l-1.7-5.6L4.5 9l5.8-1.4z"/></svg></span>
+          <span><span class="att">AIに聞いてみる</span><br><span class="ass">目的に合わせた質問の雛形を用意しました</span></span>
+          <span class="achev"></span>
+        </div>
+        <div class="askai-b">
+          <div class="askai-in">
+            <div class="ptabs">${tabs}</div>
+            <div class="prompt-box" id="prompt-text">${ps.summary.text}</div>
+            <button class="copy-btn" onclick="copyPrompt(this)"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg> <span class="cl">この質問をコピー</span></button>
+            <div class="ai-jump-label">コピーして、そのままAIを開く（開いた画面に貼り付け）</div>
+            <div class="ai-jumps">
+              <button class="ai-jump" onclick="copyAndOpen('https://chatgpt.com/')"><span class="aj-ic aj-gpt">G</span>ChatGPT</button>
+              <button class="ai-jump" onclick="copyAndOpen('https://claude.ai/new')"><span class="aj-ic aj-claude">C</span>Claude</button>
+              <button class="ai-jump" onclick="copyAndOpen('https://gemini.google.com/app')"><span class="aj-ic aj-gemini">G</span>Gemini</button>
+              <button class="ai-jump" onclick="copyAndOpen('https://www.perplexity.ai/')"><span class="aj-ic aj-perplexity">P</span>Perplexity</button>
+            </div>
+            <div class="askai-note">※ ボタンを押すと質問をコピーしてからAIが開きます。貼り付けて送信してください。AIの回答は誤ることがあるので、上の検索ボタンから公式・報道で確認を。</div>
+          </div>
+        </div>
+      </div>`;
 }
 function switchPrompt(key){
   const ps=window.__prompts; if(!ps) return;
