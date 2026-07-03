@@ -602,6 +602,22 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .pstep.now .pnode{box-shadow:0 0 0 5px rgba(30,58,138,.16)!important}
 /* 個別票バッジ：👤絵文字→SVG＋濃紺アウトラインピル（旧CSSは変数名タイポで背景無効だった） */
 .indiv-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--accent)!important;background:rgba(30,58,138,.05)!important;border:1px solid rgba(30,58,138,.3);border-radius:99px;padding:3px 10px}
+/* 第2弾: モーダル内ナビ（sticky）・共有ボタン・関連法案 */
+.mnav{position:sticky;top:0;z-index:6;display:flex;gap:6px;flex-wrap:wrap;background:rgba(255,255,255,.94);backdrop-filter:blur(4px);padding:10px 0 9px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.mnav button{font-size:11.5px;font-weight:600;padding:5px 12px;border-radius:99px;border:1px solid var(--line);background:#fff;color:#51607a;cursor:pointer;font-family:inherit;transition:.12s}
+.mnav button:hover{border-color:var(--accent);color:var(--accent)}
+.share-row{display:flex;gap:8px;margin-top:11px}
+.share-btn{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:#fff;color:#51607a;cursor:pointer;font-family:inherit;text-decoration:none;transition:.12s}
+.share-btn:hover{border-color:var(--accent);color:var(--accent)}
+.share-btn.done{border-color:var(--accent-2);color:var(--accent-2)}
+.rel-list{display:flex;flex-direction:column;gap:8px}
+.rel-item{display:flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;transition:border-color .12s,transform .12s}
+.rel-item:hover{border-color:var(--accent);transform:translateY(-1px)}
+.rel-st{flex:none;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:99px}
+.rel-st.sei{background:rgba(21,162,74,.1);color:var(--accent-2)}
+.rel-st.act{background:rgba(30,58,138,.1);color:var(--accent)}
+.rel-nm{font-size:12.5px;font-weight:600;line-height:1.5;flex:1;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+#m-sum,#m-proc,#m-vote,#m-rel,#m-explore{scroll-margin-top:56px}   /* stickyナビに隠れない */
 </style>
 </head>
 <body>
@@ -866,6 +882,7 @@ function render(){
   const events=buildEvents().filter(e=>passesFilter(e.bill));
   const tl=document.getElementById('timeline');
   document.getElementById('count').textContent=`${events.length} 件表示`;
+  syncHash();
   tl.innerHTML='';
   if(!events.length){ tl.innerHTML='<div class="empty">該当する法案がありません</div>'; return; }
 
@@ -993,6 +1010,7 @@ function deliberatingModal(b){
       <button class="close" onclick="closeModal()">×</button>
       <h2 style="font-size:18px">${b.name}</h2>
       <div class="mmeta"><span>${b.diet}</span><span>${proposer}</span><span class="fwrap">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}</span><span class="lc-badge lc-${lm.slug}">${b.lifecycleDetail||lm.label}</span></div>
+      ${shareRow(b)}
     </div>
     <div class="modal-b">
       <div class="ai-summary pending">
@@ -1005,6 +1023,7 @@ function deliberatingModal(b){
       <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">立法の流れ（法律ができるまで）を、やさしく知る ↗</a>`:''}
       <div class="sec-t">賛否<span class="fact-tag">公式記録</span></div>
       <div class="vote-pending"><b>まだ採決されていません</b><br>${voteNote}</div>
+      ${relatedHTML(b)}
       <div class="explore">
         <div class="ex-t">この法案を自分で調べる</div>
         <div class="ex-s">外部サービスへ移動します。当サイトが記事を選ぶことはしません。</div>
@@ -1076,9 +1095,17 @@ function richModal(b){
       <button class="close" onclick="closeModal()">×</button>
       <h2 style="font-size:18px">${b.name}</h2>
       <div class="mmeta"><span>${b.diet}</span><span>${b.ministry}</span><span class="fwrap">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}</span><span style="color:var(--s-passed);font-weight:700">成立</span></div>
+      ${shareRow(b)}
     </div>
     <div class="modal-b">
-      ${b.ai.plain ? `<div class="ai-summary">
+      <div class="mnav">
+        <button onclick="mjump('m-sum')">要約</button>
+        ${b.process?`<button onclick="mjump('m-proc')">プロセス</button>`:''}
+        <button onclick="mjump('m-vote')">賛否</button>
+        ${(b.fields||[]).length?`<button onclick="mjump('m-rel')">関連</button>`:''}
+        <button onclick="mjump('m-explore')">調べる</button>
+      </div>
+      ${b.ai.plain ? `<div class="ai-summary" id="m-sum">
         <div class="ai-banner"><b>AIによる要約</b> 会議録をもとに自動作成・正確には原文リンクでご確認ください</div>
         <div class="mb-plain">${b.ai.plain}</div>
         <div class="sec-t">ざっくり、何が変わる？</div>
@@ -1090,17 +1117,17 @@ function richModal(b){
           <div class="arg pro"><h4>◎ 賛成する立場</h4>${b.ai.pro.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
           <div class="arg con"><h4>● 反対する立場</h4>${b.ai.con.map(p=>`<div class="gp"><div class="gp-name">${p.group}</div><p class="gp-gist">${p.gist}</p><a class="gp-src" href="${p.url}" target="_blank" rel="noopener">${p.speaker}の討論（会議録）↗</a></div>`).join('')}</div>
         </div>` : ''}
-      </div>` : `<div class="ai-summary pending">
+      </div>` : `<div class="ai-summary pending" id="m-sum">
         <div class="ai-banner pending"><b>やさしい要約・両論は準備中</b></div>
         <div class="ai-pending">この法案の会議録（委員長報告）はまだ公開されていません。やさしい要約と賛否の理由は、会議録が公開され次第、自動で追加されます。<br>下の<b>賛否・プロセス・出典</b>はすでに確定しています。</div>
       </div>`}
 
-      ${b.process ? `<div class="sec-t">どこを通って成立したか<span class="fact-tag">公式記録</span></div>
+      ${b.process ? `<div class="sec-t" id="m-proc">どこを通って成立したか<span class="fact-tag">公式記録</span></div>
       <div class="proc-legend"><span><span class="pl d"></span>通過した</span><span><span class="pl n"></span>いまここ</span><span><span class="pl f"></span>この先の一般的な流れ</span></div>
       <div class="ptl">${procSteps}${futureSteps}</div>
       <a class="proc-learn" href="houritsu-dekirumade.html" target="_blank" rel="noopener">立法の流れ（法律ができるまで）を、やさしく知る ↗</a>` : ''}
 
-      <div class="sec-t">どの政党が賛成したか<span class="fact-tag">公式記録</span></div>
+      <div class="sec-t" id="m-vote">どの政党が賛成したか<span class="fact-tag">公式記録</span></div>
 
       <div class="hcard" id="house-shu">
         <div class="hch"><span class="hcn">衆議院</span><span class="gic party"><i></i></span><span class="gtx">会派ごと・個人記録なし</span></div>
@@ -1109,6 +1136,7 @@ function richModal(b){
             <span style="font-family:'Shippori Mincho',serif;font-weight:700;font-size:.95rem">${shu.date}　${shu.result}</span>
             <span style="font-size:.72rem;color:var(--muted)"><b style="color:var(--s-passed)">賛成 ${shuYes}</b> ／ <b style="color:var(--accent)">反対 ${shuNo}</b> 会派</span>
           </div>
+          ${(shuYes+shuNo)?`<div class="tally" style="margin-top:8px">${shuYes?`<span class="t ty" style="width:${Math.round(shuYes/(shuYes+shuNo)*100)}%">賛成 ${shuYes}</span>`:''}${shuNo?`<span class="t tn" style="width:${100-Math.round(shuYes/(shuYes+shuNo)*100)}%">反対 ${shuNo}</span>`:''}</div><div class="htag" style="margin-top:4px">会派数の比率（議席数ではありません）</div>`:''}
           <div class="htag" style="margin-top:6px">衆院の本会議は会派ごとの賛否まで（議員ひとりずつの記録はありません）</div>
         </div>
         <div class="hcb">${shuRows}</div>
@@ -1124,7 +1152,9 @@ function richModal(b){
         <div class="htag" style="padding:2px 13px 12px">政党をタップすると、議員ひとりずつの賛否が見られます。</div>
       </div>`}
 
-      <div class="explore">
+      ${relatedHTML(b)}
+
+      <div class="explore" id="m-explore">
         <div class="ex-t">この法案を自分で調べる</div>
         <div class="ex-s">外部サービスへ移動します。当サイトが記事を選ぶことはしません。</div>
         <div class="ex-grid">
@@ -1186,6 +1216,65 @@ function scrollHouse(which){
   if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
 }
 function bindDeeper(){ /* placeholder for any post-render binding */ }
+
+/* ---- 第2弾: 共有・モーダル内ナビ・関連法案・フィルタURL ---- */
+function billLink(b){ return location.origin+location.pathname+'#/bill/'+encodeURIComponent(b.id); }
+function copyBillLink(btn,id){
+  const b=BILLS.find(x=>x.id===id); if(!b) return;
+  navigator.clipboard.writeText(billLink(b)).then(()=>{
+    const t=btn.querySelector('.sl-t'); if(!t) return;
+    t.textContent='コピーしました'; btn.classList.add('done');
+    setTimeout(()=>{ t.textContent='リンクをコピー'; btn.classList.remove('done'); },1600);
+  });
+}
+function shareRow(b){
+  const url=encodeURIComponent(billLink(b)), tx=encodeURIComponent(b.name);
+  return `<div class="share-row">
+    <button class="share-btn" onclick="copyBillLink(this,'${b.id}')"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg><span class="sl-t">リンクをコピー</span></button>
+    <a class="share-btn" target="_blank" rel="noopener" href="https://x.com/intent/tweet?text=${tx}&url=${url}"><svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor"><path d="M18.9 2H22l-7.4 8.4L23.2 22H16l-5-6.6L5.3 22H2l7.9-9L1.2 2H8.5l4.5 6L18.9 2z"/></svg><span>Xで共有</span></a>
+  </div>`;
+}
+function openById(id){ const b=BILLS.find(x=>x.id===id); if(b) openModal(b); }
+function mjump(id){ const el=document.getElementById(id); if(el) el.scrollIntoView({block:'start'}); }
+function relatedHTML(b){
+  const mine=b.fields||[]; if(!mine.length) return '';
+  const dateOf=x=>(x.stages&&(x.stages.promulgated||x.stages.passed||x.stages.submit))||'';
+  const pool=pub().filter(x=>x.id!==b.id && (x.fields||[]).some(f=>mine.includes(f)))
+    .sort((a,c)=>dateOf(c).localeCompare(dateOf(a))).slice(0,3);
+  if(!pool.length) return '';
+  const rows=pool.map(x=>{
+    const lc=lcOf(x), lm=LC_META[lc]||LC_META['審議中'];
+    const st=lc==='成立'?`<span class="rel-st sei">成立</span>`:`<span class="rel-st act">${lm.label}</span>`;
+    return `<div class="rel-item" onclick="openById('${x.id}')">${st}<span class="rel-nm">${x.name}</span></div>`;
+  }).join('');
+  return `<div class="sec-t" id="m-rel">同じ分野の法案</div><div class="rel-list">${rows}</div>`;
+}
+/* フィルタ状態をURLに載せる（#/?field=..&tab=..）＝絞り込みを共有可能に。モーダル深リンクは従来どおり優先 */
+let HASH_READY=false;   // boot中の初回renderが適用前のディープリンクhashを消さないよう、openFromHash完了後に有効化
+function syncHash(){
+  if(!HASH_READY) return;
+  if(document.getElementById('overlay').classList.contains('show')) return;
+  const p=new URLSearchParams();
+  if(state.tab==='active') p.set('tab','active');
+  if(state.lc && state.lc!=='all') p.set('lc',state.lc);
+  if(state.field) p.set('field',state.field);
+  if(state.ministry) p.set('who',state.ministry);
+  if(state.diet) p.set('diet',state.diet);
+  if(state.q) p.set('q',state.q);
+  const s=p.toString();
+  history.replaceState(null,'',location.pathname+location.search+(s?'#/?'+s:''));
+}
+function applyHashFilters(){
+  const mm=location.hash.match(/^#\/\?(.+)$/); if(!mm) return;
+  const p=new URLSearchParams(mm[1]);
+  if(p.get('tab')==='active') switchTab('active');
+  if(p.get('lc')) switchLc(p.get('lc'));
+  if(p.get('field') && FIELD_ORDER.includes(p.get('field'))) setField(p.get('field'));
+  if(p.get('who')){ state.ministry=p.get('who'); const s=document.getElementById('fMinistry'); if(s) s.value=state.ministry; }
+  if(p.get('diet')){ state.diet=p.get('diet'); const s=document.getElementById('fDiet'); if(s) s.value=state.diet; }
+  if(p.get('q')){ state.q=p.get('q'); const q=document.getElementById('q'); if(q) q.value=state.q; const x=document.getElementById('qClear'); if(x) x.style.display='grid'; }
+  render();
+}
 
 /* AIに聞く：目的別の質問雛形 */
 function buildPrompts(b){
@@ -1269,6 +1358,7 @@ function simpleModal(b){
       <div class="mmeta">
         <span>${b.diet}</span><span>${b.ministry}</span><span class="fwrap">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}</span>
       </div>
+      ${shareRow(b)}
     </div>
     <div class="modal-b">
       <div class="sec-t">概要</div>
@@ -1287,12 +1377,14 @@ function simpleModal(b){
 function closeModal(){
   document.getElementById('overlay').classList.remove('show');
   if(location.hash.indexOf('#/bill/')===0) history.replaceState(null,'',location.pathname+location.search);
+  syncHash();   // 閉じたらフィルタ状態のURLへ戻す
 }
 /* 深リンク #/bill/{id} で該当法案を開く（議員ページ/houan-timeline からの被リンク・共有用） */
 function openFromHash(){
   const mm=location.hash.match(/^#\/bill\/(.+)$/);
   if(mm){ const b=BILLS.find(x=>x.id===decodeURIComponent(mm[1]));
-    if(b){ if(lcOf(b)!=='成立' && state.tab!=='active') switchTab('active'); openModal(b); } }
+    if(b){ if(lcOf(b)!=='成立' && state.tab!=='active') switchTab('active'); openModal(b); } return; }
+  applyHashFilters();   // #/?field=..&tab=.. 形式＝共有された絞り込みを復元
 }
 window.addEventListener('hashchange',openFromHash);
 document.getElementById('overlay').onclick=e=>{if(e.target.id==='overlay')closeModal()};
@@ -1380,6 +1472,7 @@ async function boot(){
     return;
   }
   initFilters(); renderStats(); updateTabCounts(); updateLcCounts(); renderFieldChips(); renderSessionSummary(); render(); renderFeed(); openFromHash();
+  HASH_READY=true; syncHash();
 }
 boot();
 </script>
