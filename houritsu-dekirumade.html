@@ -226,8 +226,13 @@
 }
 /* 明朝を全廃（SVG内のtextも含めて一括ゴシック化） */
 body, body *{font-family:'Zen Kaku Gothic New','Inter',system-ui,sans-serif !important}
-/* 戻り導線バーの和紙ベージュ→白 */
-.hubbar{background:#fff !important}
+/* 戻り導線バー: 固定(sticky)＋濃紺ベース（本体と統一） */
+.hubbar{position:sticky;top:0;z-index:940;background:var(--accent) !important;border-bottom:none;box-shadow:0 2px 10px rgba(16,24,40,.2)}
+.hubbar .hb-brand{color:#fff !important}
+.hubbar .hb-sep{color:rgba(255,255,255,.55) !important;opacity:1}
+.hubbar .hb-cur{color:#fff !important}
+.hubbar .hb-soc a{color:rgba(255,255,255,.82) !important}
+.hubbar .hb-soc a:hover{color:#fff !important}
 /* SVGフロー図の暖色（和紙・朱・金）だけ差し替え。青・緑系は新世界観と整合するので温存 */
 [stroke="#b3a994"]{stroke:#c8d2e2} [fill="#b3a994"]{fill:#c8d2e2}
 [stroke="#d8cdb8"]{stroke:#e5e9f1}
