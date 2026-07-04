@@ -1497,10 +1497,27 @@ function copyPrompt(btn){
     setTimeout(()=>{btn.classList.remove('copied');o.textContent=old;},1800);
   }).catch(()=>{ alert('コピーできませんでした。雛形を長押しして選択してください。'); });
 }
-/* コピーしてからAIを開く（全AIで確実に動く方式） */
+/* コピーしてからAIを開く。
+   旧実装は writeText の完了後(非同期)に window.open していたため、クリックのユーザージェスチャが
+   失効してポップアップブロックされる端末があった（スマホで顕著）。同期コピー(execCommand)→
+   同一ジェスチャ内で同期 window.open に変更。'noopener'指定は戻り値が常にnullになるので
+   opener=null 方式にし、ブロック時は同タブ遷移にフォールバック（深リンクがあるので戻れる）。 */
 function copyAndOpen(url){
   const text=document.getElementById('prompt-text').textContent;
-  navigator.clipboard.writeText(text).finally(()=>{ window.open(url,'_blank','noopener'); });
+  let copied=false;
+  try{
+    const ta=document.createElement('textarea');
+    ta.value=text; ta.setAttribute('readonly','');
+    ta.style.cssText='position:fixed;left:-9999px;top:0';
+    document.body.appendChild(ta);
+    ta.select(); ta.setSelectionRange(0,text.length);
+    copied=document.execCommand('copy');
+    ta.remove();
+  }catch(_e){}
+  if(!copied){ try{ navigator.clipboard.writeText(text); }catch(_e){} }   // 非同期の保険
+  const w=window.open(url,'_blank');
+  if(w){ try{ w.opener=null; }catch(_e){} }
+  else{ location.href=url; }
 }
 
 function simpleModal(b){
