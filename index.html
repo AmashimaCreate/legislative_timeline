@@ -630,19 +630,11 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .month-group{scroll-margin-top:12px}
 #toTop{position:fixed;right:18px;bottom:18px;z-index:900;width:44px;height:44px;border-radius:50%;border:none;background:var(--accent);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 6px 18px rgba(16,24,40,.28);display:none;place-items:center;font-family:inherit}
 #toTop.show{display:grid}
-.feed-strip{display:none}
-/* モバイル崩れ修正: grid子(main)が横スクロール帯の中身幅(≈1500px)につられて広がり、
+/* モバイル崩れ修正: grid子(main)が横スクロール帯の中身幅につられて広がり、
    ページ全体がビューポートを突き破ってスマホがズームアウトしていた。min-width:0で縮小を許可 */
 .wrap>main,.wrap>aside{min-width:0}
-.feed-strip,.field-chips,.month-nav{max-width:100%}
-@media(max-width:980px){
-  .feed-strip{display:flex;align-items:center;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 0 4px;margin-top:6px}
-  .fs-label{flex:none;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--accent)}
-  .fs-item{flex:none;display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:10px;padding:7px 10px;background:#fff;max-width:210px;cursor:pointer}
-  .fs-date{font-size:9.5px;color:var(--muted);font-family:'JetBrains Mono',monospace}
-  .fs-nm{font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-}
-.event:focus-visible,.rel-item:focus-visible,.fs-item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.field-chips,.month-nav{max-width:100%}
+.event:focus-visible,.rel-item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto!important}}
 /* 成立/審議中タブ: 下線型→セグメント型ボタンで目立たせる（選択中=状態色で塗り。成立=緑/審議中=濃紺） */
 .life-tabs{gap:10px;border-bottom:none;max-width:1240px;margin:16px auto 2px;padding:0 28px}
@@ -733,7 +725,6 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 
 <div class="wrap">
   <main>
-    <div id="feedStrip" class="feed-strip"></div>
     <div class="tl-head">
       <h2>時系列フィード</h2>
       <span class="count" id="count"></span>
@@ -1082,14 +1073,8 @@ function renderFeed(){
   f.querySelectorAll('.feed-item').forEach(it=>it.onclick=()=>{
     openModal(BILLS.find(b=>b.id===it.dataset.id));
   });
-  // モバイル: サイドバーが下に落ちて埋もれるため、フィード上部に横スクロールの「いま動いた」ストリップを出す
-  const strip=document.getElementById('feedStrip');
-  if(strip){
-    strip.innerHTML = recent.length ? `<span class="fs-label">いま動いた</span>`+recent.map(e=>{
-      const nm=e.bill.name.length>16 ? e.bill.name.slice(0,16)+'…' : e.bill.name;
-      return `<div class="fs-item" role="button" tabindex="0" onclick="openById('${e.bill.id}')" onkeydown="if(event.key==='Enter')openById('${e.bill.id}')"><span class="fs-date">${fmt(e.date).slice(5)} ${stageLabel(e.stage)}</span><span class="fs-nm">${nm}</span></div>`;
-    }).join('') : '';
-  }
+  // （モバイルの「いま動いた」ストリップは撤去済み＝フィード先頭と同一内容の重複だったため。
+  //   デスクトップのサイドバーは深スクロール時の常設ナビとして温存）
 }
 
 /* ---- modal ---- */
@@ -1525,7 +1510,7 @@ function copyAndOpen(url){
     copied=document.execCommand('copy');
     ta.remove();
   }catch(_e){}
-  if(!copied){ try{ navigator.clipboard.writeText(text); }catch(_e){} }   // 非同期の保険
+  if(!copied){ try{ navigator.clipboard.writeText(text).catch(()=>{}); }catch(_e){} }   // 非同期の保険（拒否も握りつぶし）
   const w=window.open(url,'_blank');
   if(w){ try{ w.opener=null; }catch(_e){} }
   else{ location.href=url; }
