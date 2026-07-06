@@ -802,7 +802,7 @@ const STAGES = [
   {key:'enforced',    label:'施行',       short:'施行', color:'var(--s-enforced)'},
 ];
 const stageColor = k => (STAGES.find(s=>s.key===k)||{}).color || '#999';
-const stageLabel = k => (STAGES.find(s=>s.key===k)||{}).label || k;
+const stageLabel = k => (STAGES.find(s=>s.key===k)||{}).label || k || '';   // k=null（受理直後でstages未記録の法案）で"null"と表示しない
 
 let BILLS = [];
 let GENERATED_AT = null;   /* データ生成日（立法日と分離した「データ最終更新」表示用） */
