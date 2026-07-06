@@ -602,6 +602,9 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 .pstep.now .pnode{box-shadow:0 0 0 5px rgba(30,58,138,.16)!important}
 /* 個別票バッジ：👤絵文字→SVG＋濃紺アウトラインピル（旧CSSは変数名タイポで背景無効だった） */
 .indiv-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--accent)!important;background:rgba(30,58,138,.05)!important;border:1px solid rgba(30,58,138,.3);border-radius:99px;padding:3px 10px}
+/* 審議中の要約（提出理由ベース）: カードの出どころ微ラベル＋モーダルの注記 */
+.gist-src{font-size:10px;color:var(--muted);font-weight:400;margin-left:6px;white-space:nowrap}
+.riyu-note{font-size:.72rem;color:var(--muted);line-height:1.75;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line)}
 /* 第2弾: モーダル内ナビ（sticky）・共有ボタン・関連法案 */
 .mnav{position:sticky;top:0;z-index:6;display:flex;gap:6px;flex-wrap:wrap;background:rgba(255,255,255,.94);backdrop-filter:blur(4px);padding:10px 0 9px;margin-bottom:8px;border-bottom:1px solid var(--line)}
 .mnav button{font-size:11.5px;font-weight:600;padding:5px 12px;border-radius:99px;border:1px solid var(--line);background:#fff;color:#51607a;cursor:pointer;font-family:inherit;transition:.12s}
@@ -1056,7 +1059,7 @@ function eventCard(e, delay){
       <span class="event-ministry">${who}</span>
     </div>
     <h3>${b.name}</h3>
-    <div class="gist">${b.gist || `<span class="gist-pending">${pendMsg}</span>`}</div>
+    <div class="gist">${b.gist ? `${b.gist}${(lc!=='成立'&&(b.ai||{}).basis==='riyu')?'<span class="gist-src">（提出理由より）</span>':''}` : `<span class="gist-pending">${pendMsg}</span>`}</div>
     <div class="tags">${(b.fields||[]).map(f=>`<span class="fchip">${f}</span>`).join('')}${b.tags.map(t=>`<span class="tag">#${t}</span>`).join('')} ${indivBadge}</div>
     <div class="cprog${cs.lc==='廃案'?' lc-dead':''}">${cprog}</div>
     ${hereHTML}
@@ -1124,10 +1127,17 @@ function deliberatingModal(b){
       ${shareRow(b)}
     </div>
     <div class="modal-b">
-      <div class="ai-summary pending">
+      ${(b.ai&&b.ai.plain&&b.ai.basis==='riyu') ? `<div class="ai-summary" id="m-sum">
+        <div class="ai-banner"><b>提出者の説明にもとづく要約</b> 原文（提出理由）へのリンク付き</div>
+        <div class="mb-plain">${b.ai.plain}</div>
+        ${(b.ai.changed&&b.ai.changed.length)?`<div class="sec-t">ざっくり、何をする法案？</div>
+        <div class="changed"><ul>${b.ai.changed.map(c=>`<li>${c}</li>`).join('')}</ul></div>`:''}
+        <a class="ai-src" href="${b.ai.summarySource.url}" target="_blank" rel="noopener">${b.ai.summarySource.label} ↗</a>
+        <div class="riyu-note">この要約は、提出者が国会に示した提案理由（上のリンク）にもとづいて自動作成しています。国会での賛否の議論・反対側の視点はまだ収録されていません。採決後は、会議録にもとづく要約と賛否に自動で更新されます。</div>
+      </div>` : `<div class="ai-summary pending">
         <div class="ai-banner pending"><b>この法案は「${lm.label}」です</b></div>
         <div class="ai-pending">${notice}</div>
-      </div>
+      </div>`}
       ${b.process?`<div class="sec-t">いま、どこまで進んだか<span class="fact-tag">公式記録</span></div>
       <div class="proc-legend"><span><span class="pl d"></span>通過した</span><span><span class="pl n"></span>いまここ</span></div>
       <div class="ptl">${procSteps}</div>
