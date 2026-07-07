@@ -787,7 +787,7 @@ body{background:#fff;background-image:none;-webkit-font-smoothing:antialiased;co
 <!-- クローラー用の静的リンク集（発見経路の担保）。build_static_pages.py が bill-index.html を生成し、
      boot時にfetchして流し込む。JSでの注入だが、bill-index.html 自体は静的HTMLでsitemapにも載るため
      クローラーはそちら経由でも辿れる＝二重の発見性。人には控えめな全件索引として機能。 -->
-<nav class="bill-index" id="billIndex" aria-label="法案の個別ページ一覧"><a href="bill-index.html">法案の個別ページ一覧（全件）を見る →</a></nav>
+<nav class="bill-index" id="billIndex" aria-label="法案の個別ページ一覧"><a href="bill-index">法案の個別ページ一覧（全件）を見る →</a></nav>
 
 <footer class="site-foot">
   <div class="site-foot-in">
@@ -1690,7 +1690,7 @@ async function boot(){
   initFilters(); renderStats(); updateTabCounts(); updateLcCounts(); renderFieldChips(); renderSessionSummary(); render(); renderFeed(); openFromHash();
   HASH_READY=true; syncHash();
   // クローラー経路＆人向けの全件索引を流し込む（bill-index.html＝静的・sitemap掲載。fetch失敗時は静的リンクのまま）
-  fetch('bill-index.html',{cache:'no-store'}).then(r=>r.ok?r.text():null).then(t=>{ if(t){const el=document.getElementById('billIndex'); if(el) el.innerHTML=t;} }).catch(()=>{});
+  fetch('bill-index',{cache:'no-store'}).then(r=>r.ok?r.text():null).then(t=>{ if(t){const el=document.getElementById('billIndex'); if(el) el.innerHTML=t;} }).catch(()=>{});
 }
 boot();
 </script>
