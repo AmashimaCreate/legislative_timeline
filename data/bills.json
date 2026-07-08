@@ -70209,7 +70209,7 @@
       "submittedDiet": 221,
       "type": "閣法",
       "number": 40,
-      "lawNumber": null,
+      "lawNumber": "39",
       "status": "成立",
       "name": "人工衛星等の打上げ及び人工衛星の管理に関する法律等の一部を改正する法律案",
       "ministry": "内閣府",
@@ -70226,7 +70226,7 @@
         "submit": "2026-04-24",
         "review": null,
         "passed": "2026-04-24",
-        "promulgated": null,
+        "promulgated": "2026-06-17",
         "enforced": null
       },
       "hasIndividual": true,
@@ -70866,7 +70866,7 @@
       "submittedDiet": 221,
       "type": "閣法",
       "number": 42,
-      "lawNumber": null,
+      "lawNumber": "52",
       "status": "成立",
       "name": "自動車の運転により人を死傷させる行為等の処罰に関する法律及び道路交通法の一部を改正する法律案",
       "ministry": "法務省",
@@ -70884,7 +70884,7 @@
         "submit": "2026-04-17",
         "review": null,
         "passed": "2026-04-17",
-        "promulgated": null,
+        "promulgated": "2026-07-01",
         "enforced": null
       },
       "hasIndividual": true,
@@ -74497,7 +74497,7 @@
       "submittedDiet": 221,
       "type": "閣法",
       "number": 51,
-      "lawNumber": null,
+      "lawNumber": "34",
       "status": "成立",
       "name": "犯罪による収益の移転防止に関する法律の一部を改正する法律案",
       "ministry": "警察庁",
@@ -74514,7 +74514,7 @@
         "submit": "2026-04-17",
         "review": null,
         "passed": "2026-04-17",
-        "promulgated": null,
+        "promulgated": "2026-06-10",
         "enforced": null
       },
       "hasIndividual": true,
@@ -75056,7 +75056,7 @@
       "submittedDiet": 221,
       "type": "閣法",
       "number": 52,
-      "lawNumber": null,
+      "lawNumber": "36",
       "status": "成立",
       "name": "南極地域の環境の保護に関する法律の一部を改正する法律案",
       "ministry": "環境省",
@@ -75073,7 +75073,7 @@
         "submit": "2026-04-17",
         "review": null,
         "passed": "2026-04-17",
-        "promulgated": null,
+        "promulgated": "2026-06-10",
         "enforced": null
       },
       "hasIndividual": true,
@@ -89281,5 +89281,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-07-06"
+  "generatedAt": "2026-07-08"
 }
