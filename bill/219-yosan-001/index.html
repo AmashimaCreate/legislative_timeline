@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "令和七年度一般会計補正予算（第１号）をわかりやすく｜賛否と議員別投票【第219回国会】", "description": "令和七年度一般会計補正予算（第１号）（第219回国会・内閣）。2025年度の追加予算が物価対策と子育て支援中心で決まった。賛成と反対の立場、衆参の会派別賛否・議員別投票を一次資料リンク付きで。", "datePublished": "2025-12-08", "dateModified": "2026-07-13", "inLanguage": "ja", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "政治見える化", "url": "https://seiji-mieru.com/"}, "publisher": {"@type": "Organization", "name": "政治見える化", "logo": {"@type": "ImageObject", "url": "https://seiji-mieru.com/houan/apple-touch-icon.png"}}, "mainEntityOfPage": "https://seiji-mieru.com/houan/bill/219-yosan-001/", "about": {"@type": "Legislation", "name": "令和七年度一般会計補正予算（第１号）", "legislationType": "予算", "legislationPassedBy": {"@type": "GovernmentOrganization", "name": "国会"}}}
+{"@context": "https://schema.org", "@type": "Article", "headline": "令和七年度一般会計補正予算（第１号）をわかりやすく｜賛否と議員別投票【第219回国会】", "description": "令和七年度一般会計補正予算（第１号）（第219回国会・内閣）。2025年度の追加予算が物価対策と子育て支援中心で決まった。賛成と反対の立場、衆参の会派別賛否・議員別投票を一次資料リンク付きで。", "datePublished": "2025-12-08", "dateModified": "2026-07-14", "inLanguage": "ja", "isAccessibleForFree": true, "author": {"@type": "Organization", "name": "政治見える化", "url": "https://seiji-mieru.com/"}, "publisher": {"@type": "Organization", "name": "政治見える化", "logo": {"@type": "ImageObject", "url": "https://seiji-mieru.com/houan/apple-touch-icon.png"}}, "mainEntityOfPage": "https://seiji-mieru.com/houan/bill/219-yosan-001/", "about": {"@type": "Legislation", "name": "令和七年度一般会計補正予算（第１号）", "legislationType": "予算", "legislationPassedBy": {"@type": "GovernmentOrganization", "name": "国会"}}}
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "政治見える化", "item": "https://seiji-mieru.com/"}, {"@type": "ListItem", "position": 2, "name": "立法タイムライン", "item": "https://seiji-mieru.com/houan/"}, {"@type": "ListItem", "position": 3, "name": "令和七年度一般会計補正予算（第１号）", "item": "https://seiji-mieru.com/houan/bill/219-yosan-001/"}]}
@@ -34,7 +34,10 @@ a{color:var(--accent)}
 .crumb{font-size:12px;color:var(--muted);margin:14px 0}.crumb a{color:var(--muted);text-decoration:none}
 h1{font-size:26px;font-weight:900;letter-spacing:.01em;line-height:1.45;margin:6px 0 12px}
 .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12.5px;color:var(--muted);margin-bottom:6px}
-.meta .fchip{background:rgba(30,58,138,.08);color:var(--accent);font-weight:600;border-radius:99px;padding:3px 10px}
+.meta .fchip{background:rgba(30,58,138,.08);color:var(--accent);font-weight:600;border-radius:99px;padding:3px 10px;text-decoration:none}
+.alias{font-size:13px;color:var(--muted);margin:-6px 0 8px;font-weight:600}
+.meta .dietlink{color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--line)}
+.meta .dietlink:hover{color:var(--accent)}
 .badge{font-weight:700;border-radius:99px;padding:3px 11px;font-size:12.5px}
 .b-sei{background:rgba(21,162,74,.12);color:var(--green)}.b-act{background:rgba(30,58,138,.1);color:var(--accent)}
 .lead{font-size:16px;font-weight:700;margin:14px 0 4px}
@@ -56,13 +59,25 @@ ul.changed li::before{content:"→";position:absolute;left:0;color:var(--accent)
 .pill{font-size:11.5px;font-weight:700;border-radius:99px;padding:2px 9px}.p-y{background:rgba(21,162,74,.12);color:var(--green)}.p-n{background:rgba(30,58,138,.1);color:var(--accent)}.p-m{background:#eef1f6;color:var(--muted)}
 .rel a{display:block;border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin:8px 0;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
 .foot{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-.pending{background:var(--paper2);border:1px dashed var(--line);border-radius:8px;padding:14px;color:var(--muted);text-align:center;font-size:14px}</style></head>
+.pending{background:var(--paper2);border:1px dashed var(--line);border-radius:8px;padding:14px;color:var(--muted);text-align:center;font-size:14px}
+.erow{display:flex;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:14.5px;flex-wrap:wrap}
+.erow:last-of-type{border-bottom:0}
+.erow .ew{color:var(--muted);font-size:11.5px;background:#eef1f6;border-radius:99px;padding:2px 9px;white-space:nowrap}
+.erow b{font-size:16px}
+.erow .emeta{font-size:12.5px;color:var(--muted)}
+.erow.enote{color:var(--muted);font-size:13px;border-bottom:0;padding-bottom:0}
+.erow.epend{color:var(--muted);font-size:13.5px}
+.etag{font-size:11px;font-weight:700;border-radius:99px;padding:2px 8px}
+.et-done{background:rgba(13,148,136,.12);color:#0f766e}
+.et-todo{background:#eef1f6;color:#475569}</style></head>
 <body>
 <div class="hub"><a href="https://seiji-mieru.com/">政治見える化</a><span class="sep">›</span><a href="../../">立法タイムライン</a></div>
 <div class="wrap">
 <nav class="crumb"><a href="https://seiji-mieru.com/">政治見える化</a> › <a href="../../">立法タイムライン</a> › 令和七年度一般会計補正予算（第１号）</nav>
 <h1>令和七年度一般会計補正予算（第１号）</h1>
-<div class="meta"><span>第219回国会</span>・<span>内閣</span> <span class="fchip">税・財政・予算</span> <span class="badge b-sei">成立</span></div>
+
+<div class="meta"><span><a class="dietlink" href="../../kokkai/219/">第219回国会</a></span>・<span>内閣</span> <a class="fchip" href="../../bunya/zaisei/">税・財政・予算</a> <span class="badge b-sei">成立</span></div>
+
 <div class="sec"><div class="card"><div class="banner">AIによる要約（会議録をもとに自動作成）</div><div class="plain">2025年度の追加予算が物価対策と子育て支援中心で決まった</div><h3 class="lead">ざっくり、何が変わる？</h3><ul class="changed"><li>令和7年度の補正予算が2つセット決定された</li><li>質疑では物価対策や子育て支援など多くの項目が議論された</li><li>物価高騰への診療報酬改定など医療面の対応が含まれた</li></ul><a class="src" href="https://kokkai.ndl.go.jp/txt/121915254X01020251216/2" target="_blank" rel="noopener">委員長報告（参議院本会議 第10号） ↗</a></div></div>
 <div class="sec"><h2>何をめぐって賛否が分かれたか</h2><div class="card"><p style="font-size:14.5px">補正予算が物価高への対策として十分か、赤字国債の規模は適切か、防衛費など緊要性の低い事業を含めるべきかをめぐって賛否が分かれた。</p></div><h3 class="lead">◎ 賛成する立場</h3><div style="margin:10px 0"><b style="font-size:14px">自由民主党</b><p style="font-size:14px;margin:3px 0">自由民主党は、物価高や燃料価格高騰への対策として国民の暮らしを守ること、食料・経済・エネルギー安全保障を地方の成長につなげる高市政権の成長戦略、そして防衛力の強化を通じた国の安全保障が盛り込まれているとして、今回の補正予算案に賛成した。</p><a class="src" href="https://kokkai.ndl.go.jp/txt/121915254X01020251216/6" target="_blank" rel="noopener">長谷川岳の討論（会議録）↗</a></div><div style="margin:10px 0"><b style="font-size:14px">国民民主党・新緑風会</b><p style="font-size:14px;margin:3px 0">国民民主党が公約に掲げてきたガソリン暫定税率の廃止と自賠責保険料の一括繰戻しが実現したこと、また国立大学法人の運営費交付金が増額されたことが予算案に反映されたため賛成した。</p><a class="src" href="https://kokkai.ndl.go.jp/txt/121915254X01020251216/10" target="_blank" rel="noopener">浜野喜史の討論（会議録）↗</a></div><div style="margin:10px 0"><b style="font-size:14px">公明党</b><p style="font-size:14px;margin:3px 0">公明党は、物価高に苦しむ生活者への支援が盛り込まれていること、および予算委員会の審議を通じて政府が幅広い層への支援、即効性のある対策、自治体の事務負担軽減、慎重な基金運営といった公明党の主張に改善の方向性を示したことを理由に賛成した。</p><a class="src" href="https://kokkai.ndl.go.jp/txt/121915254X01020251216/12" target="_blank" rel="noopener">原田大二郎の討論（会議録）↗</a></div><h3 class="lead">● 反対する立場</h3><div style="margin:10px 0"><b style="font-size:14px">立憲民主・社民・無所属</b><p style="font-size:14px;margin:3px 0">立憲民主・社民・無所属は、物価高に苦しむ中低所得者層への家計支援が不十分であり、赤字国債に多く依存した過度な規模の予算が市場の信認を損なうと考えた。また、中長期的な防衛費など緊要性に乏しい事業が多く含まれており、補正予算の本来の趣旨に反すると批判して反対した。</p><a class="src" href="https://kokkai.ndl.go.jp/txt/121915254X01020251216/4" target="_blank" rel="noopener">森本真治の討論（会議録）↗</a></div><div style="margin:10px 0"><b style="font-size:14px">参政党</b><p style="font-size:14px;margin:3px 0">参政党は、補正予算が経済構造そのものを見直す明確な意思を示していないこと、また年度内執行が難しい事業の前倒しが多く補正予算の趣旨を逸脱していることを理由に反対した。国民生活の底上げと次世代への希望を示す予算編成を求めた。</p><a class="src" href="https://kokkai.ndl.go.jp/txt/121915254X01020251216/8" target="_blank" rel="noopener">神谷宗幣の討論（会議録）↗</a></div></div>
 <div class="sec"><h2>どこを通って成立したか<span style="font-size:11px;color:var(--muted);font-weight:400;margin-left:8px">公式記録</span></h2><div class="card" style="padding:6px 18px"><div class="step"><span class="w">内閣</span><span class="nm">国会に提出</span><span class="d">2025/12/8</span></div><div class="step"><span class="w">衆議院・委員会</span><span class="nm">予算委員会で審査</span><span class="d">2025/12/8</span></div><div class="step"><span class="w">衆議院・本会議</span><span class="nm">可決</span><span class="d">2025/12/11</span></div><div class="step"><span class="w">参議院・委員会</span><span class="nm">予算委員会で審査</span><span class="d">2025/12/11</span></div><div class="step"><span class="w">参議院・本会議</span><span class="nm">可決 → 成立</span><span class="d">2025/12/16</span></div></div></div>
@@ -70,7 +85,7 @@ ul.changed li::before{content:"→";position:absolute;left:0;color:var(--accent)
 <div class="sec rel"><h2>同じ分野の法案</h2><a href="../217-kaku-001/">［成立］ 所得税法等の一部を改正する法律案</a><a href="../217-kaku-002/">［成立］ 地方税法及び地方税法等の一部を改正する法律の一部を改正する法律案</a><a href="../217-kaku-003/">［成立］ 地方交付税法等の一部を改正する法律案</a></div>
 <div class="sec"><h2>出典（一次資料）</h2><div class="card" style="font-size:13px;line-height:2.2"><a href="https://kokkai.ndl.go.jp/txt/121915254X01020251216/2" target="_blank" rel="noopener">委員長報告（参議院本会議 第10号） ↗</a><br><a href="https://laws.e-gov.go.jp/?searchLawName=%E4%BB%A4%E5%92%8C%E4%B8%83%E5%B9%B4%E5%BA%A6%E4%B8%80%E8%88%AC%E4%BC%9A%E8%A8%88%E8%A3%9C%E6%AD%A3%E4%BA%88%E7%AE%97" target="_blank" rel="noopener">e-Gov法令検索 ↗</a><br><a href="https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/menu.htm" target="_blank" rel="noopener">衆議院 議案情報 ↗</a><div class="note">事実（賛否数・議員名・日付・プロセス）は公式記録、要約はAIが作成しています。</div></div></div>
 <div style="margin-top:32px"><a href="../../" style="font-weight:700">← すべての法案を一覧・検索で見る（立法タイムライン）</a></div>
-<div class="foot">出典: 衆議院・参議院 議案データベース／内閣法制局 国会提出法案／国会会議録／e-Gov法令検索。データ最終更新 2026-07-13。<br>
+<div class="foot">出典: 衆議院・参議院 議案データベース／内閣法制局 国会提出法案／国会会議録／e-Gov法令検索。データ最終更新 2026-07-14。<br>
 やさしい要約・賛否の理由は国会会議録をもとにAIが作成。事実は公式記録です。<br>
 © 政治見える化</div>
 </div>
